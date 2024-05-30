@@ -15,11 +15,6 @@
     suppressPackageStartupMessages() |>
     suppressWarnings()
 
-"stringr" |>
-    library() |>
-    suppressPackageStartupMessages() |>
-    suppressWarnings()
-
 DT <- `[`
 
 ## A function to get all the rugby matches from ESPN.
@@ -155,50 +150,13 @@ get_espn_rugby <- function(date) {
 
 start_time <- proc.time()
 
-## need to find the last date this was updated
-fread("last_date.csv", colClasses = "Date") |>
-    DT(, last_date) ->
-    start_date
-
-## getting the dates
-seq(start_date, Sys.Date() - 1L, by = "day") |>
-    length() ->
-    final_number
-
-## setting the print number
-i <- 1L
-
 ## rows before addition
 start_rows <- NROW(fread("rugby.csv"))
 
-## looping through the dates
-while (start_date < Sys.Date()) {
-    if (i != 1L) {
-        Sys.sleep(15L)
-    }
+get_espn_rugby(Sys.Date())
 
-    start_time <- proc.time()
-
-    get_espn_rugby(start_date)
-
-    paste(str_pad(i, 2L, "left", " "), start_date,
-          str_pad(timetaken(start_time), 30L, "right", " "),
-          str_pad(sprintf("%.2f%%", (i / final_number) * 100), 7L, "left", " "),
-          sep = " ") |>
-        print()
-
-    i <- i + 1L
-
-    start_date |>
-        as.Date() |>
-        seq(length.out = 2L, by = "day") |>
-        (\(x) x[2])() |>
-        as.Date() ->
-        start_date
-
-    data.table(last_date = start_date) |>
-        fwrite("last_date.csv")
-}
+paste(Sys.Date(), timetaken(start_time), sep = " ") |>
+    print()
 
 fread("rugby.csv") |>
     DT(, match_date := as.Date(match_date)) |>
