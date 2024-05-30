@@ -38,8 +38,7 @@ jobs:
               run: |
                 git config --local user.name "$GITHUB_ACTOR"
                 git config --local user.email "<>"
+                git add last_date.csv rugby.csv
                 timestamp=$(date -u)
-                git commit last_date.csv -m "Latest last_date.csv Update: ${timestamp}" || exit 0
-                timestamp=$(date -u)
-                git commit rugby.csv -m "Latest rugby.csv Update: ${timestamp}" || exit 0
+                git commit -m "Latest Update: ${timestamp}" || exit 0
                 git push origin
