@@ -32,7 +32,7 @@ DT <- `[`
 ntfy_post <- function(procedure, time_taken) {
     sprintf("The %s have completed, %s", procedure, time_taken) |>
         shQuote() |>
-        POST(url = paste0("https://ntfy.sh/", "rubgy_koortzjg"), body = _) |>
+        POST(url = paste0("https://ntfy.sh/", "rugby_koortzjg"), body = _) |>
         invisible()
 }
 

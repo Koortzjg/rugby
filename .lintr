@@ -1,0 +1,6 @@
+linters: linters_with_defaults(
+    indentation_linter = indentation_linter(indent = 4L,
+                            hanging_indent_style = "tidy"),
+    assignment_linter = assignment_linter(allow_right_assign = TRUE)
+    )
+encoding: "UTF-8"
