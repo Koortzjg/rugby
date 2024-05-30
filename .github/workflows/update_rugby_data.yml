@@ -1,11 +1,10 @@
 name: update-rugby-data
 
 on:
-    # runs at 23:29 each day
-    # job takes around 5 minutes to complete
+    # runs at 23:29 each Monday
     push:
     schedule:
-        - cron: '29 23 * * 0,1,2,3,4,5,6'
+        - cron: '29 6 * * 1'
     workflow_dispatch:
 
 jobs:
