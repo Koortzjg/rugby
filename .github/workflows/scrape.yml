@@ -15,7 +15,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
     update-rugby-data:
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-latest
         permissions:
             contents: write
         env:
@@ -41,7 +41,7 @@ jobs:
               run: |
                 git config --local user.name "$GITHUB_ACTOR"
                 git config --local user.email "<>"
-                git add *.csv
+                git add last_date.csv rugby.csv
                 timestamp=$(date -u)
                 git commit -m "Latest Update: ${timestamp}" || exit 0
                 git push origin
