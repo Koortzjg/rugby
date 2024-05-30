@@ -1,9 +1,21 @@
 {
     "cSpell.words": [
+        "askpass",
+        "CRAN",
+        "fansi",
         "httr",
+        "jsonlite",
         "koortzjg",
         "libcurl",
+        "magrittr",
+        "pkgconfig",
+        "plyr",
+        "Rcpp",
         "renv",
-        "Rscript"
+        "Rscript",
+        "selectr",
+        "stringi",
+        "tibble",
+        "vctrs"
     ]
 }
