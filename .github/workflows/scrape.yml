@@ -4,12 +4,12 @@ name: update-rugby-data
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+    # Triggers the workflow on push or pull request events but only for the "main" branch
     push:
     schedule:
         - cron: '0 6 * * *'
 
-  # Allows you to run this workflow manually from the Actions tab
+    # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -29,12 +29,16 @@ jobs:
             
             - uses: r-lib/actions/setup-r@v2
 
-            #- uses: r-lib/actions/setup-r-dependencies@v2
-            
+            - uses: r-lib/actions/setup-r-dependencies@v2
+
+            - name: Fetch latest data
+              run: Rscript rugby.R
+
             - name: Commit Results
               run: |
                 git config --local user.name "$GITHUB_ACTOR"
                 git config --local user.email "<>"
                 timestamp=$(date -u)
-                git commit products.csv -m "Latest data: ${timestamp}" || exit 0
+                git commit data\last_date.csv
+                git commit data\rugby.csv -m "Latest data: ${timestamp}" || exit 0
                 git push origin
