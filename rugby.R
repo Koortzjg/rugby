@@ -20,21 +20,7 @@
     suppressPackageStartupMessages() |>
     suppressWarnings()
 
-"httr" |>
-    library() |>
-    suppressPackageStartupMessages() |>
-    suppressWarnings()
-
 DT <- `[`
-
-## @title Sending notification
-## @description Sending a notification via ntfy.sh
-ntfy_post <- function(procedure, time_taken) {
-    sprintf("The %s have completed, %s", procedure, time_taken) |>
-        shQuote() |>
-        POST(url = paste0("https://ntfy.sh/", "rugby_koortzjg"), body = _) |>
-        invisible()
-}
 
 ## A function to get all the rugby matches from ESPN.
 ## ESPN does not allow the usage of it's API any more.
@@ -182,6 +168,9 @@ seq(start_date, Sys.Date() - 1L, by = "day") |>
 ## setting the print number
 i <- 1L
 
+## rows before addition
+start_rows <- NROW(fread("rugby.csv"))
+
 ## looping through the dates
 while (start_date < Sys.Date()) {
     if (i != 1L) {
@@ -284,4 +273,11 @@ if (fread("rugby.csv", select = c("home_tries", "home_conversion",
         fwrite("rugby.csv")
 }
 
-ntfy_post("rugby updated", timetaken(start_time))
+## rows before addition
+end_rows <- NROW(fread("rugby.csv"))
+
+sprintf("The rugby data have updated, adding %d rows, and %s",
+        end_rows - start_rows, timetaken(start_time)) |>
+    shQuote() |>
+    httr::POST(url = paste0("https://ntfy.sh/", "rugby_koortzjg"), body = _) |>
+    invisible()
