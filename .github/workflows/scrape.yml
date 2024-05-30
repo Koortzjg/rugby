@@ -7,7 +7,7 @@ on:
     # Triggers the workflow on push or pull request events but only for the "main" branch
     push:
     schedule:
-        - cron: '0 6 * * *'
+        - cron: '0 0 * * *'
 
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
@@ -41,8 +41,7 @@ jobs:
               run: |
                 git config --local user.name "$GITHUB_ACTOR"
                 git config --local user.email "<>"
+                git add last_date.csv rugby.csv
                 timestamp=$(date -u)
-                git commit last_date.csv -m "last_date.csv ${timestamp}" || exit 0
-                timestamp=$(date -u)
-                git commit rugby.csv -m "rugby.csv ${timestamp}" || exit 0
+                git commit -m "Latest Update: ${timestamp}" || exit 0
                 git push origin
