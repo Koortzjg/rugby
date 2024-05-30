@@ -1,11 +1,11 @@
 name: update-rugby-data
 
 on:
-    # runs at 23:29 each day
+    # runs at 23:29 each Monday
     # job takes around 5 minutes to complete
     push:
     schedule:
-        - cron: '29 23 * * *'
+        - cron: '29 23 * * 1'
     workflow_dispatch:
 
 jobs:
@@ -39,5 +39,7 @@ jobs:
                 git config --local user.name "$GITHUB_ACTOR"
                 git config --local user.email "<>"
                 timestamp=$(date -u)
-                git commit rugby.csv -m "Latest Update: ${timestamp}" || exit 0
+                git commit last_date.csv -m "Latest last_date.csv Update: ${timestamp}" || exit 0
+                timestamp=$(date -u)
+                git commit rugby.csv -m "Latest rugby.csv Update: ${timestamp}" || exit 0
                 git push origin

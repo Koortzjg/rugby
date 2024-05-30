@@ -1,3 +1,5 @@
+my_time <- proc.time()
+
 ## getting all the matches
 ## packages
 "data.table" |>
@@ -11,6 +13,11 @@
     suppressWarnings()
 
 "elo" |>
+    library() |>
+    suppressPackageStartupMessages() |>
+    suppressWarnings()
+
+"stringr" |>
     library() |>
     suppressPackageStartupMessages() |>
     suppressWarnings()
@@ -148,15 +155,51 @@ get_espn_rugby <- function(date) {
     }
 }
 
-start_time <- proc.time()
-
 ## rows before addition
 start_rows <- NROW(fread("rugby.csv"))
 
-get_espn_rugby(Sys.Date())
+## need to find the last date this was updated
+fread("last_date.csv", colClasses = "Date") |>
+    #DT(, last_date := as.Date(last_date)) |>
+    DT(, last_date) ->
+    start_date
 
-paste(Sys.Date(), timetaken(start_time), sep = " ") |>
-    print()
+## getting the dates
+seq(start_date, Sys.Date() - 1L, by = "day") |>
+    length() ->
+    final_number
+
+## setting the print number
+i <- 1L
+
+## looping through the dates
+while (start_date < Sys.Date()) {
+    if (i != 1L) {
+        Sys.sleep(15L)
+    }
+
+    start_time <- proc.time()
+
+    get_espn_rugby(start_date)
+
+    paste(str_pad(i, 2L, "left", " "), start_date,
+          str_pad(timetaken(start_time), 30L, "right", " "),
+          str_pad(sprintf("%.2f%%", (i / final_number) * 100), 7L, "left", " "),
+          sep = " ") |>
+        print()
+
+    i <- i + 1L
+
+    start_date |>
+        as.Date() |>
+        seq(length.out = 2L, by = "day") |>
+        (\(x) x[2])() |>
+        as.Date() ->
+        start_date
+
+    data.table(last_date = start_date) |>
+        fwrite("last_date.csv")
+}
 
 fread("rugby.csv") |>
     DT(, match_date := as.Date(match_date)) |>
@@ -235,7 +278,7 @@ if (fread("rugby.csv", select = c("home_tries", "home_conversion",
 end_rows <- NROW(fread("rugby.csv"))
 
 sprintf("The rugby data have updated, adding %d rows, and %s",
-        end_rows - start_rows, timetaken(start_time)) |>
+        end_rows - start_rows, timetaken(my_time)) |>
     shQuote() |>
     httr::POST(url = paste0("https://ntfy.sh/", "rugby_koortzjg"), body = _) |>
     invisible()
