@@ -29,14 +29,12 @@ jobs:
             
             - uses: r-lib/actions/setup-r@v2
 
-            - uses: r-lib/actions/setup-r-dependencies@v2
+            #- uses: r-lib/actions/setup-r-dependencies@v2
             
-            # Runs a single command using the runners shell
-            - name: Run a one-line script
-              run: echo Hello, world!
-            
-            # Runs a set of commands using the runners shell
-            - name: Run a multi-line script
+            - name: Commit Results
               run: |
-                echo Add other actions to build,
-                echo test, and deploy your project.
+                git config --local user.name "$GITHUB_ACTOR"
+                git config --local user.email "<>"
+                timestamp=$(date -u)
+                git commit products.csv -m "Latest data: ${timestamp}" || exit 0
+                git push origin
