@@ -148,7 +148,7 @@ get_espn_rugby <- function(date) {
                        away_kick = match_stats[4, X5][[1]]) |>
                 DT(!(home_score == 0 & away_score == 0)) |>
                 DT() |>
-                fwrite("data/rugby.csv", append = TRUE)
+                fwrite("rugby.csv", append = TRUE)
 
             n_y <- n_y + 1L
 
@@ -170,7 +170,7 @@ get_espn_rugby <- function(date) {
 start_time <- proc.time()
 
 ## need to find the last date this was updated
-fread("data/last_date.csv", colClasses = "Date") |>
+fread("last_date.csv", colClasses = "Date") |>
     DT(, last_date) ->
     start_date
 
@@ -208,10 +208,10 @@ while (start_date < Sys.Date()) {
         start_date
 
     data.table(last_date = start_date) |>
-        fwrite("data/last_date.csv")
+        fwrite("last_date.csv")
 }
 
-fread("data/rugby.csv") |>
+fread("rugby.csv") |>
     DT(, match_date := as.Date(match_date)) |>
     DT(, venue := competition_name == "Rugby World Cup") |>
     DT(, venue := fifelse((venue), 0, 10)) |>
@@ -233,7 +233,7 @@ fread("data/rugby.csv") |>
          cbind(x))() |>
     DT(, .(match_date, home_team, home_elo = as.integer(elo.A), away_team,
            away_elo = as.integer(elo.B))) |>
-    DT(fread("data/rugby.csv") |>
+    DT(fread("rugby.csv") |>
            DT(, match_date := as.Date(match_date)),
        on = .(match_date, home_team, away_team)) |>
     DT(, .(match_date, competition_name, home_team, home_score, home_elo,
@@ -244,17 +244,17 @@ fread("data/rugby.csv") |>
     DT(, all_count := rowid(match_date, competition_name, home_team,
                             away_team)) |>
     DT(all_count == 1, -"all_count") |>
-    fwrite("data/rugby.csv")
+    fwrite("rugby.csv")
 
-if (fread("data/rugby.csv", select = c("home_tries", "home_conversion",
-                                       "home_penalty", "away_tries",
-                                       "away_conversion", "away_penalty")) |>
+if (fread("rugby.csv", select = c("home_tries", "home_conversion",
+                                  "home_penalty", "away_tries",
+                                  "away_conversion", "away_penalty")) |>
         DT(, all_count := seq_len(.N)) |>
         melt(id.vars = "all_count", variable.factor = FALSE) |>
         DT(, value) |>
         is.na() |>
         sum() > 0) {
-    fread("data/rugby.csv") |>
+    fread("rugby.csv") |>
         DT(, `:=`(home_tries = fifelse(is.na(home_tries),
                                        decompose_score(home_score, "tries"),
                                        home_tries),
@@ -281,7 +281,7 @@ if (fread("data/rugby.csv", select = c("home_tries", "home_conversion",
                                          away_penalty)),
            .(match_date, competition_name, home_team, home_score, away_team,
              away_score)) |>
-        fwrite("data/rugby.csv")
+        fwrite("rugby.csv")
 }
 
 ntfy_post("rugby updated", timetaken(start_time))
