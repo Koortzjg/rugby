@@ -225,14 +225,16 @@ if (fread("rugby.csv", select = c("home_tries", "home_conversion",
                                          away_penalty)),
            .(match_date, competition_name, home_team, home_score, away_team,
              away_score)) |>
+        DT(, `:=`(home_kick = fcoalesce(home_kick, 0L),
+                  away_kick = fcoalesce(away_kick, 0L))) |>
         fwrite("rugby.csv")
 }
 
 ## rows before addition
 end_rows <- NROW(fread("rugby.csv"))
 
-sprintf("The rugby data have updated, adding %d rows, and %s",
-        end_rows - start_rows, timetaken(start_time)) |>
+sprintf("The rugby data have updated for %s, adding %d rows, and %s",
+        Sys.Date() - 1, end_rows - start_rows, timetaken(start_time)) |>
     shQuote() |>
     httr::POST(url = paste0("https://ntfy.sh/", "rugby_koortzjg"), body = _) |>
     invisible()
