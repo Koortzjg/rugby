@@ -155,8 +155,7 @@ start_rows <- NROW(fread("rugby.csv"))
 
 get_espn_rugby(Sys.Date() - 1)
 
-fread("rugby.csv") |>
-    DT(, match_date := as.Date(match_date)) |>
+fread("rugby.csv", colClasses = list(Date = "match_date")) |>
     DT(, venue := competition_name == "Rugby World Cup") |>
     DT(, venue := fifelse((venue), 0, 10)) |>
     (\(x) elo.run(score(home_score, away_score) ~ adjust(home_team, venue) +
