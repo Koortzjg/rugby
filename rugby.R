@@ -150,6 +150,24 @@ get_espn_rugby <- function(date) {
     }
 }
 
+## decompose the rugby score into tries, conversions, and penalties
+## This functions estimate the number of tries, conversions, and penalties from
+## a rugby score.
+decompose_score <- function(score, what) {
+    result <- lpSolve::lp("max", c(3, 1, 1), matrix(c(7, 5, 3), nrow = 1,
+                                                    byrow = TRUE), c("="),
+                          c(score), all.int = TRUE)
+
+    result <- switch(what, penalty = result[["solution"]][3],
+                     tries = result[["solution"]][2] + result[["solution"]][1],
+                     conversions = result[["solution"]][1])
+
+    return(result)
+}
+
+decompose_score <- Vectorize(decompose_score)
+
+
 ## rows before addition
 start_rows <- NROW(fread("rugby.csv"))
 
