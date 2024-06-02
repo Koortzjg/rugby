@@ -146,6 +146,13 @@
       ],
       "Hash": "b8552d117e1b808b09a832f589b79035"
     },
+    "lpSolve": {
+      "Package": "lpSolve",
+      "Version": "5.6.20",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2801c8082e89ed84cc0dbe43de850d31"
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.3",
