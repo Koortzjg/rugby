@@ -18471,12 +18471,26 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2023-12-30,Premiership Rugby,Northampton Saints,21,2678,3,2,0,0.67,Sale Sharks,17,2771,2,2,0,0.67
 2023-12-30,Premiership Rugby,Harlequins,32,2661,5,2,0,0.4,Gloucester Rugby,26,2582,4,2,0,0.67
 2023-12-31,Premiership Rugby,Leicester Tigers,35,2719,5,4,0,1,Bath Rugby,22,2562,3,2,1,0.75
+2024-01-01,United Rugby Championship,Ospreys,27,2571,3,3,2,0,Cardiff Blues,21,2470,3,3,0,0
+2024-01-01,United Rugby Championship,Connacht,22,2612,1,1,5,0,Munster,9,2735,0,0,3,0
+2024-01-01,United Rugby Championship,Dragons,13,2330,1,1,2,0,Scarlets,12,2534,0,0,4,0
+2024-01-01,United Rugby Championship,Leinster,21,2878,3,3,0,0,Ulster,22,2709,1,1,5,0
 2024-01-05,Premiership Rugby,Newcastle Falcons,3,2450,0,0,1,1,Harlequins,24,2668,4,2,0,0.5
 2024-01-05,Premiership Rugby,Sale Sharks,14,2756,2,2,0,1,Bristol Rugby,22,2629,3,2,1,0.75
 2024-01-06,Premiership Rugby,Exeter Chiefs,36,2704,5,4,1,0.83,Northampton Saints,42,2689,6,6,0,1
 2024-01-06,Premiership Rugby,Leicester Tigers,19,2732,3,2,0,0.67,Saracens,10,2803,1,1,1,1
+2024-01-06,Top 14,Pau,20,2534,2,2,2,0,La Rochelle,29,2712,2,2,5,0
+2024-01-06,Top 14,Perpignan,27,2527,3,3,2,0,Oyonnax,12,2404,0,0,4,0
+2024-01-06,Top 14,Bordeaux Begles,24,2737,3,3,1,0,Bayonne,23,2546,2,2,3,0
+2024-01-06,Top 14,Stade Francais Paris,14,2583,2,2,0,0,Clermont Auvergne,14,2643,2,2,0,0
+2024-01-06,Top 14,Racing 92,34,2635,4,4,2,0,Castres Olympique,30,2629,3,3,3,0
+2024-01-06,Top 14,Stade Toulousain,45,2829,6,6,1,0,Lyon,0,2640,0,0,0,0
+2024-01-06,United Rugby Championship,Sharks,18,2597,0,0,6,0,Lions,20,2620,2,2,2,0
 2024-01-07,Premiership Rugby,Bath Rugby,17,2573,3,1,0,0.33,Gloucester Rugby,10,2572,1,1,1,1
+2024-01-07,Top 14,Montpellier Herault,27,2618,3,3,2,0,Toulon,17,2649,2,2,1,0
 2024-01-12,European Rugby Champions Cup,Northampton Saints,61,2695,9,8,0,0.89,Bayonne,14,2461,2,2,0,1
+2024-01-12,European Rugby Challenge Cup,Newcastle Falcons,18,2383,0,0,6,0,Benetton Treviso,57,2498,6,6,5,0
+2024-01-12,European Rugby Challenge Cup,Ospreys,25,2584,1,1,6,0,Perpignan,3,2514,0,0,1,0
 2024-01-13,European Rugby Champions Cup,Lyon,34,2687,4,4,2,1,Connacht,20,2605,3,1,1,0.5
 2024-01-13,European Rugby Champions Cup,Exeter Chiefs,19,2711,3,2,0,0.67,Glasgow Warriors,17,2612,2,2,1,1
 2024-01-13,European Rugby Champions Cup,Toulon,18,2677,2,1,2,0.75,Munster,29,2778,4,3,1,0.8
@@ -18485,11 +18499,20 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-01-13,European Rugby Champions Cup,Stormers,31,2688,4,4,1,0.71,Sale Sharks,24,2744,3,3,1,1
 2024-01-13,European Rugby Champions Cup,Ulster,24,2758,3,3,1,1,Stade Toulousain,48,2744,7,5,1,0.75
 2024-01-13,European Rugby Champions Cup,Cardiff Blues,15,2505,2,1,1,0.67,Harlequins,54,2677,8,7,0,0.88
+2024-01-13,European Rugby Challenge Cup,Sharks,38,2604,5,5,1,0,Oyonnax,7,2397,1,1,0,0
+2024-01-13,European Rugby Challenge Cup,Clermont Auvergne,38,2653,5,5,1,0,Scarlets,17,2524,2,2,1,0
+2024-01-13,European Rugby Challenge Cup,Zebre,20,2254,2,2,2,0,Dragons,17,2318,2,2,1,0
+2024-01-13,European Rugby Challenge Cup,Castres Olympique,28,2638,4,4,0,0,Black Lion,6,2490,0,0,2,0
+2024-01-13,European Rugby Challenge Cup,Edinburgh,20,2605,2,2,2,0,Gloucester Rugby,21,2582,3,3,0,0
+2024-01-13,European Rugby Challenge Cup,Montpellier Herault,13,2628,1,1,2,0,Lions,3,2611,0,0,1,0
 2024-01-14,European Rugby Champions Cup,Bath Rugby,29,2586,4,3,1,0.67,Racing 92,25,2691,3,2,2,0.8
 2024-01-14,European Rugby Champions Cup,La Rochelle,45,2718,7,5,0,0.71,Leicester Tigers,12,2716,2,1,0,0.5
 2024-01-14,European Rugby Champions Cup,Bordeaux Begles,55,2717,9,5,0,0.56,Saracens,15,2784,2,1,1,0.67
+2024-01-14,European Rugby Challenge Cup,Cheetahs,20,2477,2,2,2,0,Pau,33,2543,3,3,4,0
 2024-01-19,European Rugby Champions Cup,Glasgow Warriors,29,2629,5,2,0,0.4,Toulon,5,2659,1,0,0,0
 2024-01-19,European Rugby Champions Cup,Connacht,27,2620,4,2,1,0.6,Bristol Rugby,10,2603,1,0,1,1
+2024-01-19,European Rugby Challenge Cup,Gloucester Rugby,35,2599,5,5,0,0,Castres Olympique,5,2621,1,0,0,0
+2024-01-19,European Rugby Challenge Cup,Scarlets,19,2516,1,1,4,0,Edinburgh,31,2613,4,4,1,0
 2024-01-20,European Rugby Champions Cup,Harlequins,47,2695,7,6,0,0.86,Ulster,19,2740,3,2,0,0.67
 2024-01-20,European Rugby Champions Cup,Bulls,46,2627,6,5,2,0.88,Bordeaux Begles,40,2705,6,5,0,0.83
 2024-01-20,European Rugby Champions Cup,Leicester Tigers,10,2708,1,1,1,1,Leinster,27,2924,4,2,1,0.6
@@ -18497,20 +18520,49 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-01-20,European Rugby Champions Cup,Munster,23,2766,3,1,2,0.5,Northampton Saints,26,2708,2,2,3,0.83
 2024-01-20,European Rugby Champions Cup,Stade Francais Paris,20,2550,3,1,1,0.5,Stormers,24,2695,4,2,0,0.5
 2024-01-20,European Rugby Champions Cup,Saracens,39,2791,5,4,2,0.86,Lyon,24,2680,3,3,1,1
+2024-01-20,European Rugby Challenge Cup,Black Lion,3,2481,0,0,1,0,Clermont Auvergne,36,2662,3,3,5,0
+2024-01-20,European Rugby Challenge Cup,Pau,28,2546,4,4,0,0,Zebre,27,2251,3,3,2,0
+2024-01-20,European Rugby Challenge Cup,Oyonnax,28,2409,4,4,0,0,Cheetahs,27,2465,3,3,2,0
+2024-01-20,European Rugby Challenge Cup,Benetton Treviso,27,2511,3,3,2,0,Montpellier Herault,19,2615,1,1,4,0
 2024-01-21,European Rugby Champions Cup,Sale Sharks,24,2733,4,2,0,0.5,La Rochelle,37,2729,4,4,3,1
 2024-01-21,European Rugby Champions Cup,Stade Toulousain,31,2749,5,2,0,0.4,Bath Rugby,19,2580,3,2,0,0.67
 2024-01-21,European Rugby Champions Cup,Bayonne,40,2485,6,5,0,0.83,Exeter Chiefs,17,2687,3,1,0,0.33
+2024-01-21,European Rugby Challenge Cup,Perpignan,23,2500,2,2,3,0,Newcastle Falcons,32,2397,2,2,6,0
+2024-01-21,European Rugby Challenge Cup,Lions,28,2600,4,4,0,0,Ospreys,38,2595,5,5,1,0
+2024-01-21,European Rugby Challenge Cup,Dragons,9,2313,0,0,3,0,Sharks,29,2609,2,2,5,0
 2024-01-26,Premiership Rugby,Harlequins,19,2685,3,2,0,0.67,Leicester Tigers,20,2718,2,2,2,1
 2024-01-27,Premiership Rugby,Northampton Saints,38,2713,6,3,0,0.6,Newcastle Falcons,13,2445,1,1,2,1
 2024-01-27,Premiership Rugby,Bristol Rugby,57,2612,8,7,1,0.8,Bath Rugby,44,2571,6,3,2,0.71
 2024-01-27,Premiership Rugby,Saracens,40,2801,5,3,2,0.71,Exeter Chiefs,22,2677,3,2,1,0.6
+2024-01-27,Top 14,Bordeaux Begles,26,2728,2,2,4,0,Stade Francais Paris,30,2586,3,3,3,0
+2024-01-27,Top 14,Bayonne,21,2561,3,3,0,0,Oyonnax,17,2403,2,2,1,0
+2024-01-27,Top 14,Castres Olympique,20,2612,2,2,2,0,Clermont Auvergne,23,2671,2,2,3,0
+2024-01-27,Top 14,Lyon,36,2648,3,3,5,0,Perpignan,24,2495,3,3,1,0
+2024-01-27,Top 14,Montpellier Herault,22,2622,1,1,5,0,Pau,17,2538,2,2,1,0
+2024-01-27,Top 14,Toulon,25,2640,1,1,6,0,La Rochelle,23,2724,2,2,3,0
+2024-01-27,United Rugby Championship,Bulls,30,2738,3,3,3,0,Lions,28,2593,4,4,0,0
 2024-01-28,Premiership Rugby,Gloucester Rugby,32,2586,4,3,2,0.83,Sale Sharks,20,2719,2,2,2,1
+2024-01-28,Top 14,Racing 92,20,2630,2,2,2,0,Stade Toulousain,27,2850,3,3,2,0
 2024-02-02,Six Nations Championship,France,17,2918,2,2,1,0.75,Ireland,38,3025,5,5,1,0.86
+2024-02-02,Six Nations,France,17,2918,2,2,1,0,Ireland,38,3025,5,5,1,0
 2024-02-03,Six Nations Championship,Italy,24,2556,3,3,1,0.8,England,27,2878,2,1,5,0.86
 2024-02-03,Six Nations Championship,Wales,26,2744,4,3,0,0.75,Scotland,27,2775,3,3,2,1
+2024-02-03,Six Nations,Italy,24,2556,3,3,1,0,England,27,2878,3,3,2,0
+2024-02-03,Six Nations,Wales,26,2744,2,2,4,0,Scotland,27,2775,3,3,2,0
+2024-02-03,Top 14,Perpignan,26,2515,2,2,4,0,Racing 92,5,2610,1,0,0,0
+2024-02-03,Top 14,Oyonnax,19,2398,1,1,4,0,Stade Francais Paris,23,2592,2,2,3,0
+2024-02-03,Top 14,Clermont Auvergne,38,2685,5,5,1,0,Lyon,21,2634,3,3,0,0
+2024-02-03,Top 14,La Rochelle,18,2731,0,0,6,0,Montpellier Herault,10,2615,1,1,1,0
+2024-02-03,Top 14,Pau,33,2530,3,3,4,0,Castres Olympique,44,2621,5,5,3,0
+2024-02-03,Top 14,Stade Toulousain,46,2855,4,4,6,0,Bayonne,26,2557,2,2,4,0
+2024-02-03,International Test Match,Algeria,26,2562,2,2,4,0,Senegal,12,2477,0,0,4,0
+2024-02-04,Top 14,Toulon,32,2632,2,2,6,0,Bordeaux Begles,37,2736,4,4,3,0
 2024-02-10,Six Nations Championship,Scotland,16,2769,1,1,3,0,France,20,2925,2,2,2,0
 2024-02-10,Six Nations Championship,England,16,2884,1,1,3,0,Wales,14,2738,2,2,0,0
+2024-02-10,Six Nations,Scotland,16,2769,1,1,3,0,France,20,2925,2,2,2,0
+2024-02-10,Six Nations,England,16,2884,1,1,3,0,Wales,14,2738,2,2,0,0
 2024-02-11,Six Nations Championship,Ireland,36,3027,3,3,5,0,Italy,0,2555,0,0,0,0
+2024-02-11,Six Nations,Ireland,36,3027,3,3,5,0,Italy,0,2555,0,0,0,0
 2024-02-16,United Rugby Championship,Scarlets,7,2578,1,1,0,0,Munster,42,2774,6,6,0,0
 2024-02-16,United Rugby Championship,Zebre,19,2262,1,1,4,0,Edinburgh,24,2654,3,3,1,0
 2024-02-17,Top 14,Lyon,28,2691,4,4,0,0,La Rochelle,17,2718,2,2,1,0
@@ -18540,8 +18592,11 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-02-24,Super Rugby Pacific,Blues,34,2753,4,4,2,0,Fijian Drua,10,2409,1,1,1,0
 2024-02-24,Super Rugby Pacific,Highlanders,35,2520,5,5,0,0,Moana Pasifika,21,2343,3,3,0,0
 2024-02-24,Super Rugby Pacific,Queensland Reds,40,2485,4,4,4,0,New South Wales Waratahs,22,2426,1,1,5,0
+2024-02-24,Six Nations,Ireland,31,3031,4,4,1,0,Wales,7,2734,1,1,0,0
+2024-02-24,Six Nations,Scotland,30,2782,3,3,3,0,England,21,2871,3,3,0,0
 2024-02-25,Six Nations Championship,France,13,2921,1,1,2,0,Italy,13,2559,1,1,2,0
 2024-02-25,Top 14,Clermont Auvergne,33,2661,3,3,4,0,Stade Toulousain,37,2761,4,4,3,0
+2024-02-25,Six Nations,France,13,2921,1,1,2,0,Italy,13,2559,1,1,2,0
 2024-03-01,United Rugby Championship,Edinburgh,19,2661,1,1,4,0,Ospreys,15,2564,0,0,5,0
 2024-03-01,United Rugby Championship,Munster,45,2775,6,6,1,0,Zebre,29,2261,2,2,5,0
 2024-03-01,Super Rugby Pacific,Highlanders,29,2516,2,2,5,0,Blues,37,2758,4,4,3,0
@@ -18577,8 +18632,12 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-03-09,Super Rugby Pacific,Brumbies,22,2639,1,1,5,0,Western Force,19,2336,1,1,4,0
 2024-03-09,Super Rugby Pacific,Hurricanes,29,2678,2,2,5,0,Blues,21,2745,3,3,0,0
 2024-03-09,Super Rugby Pacific,Queensland Reds,25,2497,1,1,6,0,Chiefs,19,2764,1,1,4,0
+2024-03-09,Six Nations,Italy,31,2574,4,4,1,0,Scotland,29,2766,2,2,5,0
+2024-03-09,Six Nations,England,23,2885,2,2,3,0,Ireland,22,3017,1,1,5,0
+2024-03-09,International Test Match,Czech Republic,25,2628,1,1,6,0,Switzerland,41,2620,5,5,2,0
 2024-03-10,Six Nations Championship,Wales,24,2726,3,3,1,0,France,45,2929,6,6,1,0
 2024-03-10,Top 14,Racing 92,20,2657,2,2,2,0,Toulon,6,2635,0,0,2,0
+2024-03-10,Six Nations,Wales,24,2726,3,3,1,0,France,45,2929,6,6,1,0
 2024-03-15,Super Rugby Pacific,Crusaders,10,2804,1,1,1,0,Hurricanes,14,2692,2,2,0,0
 2024-03-15,Super Rugby Pacific,Melbourne Rebels,26,2371,2,2,4,0,Queensland Reds,53,2508,5,5,6,0
 2024-03-15,Super Rugby Pacific,Western Force,14,2326,2,2,0,0,Moana Pasifika,22,2355,1,1,5,0
@@ -18588,6 +18647,10 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-03-16,Super Rugby Pacific,Highlanders,21,2517,3,3,0,0,Brumbies,27,2646,3,3,2,0
 2024-03-16,Super Rugby Pacific,Chiefs,46,2768,4,4,6,0,Fijian Drua,29,2412,2,2,5,0
 2024-03-16,Super Rugby Pacific,New South Wales Waratahs,10,2434,1,1,1,0,Blues,12,2748,0,0,4,0
+2024-03-16,Six Nations,Wales,21,2711,3,3,0,0,Italy,24,2588,3,3,1,0
+2024-03-16,Six Nations,Ireland,17,3021,2,2,1,0,Scotland,13,2763,1,1,2,0
+2024-03-16,Six Nations,France,33,2937,3,3,4,0,England,31,2877,4,4,1,0
+2024-03-16,International Test Match,Croatia,37,2597,4,4,3,0,Lithuania,22,2595,1,1,5,0
 2024-03-22,Premiership Rugby,Bristol Rugby,52,2631,7,7,1,0,Northampton Saints,21,2694,3,3,0,0
 2024-03-22,Premiership Rugby,Leicester Tigers,25,2704,1,1,6,0,Gloucester Rugby,27,2600,3,3,2,0
 2024-03-22,United Rugby Championship,Glasgow Warriors,17,2644,2,2,1,0,Cardiff Blues,13,2483,1,1,2,0
@@ -18612,6 +18675,9 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-03-23,Super Rugby Pacific,Chiefs,28,2771,4,4,0,0,Highlanders,21,2513,3,3,0,0
 2024-03-23,Super Rugby Pacific,Blues,26,2765,2,2,4,0,Crusaders,6,2787,0,0,2,0
 2024-03-23,Super Rugby Pacific,Western Force,40,2341,4,4,4,0,Queensland Reds,31,2493,4,4,1,0
+2024-03-23,International Test Match,Ukraine,18,2574,0,0,6,0,Czech Republic,48,2642,6,6,2,0
+2024-03-23,International Test Match,Lithuania,8,2578,1,0,1,0,Sweden,27,2560,3,3,2,0
+2024-03-23,International Test Match,Switzerland,35,2634,5,5,0,0,Croatia,10,2583,1,1,1,0
 2024-03-24,Premiership Rugby,Bath Rugby,42,2592,6,6,0,0,Sale Sharks,24,2698,3,3,1,0
 2024-03-24,Top 14,Bordeaux Begles,31,2691,4,4,1,0,Stade Toulousain,28,2744,4,4,0,0
 2024-03-29,Premiership Rugby,Newcastle Falcons,13,2437,1,1,2,0,Leicester Tigers,19,2708,1,1,4,0
@@ -18661,6 +18727,9 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-04-06,URBA Top 12,CASI,30,2409,3,3,3,0,B.A.C.R.C.,27,2407,3,3,2,0
 2024-04-06,URBA Top 12,Regatas Bella Vista,13,2385,1,1,2,0,Belgrano AC,24,2542,3,3,1,0
 2024-04-06,URBA Top 12,San Luis,25,2404,1,1,6,0,Hindú,20,2699,2,2,2,0
+2024-04-06,International Test Match,Sweden,36,2571,3,3,5,0,Ukraine,24,2564,3,3,1,0
+2024-04-06,International Test Match,Austria,57,2372,6,6,5,0,Bosnia-Herzegovina,17,2479,2,2,1,0
+2024-04-06,International Test Match,Hungary,15,2358,0,0,5,0,Luxembourg,18,2472,0,0,6,0
 2024-04-07,European Rugby Champions Cup,Northampton Saints,24,2719,3,3,1,0,Munster,14,2771,2,2,0,0
 2024-04-07,European Rugby Champions Cup,Stade Toulousain,31,2760,4,4,1,0,Racing 92,7,2670,1,1,0,0
 2024-04-07,European Rugby Challenge Cup,Montpellier Herault,17,2659,2,2,1,0,Ulster,40,2718,4,4,4,0
@@ -18682,6 +18751,11 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-04-13,URBA Top 12,B.A.C.R.C.,34,2429,4,4,2,0,CUBA,15,2560,0,0,5,0
 2024-04-13,URBA Top 12,Newman,12,2645,0,0,4,0,SIC,35,2662,5,5,0,0
 2024-04-13,URBA Top 12,Club Atletico del Rosario,18,2491,0,0,6,0,Champagnat,18,2491,0,0,6,0
+2024-04-13,International Test Match,Andorra,0,2355,0,0,0,0,Finland,28,2388,4,4,0,0
+2024-04-13,International Test Match,Denmark,41,2461,5,5,2,0,Norway,5,2259,1,0,0,0
+2024-04-13,International Test Match,Slovenia,14,2344,2,2,0,0,Austria,31,2387,4,4,1,0
+2024-04-13,International Test Match,Serbia,22,2487,1,1,5,0,Turkey,31,2421,4,4,1,0
+2024-04-13,International Test Match,Switzerland,68,2645,8,8,4,0,Ukraine,0,2552,0,0,0,0
 2024-04-14,European Rugby Champions Cup,Stade Toulousain,64,2771,7,7,5,0,Exeter Chiefs,26,2663,2,2,4,0
 2024-04-14,European Rugby Challenge Cup,Benetton Treviso,39,2451,3,3,6,0,Connacht,24,2599,3,3,1,0
 2024-04-19,United Rugby Championship,Ulster,19,2705,1,1,4,0,Cardiff Blues,17,2476,2,2,1,0
@@ -18711,6 +18785,10 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-04-20,URBA Top 12,CUBA,41,2550,5,5,2,0,Belgrano AC,42,2558,6,6,0,0
 2024-04-20,URBA Top 12,CASI,44,2428,5,5,3,0,Hindú,8,2677,1,0,1,0
 2024-04-20,URBA Top 12,Regatas Bella Vista,28,2393,4,4,0,0,San Luis,17,2387,2,2,1,0
+2024-04-20,International Test Match,Latvia,29,2478,2,2,5,0,Denmark,25,2451,1,1,6,0
+2024-04-20,International Test Match,Bosnia-Herzegovina,13,2458,1,1,2,0,Hungary,48,2378,6,6,2,0
+2024-04-20,International Test Match,Bulgaria,30,2486,3,3,3,0,Serbia,7,2471,1,1,0,0
+2024-04-20,International Test Match,Luxembourg,84,2481,12,12,0,0,Slovenia,7,2335,1,1,0,0
 2024-04-21,Premiership Rugby,Bristol Rugby,85,2647,10,10,5,0,Newcastle Falcons,14,2430,2,2,0,0
 2024-04-21,Premiership Rugby,Sale Sharks,37,2708,4,4,3,0,Harlequins,31,2692,4,4,1,0
 2024-04-21,Top 14,Bordeaux Begles,41,2699,5,5,2,0,Clermont Auvergne,7,2648,1,1,0,0
@@ -18743,9 +18821,12 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-04-27,URBA Top 12,Belgrano AC,24,2551,3,3,1,0,SIC,32,2673,2,2,6,0
 2024-04-27,URBA Top 12,B.A.C.R.C.,33,2437,3,3,4,0,Champagnat,23,2493,2,2,3,0
 2024-04-27,URBA Top 12,Newman,45,2640,6,6,1,0,Club Atletico del Rosario,17,2470,2,2,1,0
+2024-04-27,International Test Match,Trinidad and Tobago,23,2522,2,2,3,0,Guyana,24,2545,3,3,1,0
 2024-04-28,Premiership Rugby,Gloucester Rugby,17,2590,2,2,1,0,Exeter Chiefs,38,2664,5,5,1,0
 2024-04-28,Premiership Rugby,Newcastle Falcons,14,2425,2,2,0,0,Sale Sharks,35,2714,5,5,0,0
 2024-04-28,Top 14,La Rochelle,27,2713,3,3,2,0,Toulon,17,2666,2,2,1,0
+2024-04-30,International Test Match,Qatar,31,2541,4,4,1,0,Cambridge,33,2511,3,3,4,0
+2024-04-30,International Test Match,Sri Lanka,45,2492,6,6,1,0,India,10,2410,1,1,1,0
 2024-05-03,Super Rugby Pacific,Hurricanes,41,2713,5,5,2,0,New South Wales Waratahs,12,2415,0,0,4,0
 2024-05-03,Super Rugby Pacific,Melbourne Rebels,11,2408,1,0,2,0,Blues,38,2787,5,5,1,0
 2024-05-04,European Rugby Champions Cup,Leinster,20,2898,2,2,2,0,Northampton Saints,17,2728,2,2,1,0
@@ -18755,6 +18836,12 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-05-04,Super Rugby Pacific,Crusaders,28,2737,4,4,0,0,Queensland Reds,33,2502,3,3,4,0
 2024-05-04,Super Rugby Pacific,Chiefs,56,2760,8,8,0,0,Western Force,7,2347,1,1,0,0
 2024-05-04,Super Rugby Pacific,Brumbies,28,2667,4,4,0,0,Fijian Drua,20,2416,2,2,2,0
+2024-05-04,International Test Match,Qatar,34,2547,4,4,2,0,India,25,2404,1,1,6,0
+2024-05-04,International Test Match,Cyprus,14,2457,2,2,0,0,Malta,24,2592,3,3,1,0
+2024-05-04,International Test Match,Norway,8,2248,1,0,1,0,Andorra,32,2367,2,2,6,0
+2024-05-04,International Test Match,Moldova,48,2517,6,6,2,0,Bulgaria,6,2472,0,0,2,0
+2024-05-04,International Test Match,Cambridge,7,2495,1,1,0,0,Sri Lanka,45,2509,6,6,1,0
+2024-05-04,International Test Match,Bermuda,12,2460,0,0,4,0,Cayman Islands,44,2486,5,5,3,0
 2024-05-05,European Rugby Champions Cup,Stade Toulousain,38,2777,5,5,1,0,Harlequins,26,2696,2,2,4,0
 2024-05-10,Premiership Rugby,Newcastle Falcons,17,2419,2,2,1,0,Bath Rugby,28,2591,4,4,0,0
 2024-05-10,Premiership Rugby,Sale Sharks,31,2722,4,4,1,0,Leicester Tigers,22,2670,1,1,5,0
@@ -18788,6 +18875,8 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-05-11,URBA Top 12,SIC,15,2683,0,0,5,0,Hindú,13,2673,1,1,2,0
 2024-05-11,URBA Top 12,CUBA,10,2529,1,1,1,0,San Luis,15,2393,0,0,5,0
 2024-05-11,URBA Top 12,CASI,41,2449,5,5,2,0,Regatas Bella Vista,18,2375,0,0,6,0
+2024-05-11,International Test Match,Malaysia,46,2436,4,4,6,0,Singapore,7,2398,1,1,0,0
+2024-05-11,International Test Match,Norway,7,2238,1,1,0,0,Finland,57,2398,6,6,5,0
 2024-05-12,Top 14,Stade Toulousain,49,2785,7,7,0,0,Stade Francais Paris,18,2589,0,0,6,0
 2024-05-17,United Rugby Championship,Zebre,18,2238,0,0,6,0,Scarlets,32,2537,2,2,6,0
 2024-05-17,United Rugby Championship,Edinburgh,26,2651,2,2,4,0,Munster,29,2799,2,2,5,0
@@ -18820,6 +18909,8 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-05-18,URBA Top 12,Belgrano AC,69,2574,9,9,2,0,Club Atletico del Rosario,22,2449,1,1,5,0
 2024-05-18,URBA Top 12,B.A.C.R.C.,29,2443,2,2,5,0,Newman,30,2633,3,3,3,0
 2024-05-18,URBA Top 12,Hindú,19,2670,1,1,4,0,Champagnat,19,2483,1,1,4,0
+2024-05-18,International Test Match,Barbados,80,2474,11,11,1,0,St. Vincent and the Grenadines,0,2483,0,0,0,0
+2024-05-18,International Test Match,Jamaica,19,2450,1,1,4,0,Bermuda,14,2450,2,2,0,0
 2024-05-19,Top 14,Stade Francais Paris,22,2603,1,1,5,0,Bordeaux Begles,18,2708,0,0,6,0
 2024-05-24,European Rugby Challenge Cup,Gloucester Rugby,22,2587,1,1,5,0,Sharks,36,2606,3,3,5,0
 2024-05-24,Super Rugby Pacific,Chiefs,17,2753,2,2,1,0,Hurricanes,20,2719,2,2,2,0
@@ -18834,7 +18925,13 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-05-25,URBA Top 12,Champagnat,19,2470,1,1,4,0,San Luis,20,2402,2,2,2,0
 2024-05-25,URBA Top 12,SIC,19,2690,1,1,4,0,Regatas Bella Vista,10,2386,1,1,1,0
 2024-05-25,URBA Top 12,CUBA,11,2514,1,0,2,0,CASI,11,2470,1,0,2,0
+2024-05-25,International Test Match,Luxembourg,19,2498,1,1,4,0,Moldova,0,2501,0,0,0,0
 2024-05-26,Super Rugby Pacific,Highlanders,39,2507,3,3,6,0,Fijian Drua,3,2401,0,0,1,0
+2024-05-31,Premiership Rugby,Northampton Saints,22,2754,1,1,5,0,Saracens,20,2764,2,2,2,0
+2024-05-31,United Rugby Championship,Glasgow Warriors,38,2678,5,5,1,0,Zebre,26,2222,2,2,4,0
+2024-05-31,United Rugby Championship,Leinster,33,2860,3,3,4,0,Connacht,7,2588,1,1,0,0
+2024-05-31,Super Rugby Pacific,Crusaders,43,2624,4,4,5,0,Moana Pasifika,10,2348,1,1,1,0
+2024-05-31,Super Rugby Pacific,New South Wales Waratahs,26,2338,2,2,4,0,Queensland Reds,27,2530,3,3,2,0
 2024-06-01,Premiership Rugby,Bath Rugby,31,2625,4,4,1,0,Sale Sharks,23,2722,2,2,3,0
 2024-06-01,Top 14,Racing 92,24,2647,3,3,1,0,Pau,15,2529,0,0,5,0
 2024-06-01,Top 14,Perpignan,37,2524,4,4,3,0,Bordeaux Begles,30,2693,3,3,3,0
@@ -18857,8 +18954,12 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-06-01,URBA Top 12,San Luis,36,2419,3,3,5,0,Club Atletico del Rosario,14,2428,2,2,0,0
 2024-06-01,URBA Top 12,Belgrano AC,31,2598,4,4,1,0,B.A.C.R.C.,27,2428,3,3,2,0
 2024-06-01,URBA Top 12,Hindú,22,2657,1,1,5,0,Newman,40,2633,4,4,4,0
+2024-06-01,International Test Match,Cayman Islands,10,2477,1,1,1,0,Mexico,20,2549,2,2,2,0
+2024-06-01,International Test Match,Hong Kong,52,2545,7,7,1,0,United Arab Emirates,5,2449,1,0,0,0
+2024-06-01,International Test Match,Bermuda,35,2465,5,5,0,0,Bahamas,5,2442,1,0,0,0
 2024-06-02,Top 14,Toulon,52,2694,7,7,1,0,Clermont Auvergne,10,2657,1,1,1,0
 2024-06-02,Top 14,Stade Toulousain,31,2802,4,4,1,0,La Rochelle,31,2705,4,4,1,0
+2024-06-02,International Test Match,Korea Republic,55,2511,7,7,2,0,Malaysia,5,2424,1,0,0,0
 2024-06-07,United Rugby Championship,Munster,23,2813,2,2,3,0,Ospreys,7,2576,1,1,0,0
 2024-06-07,Super Rugby Pacific,Chiefs,43,2750,4,4,5,0,Queensland Reds,21,2500,3,3,0,0
 2024-06-08,Premiership Rugby,Northampton Saints,25,2724,1,1,6,0,Bath Rugby,21,2617,3,3,0,0
@@ -18881,6 +18982,9 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-06-08,URBA Top 12,Champagnat,23,2448,2,2,3,0,CASI,28,2495,4,4,0,0
 2024-06-08,URBA Top 12,SIC,30,2660,3,3,3,0,CUBA,31,2545,4,4,1,0
 2024-06-08,URBA Top 12,Newman,59,2640,8,8,1,0,San Luis,15,2412,0,0,5,0
+2024-06-08,International Test Match,Malaysia,6,2413,0,0,2,0,Hong Kong,70,2555,10,10,0,0
+2024-06-08,International Test Match,Saint Lucia,7,2483,1,1,0,0,Barbados,93,2491,12,12,3,0
+2024-06-09,International Test Match,United Arab Emirates,36,2460,3,3,5,0,Korea Republic,32,2500,2,2,6,0
 2024-06-14,Super Rugby Pacific,Blues,34,2805,4,4,2,0,Brumbies,20,2690,2,2,2,0
 2024-06-15,Top 14,Toulon,29,2672,2,2,5,0,La Rochelle,34,2723,4,4,2,0
 2024-06-15,United Rugby Championship,Bulls,25,2704,1,1,6,0,Leinster,20,2868,2,2,2,0
@@ -18888,6 +18992,7 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-06-15,Super Rugby Pacific,Hurricanes,19,2720,1,1,4,0,Chiefs,30,2760,3,3,3,0
 2024-06-16,Top 14,Bordeaux Begles,31,2706,4,4,1,0,Racing 92,17,2631,2,2,1,0
 2024-06-21,Top 14,Stade Toulousain,39,2800,3,3,6,0,La Rochelle,23,2711,2,2,3,0
+2024-06-21,International Test Match,United Arab Emirates,62,2473,8,8,2,0,Malaysia,19,2401,1,1,4,0
 2024-06-22,International Test Match,Japan,17,2610,2,2,1,0,England,52,2883,7,7,1,0
 2024-06-22,International Test Match,South Africa,41,3023,5,5,2,0,Wales,13,2707,1,1,2,0
 2024-06-22,Top 14,Stade Francais Paris,20,2599,2,2,2,0,Bordeaux Begles,22,2713,1,1,5,0
@@ -18899,6 +19004,8 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-06-22,URBA Top 12,San Luis,28,2423,4,4,0,0,B.A.C.R.C.,22,2433,1,1,5,0
 2024-06-22,URBA Top 12,Hindú,26,2650,2,2,4,0,Belgrano AC,23,2598,2,2,3,0
 2024-06-22,URBA Top 12,CUBA,52,2556,7,7,1,0,Champagnat,13,2438,1,1,2,0
+2024-06-22,International Test Match,Hong Kong,67,2567,7,7,6,0,Korea Republic,7,2488,1,1,0,0
+2024-06-22,International Test Match,Guyana,3,2529,0,0,1,0,Trinidad and Tobago,26,2538,2,2,4,0
 2024-06-28,Top 14,Stade Toulousain,59,2811,8,8,1,0,Bordeaux Begles,3,2702,0,0,1,0
 2024-06-29,URBA Top 12,Alumni,24,2573,3,3,1,0,Hindú,19,2638,1,1,4,0
 2024-06-29,URBA Top 12,Belgrano AC,40,2606,4,4,4,0,San Luis,22,2415,1,1,5,0
@@ -18906,7 +19013,12 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-06-29,URBA Top 12,Newman,37,2655,4,4,3,0,CASI,14,2498,2,2,0,0
 2024-06-29,URBA Top 12,Club Atletico del Rosario,17,2406,2,2,1,0,CUBA,38,2565,5,5,1,0
 2024-06-29,URBA Top 12,Champagnat,6,2430,0,0,2,0,SIC,39,2654,3,3,6,0
+2024-06-29,International Test Match,Singapore,30,2414,3,3,3,0,Thailand,8,2416,1,0,1,0
+2024-06-29,International Test Match,Bahamas,14,2427,2,2,0,0,Jamaica,48,2465,6,6,2,0
+2024-07-02,International Test Match,Chinese Taipei,12,2418,0,0,4,0,Thailand,18,2427,0,0,6,0
 2024-07-05,International Test Match,Samoa,33,2536,3,3,4,0,Italy,25,2577,1,1,6,0
+2024-07-05,International Test Match,Singapore,16,2403,1,1,3,0,Chinese Taipei,19,2428,1,1,4,0
+2024-07-05,International Test Match,Georgia,12,2497,0,0,4,0,Fiji,21,2618,3,3,0,0
 2024-07-06,International Test Match,United States of America,20,2495,2,2,2,0,Romania,22,2445,1,1,5,0
 2024-07-06,International Test Match,New Zealand,16,3019,1,1,3,0,England,15,2876,0,0,5,0
 2024-07-06,International Test Match,Australia,25,2710,1,1,6,0,Wales,16,2697,1,1,3,0
@@ -18919,6 +19031,8 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-07-06,URBA Top 12,Belgrano AC,22,2610,1,1,5,0,Regatas Bella Vista,12,2380,0,0,4,0
 2024-07-06,URBA Top 12,Hindú,17,2622,2,2,1,0,San Luis,23,2431,2,2,3,0
 2024-07-06,URBA Top 12,Newman,34,2662,4,4,2,0,CUBA,27,2558,3,3,2,0
+2024-07-06,International Test Match,Chile,22,2351,1,1,5,0,Hong Kong,17,2552,2,2,1,0
+2024-07-10,International Test Match,Uruguay,28,2469,4,4,0,0,France,43,2939,4,4,5,0
 2024-07-12,International Test Match,Tonga,14,2485,2,2,0,0,Italy,36,2589,3,3,5,0
 2024-07-12,International Test Match,United States of America,7,2489,1,1,0,0,Scotland,42,2771,6,6,0,0
 2024-07-13,International Test Match,Canada,35,2363,5,5,0,0,Romania,22,2432,1,1,5,0
@@ -18928,17 +19042,30 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-07-13,International Test Match,Namibia,22,2436,1,1,5,0,Portugal,37,2448,4,4,3,0
 2024-07-13,International Test Match,South Africa,24,3022,3,3,1,0,Ireland,25,3022,1,1,6,0
 2024-07-13,International Test Match,Argentina,33,2726,3,3,4,0,France,25,2926,1,1,6,0
+2024-07-13,International Test Match,Samoa,34,2556,4,4,2,0,Spain,30,2481,3,3,3,0
+2024-07-13,International Test Match,Chile,33,2367,3,3,4,0,Belgium,5,2375,1,0,0,0
 2024-07-14,URBA Top 12,Alumni,19,2585,1,1,4,0,San Luis,16,2425,1,1,3,0
 2024-07-14,URBA Top 12,Regatas Bella Vista,20,2375,2,2,2,0,Hindú,35,2626,5,5,0,0
 2024-07-14,URBA Top 12,CASI,37,2503,4,4,3,0,Belgrano AC,41,2617,5,5,2,0
 2024-07-14,URBA Top 12,CUBA,30,2567,3,3,3,0,B.A.C.R.C.,10,2419,1,1,1,0
 2024-07-14,URBA Top 12,SIC,10,2645,1,1,1,0,Newman,38,2678,5,5,1,0
 2024-07-14,URBA Top 12,Champagnat,36,2438,3,3,5,0,Club Atletico del Rosario,20,2386,2,2,2,0
+2024-07-14,International Test Match,Paraguay,12,2407,0,0,4,0,Hong Kong,80,2562,11,11,1,0
 2024-07-19,International Test Match,Fiji,5,2611,1,0,0,0,New Zealand,47,3028,5,5,4,0
+2024-07-19,International Test Match,Tonga,20,2464,2,2,2,0,Spain,29,2491,2,2,5,0
 2024-07-20,International Test Match,Australia,40,2724,4,4,4,0,Georgia,29,2504,2,2,5,0
 2024-07-20,International Test Match,South Africa,64,3023,7,7,5,0,Portugal,21,2447,3,3,0,0
 2024-07-20,International Test Match,Uruguay,5,2474,1,0,0,0,Argentina,79,2733,10,10,3,0
 2024-07-20,International Test Match,Scotland,52,2773,7,7,1,0,Chile,0,2336,0,0,0,0
+2024-07-20,International Test Match,New Zealand,47,3020,5,5,4,0,Fiji,5,2616,1,0,0,0
+2024-07-20,International Test Match,Namibia,38,2444,5,5,1,0,Burkina Faso,5,2502,1,0,0,0
+2024-07-20,International Test Match,Kenya,36,2492,3,3,5,0,Senegal,17,2462,2,2,1,0
+2024-07-20,International Test Match,Algeria,32,2574,2,2,6,0,Cote d'Ivoire,12,2488,0,0,4,0
+2024-07-20,International Test Match,Zimbabwe,22,2487,1,1,5,0,Uganda,20,2467,2,2,2,0
+2024-07-20,International Test Match,Brazil,25,2296,1,1,6,0,Hong Kong,26,2565,2,2,4,0
+2024-07-20,International Test Match,Chile,11,2365,1,0,2,0,Scotland,52,2782,7,7,1,0
+2024-07-20,International Test Match,Paraguay,20,2390,2,2,2,0,Belgium,45,2392,6,6,1,0
+2024-07-21,International Test Match,Japan,14,2564,2,2,0,0,Italy,42,2627,6,6,0,0
 2024-07-24,Olympic Men's 7s,Australia 7s,21,2496,3,3,0,0,Samoa 7s,14,2489,2,2,0,0
 2024-07-24,Olympic Men's 7s,Argentina 7s,31,2517,4,4,1,0,Kenya 7s,12,2450,0,0,4,0
 2024-07-24,Olympic Men's 7s,France 7s,12,2504,0,0,4,0,USA 7s,12,2512,0,0,4,0
@@ -18951,6 +19078,10 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-07-24,Olympic Men's 7s,Fiji 7s,38,2589,5,5,1,0,USA 7s,12,2500,0,0,4,0
 2024-07-24,Olympic Men's 7s,Ireland 7s,40,2523,4,4,4,0,Japan 7s,5,2471,1,0,0,0
 2024-07-24,Olympic Men's 7s,New Zealand 7s,17,2530,2,2,1,0,South Africa 7s,5,2504,1,0,0,0
+2024-07-24,International Test Match,Senegal,25,2478,1,1,6,0,Cote d'Ivoire,8,2472,1,0,1,0
+2024-07-24,International Test Match,Uganda,25,2478,1,1,6,0,Burkina Faso,15,2491,0,0,5,0
+2024-07-24,International Test Match,Kenya,12,2484,0,0,4,0,Algeria,20,2582,2,2,2,0
+2024-07-24,International Test Match,Zimbabwe,32,2500,2,2,6,0,Namibia,10,2432,1,1,1,0
 2024-07-25,Olympic Men's 7s,Samoa 7s,26,2489,2,2,4,0,Kenya 7s,0,2428,0,0,0,0
 2024-07-25,Olympic Men's 7s,Argentina 7s,14,2519,2,2,0,0,Australia 7s,22,2515,1,1,5,0
 2024-07-25,Olympic Men's 7s,USA 7s,33,2514,3,3,4,0,Uruguay 7s,17,2465,2,2,1,0
@@ -18974,6 +19105,7 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-07-27,Olympic Men's 7s,New Zealand 7s,17,2546,2,2,1,0,Ireland 7s,7,2507,1,1,0,0
 2024-07-27,Olympic Men's 7s,South Africa 7s,26,2527,2,2,4,0,Australia 7s,19,2508,1,1,4,0
 2024-07-27,Olympic Men's 7s,France 7s,28,2545,4,4,0,0,Fiji 7s,7,2597,1,1,0,0
+2024-07-27,International Test Match,Brazil,47,2314,5,5,4,0,Belgium,25,2373,1,1,6,0
 2024-07-28,Olympic Women's Rugby Sevens,Ireland Women 7s,12,2490,0,0,4,0,Great Britain Women 7s,21,2534,3,3,0,0
 2024-07-28,Olympic Women's Rugby Sevens,Australia Women 7s,34,2572,4,4,2,0,South Africa Women 7s,5,2487,1,0,0,0
 2024-07-28,Olympic Women's Rugby Sevens,USA Women 7s,36,2528,3,3,5,0,Japan Women 7s,7,2447,1,1,0,0
@@ -18986,6 +19118,11 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-07-28,Olympic Women's Rugby Sevens,France Women 7s,49,2529,7,7,0,0,Japan Women 7s,0,2436,0,0,0,0
 2024-07-28,Olympic Women's Rugby Sevens,Fiji Women 7s,12,2447,0,0,4,0,China Women 7s,40,2502,4,4,4,0
 2024-07-28,Olympic Women's Rugby Sevens,New Zealand Women 7s,33,2581,3,3,4,0,Canada Women 7s,7,2524,1,1,0,0
+2024-07-28,International Test Match,Cote d'Ivoire,23,2482,2,2,3,0,Burkina Faso,10,2481,1,1,1,0
+2024-07-28,International Test Match,Uganda,34,2488,4,4,2,0,Senegal,31,2468,4,4,1,0
+2024-07-28,International Test Match,Kenya,27,2472,3,3,2,0,Namibia,38,2443,5,5,1,0
+2024-07-28,International Test Match,Algeria,3,2563,0,0,1,0,Zimbabwe,29,2519,2,2,5,0
+2024-07-28,International Test Match,Costa Rica,27,2520,3,3,2,0,Peru,26,2412,2,2,4,0
 2024-07-29,Olympic Women's Rugby Sevens,Great Britain Women 7s,26,2529,2,2,4,0,South Africa Women 7s,17,2465,2,2,1,0
 2024-07-29,Olympic Women's Rugby Sevens,Australia Women 7s,19,2592,1,1,4,0,Ireland Women 7s,14,2497,2,2,0,0
 2024-07-29,Olympic Women's Rugby Sevens,Japan Women 7s,39,2452,3,3,6,0,Brazil Women 7s,12,2468,0,0,4,0
@@ -19044,6 +19181,7 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-08-18,National Provence Championship,Wellington,26,2690,2,2,4,0,Taranaki,19,2516,1,1,4,0
 2024-08-18,National Provence Championship,Bay of Plenty,24,2545,3,3,1,0,North Harbour,20,2512,2,2,2,0
 2024-08-18,National Provence Championship,Counties Manukau,20,2349,2,2,2,0,Waikato,26,2547,2,2,4,0
+2024-08-18,International Test Match,Brazil,77,2332,11,11,0,0,Paraguay,17,2372,2,2,1,0
 2024-08-23,National Provence Championship,Hawke's Bay,55,2566,7,7,2,0,Northland,30,2354,3,3,3,0
 2024-08-24,URBA Top 12,Alumni,37,2598,4,4,3,0,CASI,25,2488,1,1,6,0
 2024-08-24,URBA Top 12,CUBA,28,2543,4,4,0,0,Regatas Bella Vista,23,2369,2,2,3,0
@@ -19140,12 +19278,15 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-09-21,National Provence Championship,Northland,47,2344,5,5,4,0,North Harbour,24,2484,3,3,1,0
 2024-09-21,National Provence Championship,Canterbury,36,2702,3,3,5,0,Counties Manukau,28,2384,4,4,0,0
 2024-09-21,National Provence Championship,Wellington,30,2708,3,3,3,0,Bay of Plenty,25,2534,1,1,6,0
+2024-09-21,International Test Match,Hungary,12,2363,0,0,4,0,Austria,39,2402,3,3,6,0
 2024-09-22,Premiership Rugby,Sale Sharks,12,2730,0,0,4,0,Harlequins,11,2655,1,0,2,0
 2024-09-22,Top 14,Stade Francais Paris,10,2587,1,1,1,0,Toulon,14,2681,2,2,0,0
 2024-09-22,National Provence Championship,Waikato,25,2556,1,1,6,0,Tasman,27,2701,3,3,2,0
 2024-09-22,National Provence Championship,Auckland,27,2586,3,3,2,0,Southland,19,2190,1,1,4,0
 2024-09-22,National Provence Championship,Manawatu,10,2270,1,1,1,0,Otago,28,2446,4,4,0,0
 2024-09-25,National Provence Championship,Taranaki,31,2553,4,4,1,0,North Harbour,25,2476,1,1,6,0
+2024-09-25,International Test Match,Peru,15,2404,0,0,5,0,Venezuela,27,2514,3,3,2,0
+2024-09-25,International Test Match,Colombia,136,2513,19,19,1,0,Costa Rica,0,2504,0,0,0,0
 2024-09-27,Premiership Rugby,Bristol Rugby,41,2659,5,5,2,0,Gloucester Rugby,44,2595,5,5,3,0
 2024-09-27,United Rugby Championship,Glasgow Warriors,42,2675,6,6,0,0,Benetton Treviso,10,2468,1,1,1,0
 2024-09-27,United Rugby Championship,Leinster,34,2873,4,4,2,0,Dragons,6,2333,0,0,2,0
@@ -19176,11 +19317,17 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-09-28,National Provence Championship,Bay of Plenty,53,2541,5,5,6,0,Northland,13,2336,1,1,2,0
 2024-09-28,National Provence Championship,Hawke's Bay,36,2554,3,3,5,0,Auckland,35,2575,5,5,0,0
 2024-09-28,National Provence Championship,Otago,47,2470,5,5,4,0,Tasman,31,2677,4,4,1,0
+2024-09-28,International Test Match,Moldova,43,2512,4,4,5,0,Turkey,13,2410,1,1,2,0
+2024-09-28,International Test Match,Chile,64,2380,7,7,5,0,Paraguay,0,2357,0,0,0,0
 2024-09-29,Premiership Rugby,Leicester Tigers,15,2683,0,0,5,0,Bath Rugby,20,2648,2,2,2,0
 2024-09-29,Top 14,Stade Toulousain,12,2814,0,0,4,0,Bordeaux Begles,16,2727,1,1,3,0
 2024-09-29,National Provence Championship,Southland,14,2187,2,2,0,0,Waikato,38,2559,5,5,1,0
 2024-09-29,National Provence Championship,North Harbour,65,2499,8,8,3,0,Canterbury,19,2679,1,1,4,0
 2024-09-29,National Provence Championship,Taranaki,33,2556,3,3,4,0,Manawatu,31,2267,4,4,1,0
+2024-09-29,International Test Match,Kosovo,10,2483,1,1,1,0,Montenegro,55,2500,7,7,2,0
+2024-09-29,International Test Match,Peru,44,2423,5,5,3,0,Costa Rica,0,2486,0,0,0,0
+2024-09-29,International Test Match,Venezuela,5,2498,1,0,0,0,Colombia,50,2529,5,5,5,0
+2024-10-02,National Provence Championship,Tasman,31,2686,4,4,1,0,Auckland,17,2524,2,2,1,0
 2024-10-04,Premiership Rugby,Northampton Saints,33,2721,3,3,4,0,Harlequins,29,2651,2,2,5,0
 2024-10-04,Premiership Rugby,Sale Sharks,31,2724,4,4,1,0,Gloucester Rugby,27,2589,3,3,2,0
 2024-10-04,United Rugby Championship,Scarlets,23,2522,2,2,3,0,Connacht,24,2605,3,3,1,0
@@ -19210,10 +19357,16 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-10-05,National Provence Championship,Wellington,46,2691,4,4,6,0,Hawke's Bay,28,2545,4,4,0,0
 2024-10-05,National Provence Championship,Southland,59,2212,8,8,1,0,North Harbour,35,2474,5,5,0,0
 2024-10-05,National Provence Championship,Canterbury,36,2688,3,3,5,0,Waikato,19,2550,1,1,4,0
+2024-10-05,International Test Match,Bosnia-Herzegovina,30,2469,3,3,3,0,Montenegro,20,2489,2,2,2,0
+2024-10-05,International Test Match,Turkey,49,2427,7,7,0,0,Bulgaria,10,2455,1,1,1,0
+2024-10-05,International Test Match,Serbia,3,2458,0,0,1,0,Moldova,31,2526,4,4,1,0
+2024-10-05,International Test Match,Malta,43,2601,4,4,5,0,Cyprus,21,2448,3,3,0,0
+2024-10-05,International Test Match,Denmark,42,2464,6,6,0,0,Finland,0,2386,0,0,0,0
 2024-10-06,Premiership Rugby,Saracens,29,2811,2,2,5,0,Exeter Chiefs,14,2642,2,2,0,0
 2024-10-06,Top 14,Clermont Auvergne,19,2664,1,1,4,0,Toulon,18,2678,0,0,6,0
 2024-10-06,National Provence Championship,Tasman,29,2664,2,2,5,0,Taranaki,42,2570,6,6,0,0
 2024-10-06,National Provence Championship,Auckland,24,2564,3,3,1,0,Bay of Plenty,26,2553,2,2,4,0
+2024-10-06,International Test Match,Chile,36,2392,3,3,5,0,Brazil,10,2320,1,1,1,0
 2024-10-11,Premiership Rugby,Sale Sharks,43,2728,4,4,5,0,Newcastle Falcons,10,2393,1,1,1,0
 2024-10-11,United Rugby Championship,Glasgow Warriors,33,2685,3,3,4,0,Zebre,3,2248,0,0,1,0
 2024-10-11,National Provence Championship,Wellington,29,2695,2,2,5,0,Counties Manukau,14,2416,2,2,0,0
@@ -19234,10 +19387,13 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-10-12,United Rugby Championship,Ulster,32,2700,2,2,6,0,Connacht,27,2598,3,3,2,0
 2024-10-12,National Provence Championship,Bay of Plenty,19,2562,1,1,4,0,Hawke's Bay,17,2535,2,2,1,0
 2024-10-12,National Provence Championship,Taranaki,14,2559,2,2,0,0,Waikato,15,2560,0,0,5,0
+2024-10-12,International Test Match,Estonia,0,2346,0,0,0,0,Denmark,105,2475,15,15,0,0
+2024-10-12,International Test Match,Slovenia,74,2356,8,8,6,0,Kosovo,10,2463,1,1,1,0
 2024-10-13,Premiership Rugby,Harlequins,17,2665,2,2,1,0,Saracens,10,2797,1,1,1,0
 2024-10-13,Top 14,Lyon,35,2675,5,5,0,0,Stade Francais Paris,3,2575,0,0,1,0
 2024-10-13,United Rugby Championship,Dragons,19,2325,1,1,4,0,Lions,23,2613,2,2,3,0
 2024-10-13,National Provence Championship,Tasman,14,2649,2,2,0,0,Canterbury,62,2703,8,8,2,0
+2024-10-17,International Test Match,Paraguay,49,2379,7,7,0,0,Colombia,18,2507,0,0,6,0
 2024-10-18,Premiership Rugby,Newcastle Falcons,24,2408,3,3,1,0,Exeter Chiefs,18,2616,0,0,6,0
 2024-10-18,Premiership Rugby,Northampton Saints,47,2721,5,5,4,0,Sale Sharks,17,2712,2,2,1,0
 2024-10-18,United Rugby Championship,Scarlets,23,2546,2,2,3,0,Bulls,22,2707,1,1,5,0
@@ -19259,6 +19415,7 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-10-19,URBA Top 12,Newman,27,2697,3,3,2,0,Belgrano AC,28,2605,4,4,0,0
 2024-10-19,National Provence Championship,Bay of Plenty,32,2576,2,2,6,0,Canterbury,20,2689,2,2,2,0
 2024-10-19,National Provence Championship,Wellington,29,2701,2,2,5,0,Waikato,24,2554,3,3,1,0
+2024-10-19,International Test Match,Finland,81,2394,9,9,6,0,Norway,10,2230,1,1,1,0
 2024-10-20,Premiership Rugby,Leicester Tigers,29,2710,2,2,5,0,Gloucester Rugby,26,2569,2,2,4,0
 2024-10-20,Top 14,La Rochelle,32,2727,2,2,6,0,Bordeaux Begles,22,2727,1,1,5,0
 2024-10-20,URBA Top 12,SIC,21,2684,3,3,0,0,Alumni,30,2622,3,3,3,0
@@ -19282,5 +19439,22 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-10-26,United Rugby Championship,Cardiff Blues,21,2478,3,3,0,0,Ulster,19,2693,1,1,4,0
 2024-10-26,URBA Top 12,Alumni,20,2631,2,2,2,0,Belgrano AC,17,2596,2,2,1,0
 2024-10-26,National Provence Championship,Wellington,23,2707,2,2,3,0,Bay of Plenty,20,2569,2,2,2,0
+2024-10-26,International Test Match,Japan,19,2562,1,1,4,0,New Zealand,64,3004,7,7,5,0
+2024-10-26,International Test Match,Lithuania,47,2589,5,5,4,0,Luxembourg,20,2486,2,2,2,0
+2024-10-26,International Test Match,Sweden,22,2582,1,1,5,0,Czech Republic,16,2630,1,1,3,0
+2024-10-26,International Test Match,Norway,19,2224,1,1,4,0,Latvia,36,2484,3,3,5,0
+2024-10-26,International Test Match,Slovakia,16,2366,1,1,3,0,Hungary,51,2379,6,6,3,0
 2024-10-27,Premiership Rugby,Exeter Chiefs,19,2602,1,1,4,0,Harlequins,36,2668,3,3,5,0
 2024-10-27,Top 14,Stade Toulousain,57,2821,6,6,5,0,Toulon,5,2660,1,0,0,0
+2024-11-02,Top 14,Clermont Auvergne,32,2659,2,2,6,0,Bordeaux Begles,27,2735,3,3,2,0
+2024-11-02,Top 14,Castres Olympique,30,2620,3,3,3,0,Montpellier Herault,26,2572,2,2,4,0
+2024-11-02,Top 14,Toulon,21,2655,3,3,0,0,Lyon,10,2621,1,1,1,0
+2024-11-02,Top 14,Pau,23,2540,2,2,3,0,Racing 92,33,2597,3,3,4,0
+2024-11-02,Top 14,Perpignan,32,2571,2,2,6,0,Vannes,13,2466,1,1,2,0
+2024-11-02,Top 14,La Rochelle,35,2718,5,5,0,0,Stade Francais Paris,18,2590,0,0,6,0
+2024-11-02,International Test Match,Lithuania,19,2573,1,1,4,0,Sweden,46,2598,4,4,6,0
+2024-11-02,International Test Match,Latvia,62,2493,8,8,2,0,Estonia,0,2337,0,0,0,0
+2024-11-02,International Test Match,England,22,2859,1,1,5,0,New Zealand,24,3011,3,3,1,0
+2024-11-02,International Test Match,Scotland,57,2792,6,6,5,0,Fiji,17,2608,2,2,1,0
+2024-11-02,International Test Match,Belgium,48,2398,6,6,2,0,Switzerland,7,2621,1,1,0,0
+2024-11-03,Top 14,Bayonne,12,2600,0,0,4,0,Stade Toulousain,8,2851,1,0,1,0
