@@ -19473,20 +19473,38 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-11-09,International Test Match,France,52,2938,7,7,1,0,Japan,12,2576,0,0,4,0
 2024-11-10,International Test Match,Wales,19,2643,1,1,4,0,Fiji,24,2619,3,3,1,0
 2024-11-10,International Test Match,Scotland,15,2778,0,0,5,0,South Africa,32,3044,2,2,6,0
-2024-11-15,International Test Match,Ireland,22,3010,1,1,5,0,Argentina,19,2775,1,1,4,0
-2024-11-16,International Test Match,Korea Republic,22,2479,1,1,5,0,Zimbabwe,27,2554,3,3,2,0
-2024-11-16,International Test Match,Hong Kong,38,2541,5,5,1,0,Brazil,17,2344,2,2,1,0
-2024-11-16,International Test Match,United Arab Emirates,20,2441,2,2,2,0,Germany,26,2603,2,2,4,0
-2024-11-16,International Test Match,Uganda,5,2454,1,0,0,0,Kenya,21,2506,3,3,0,0
-2024-11-16,International Test Match,Croatia,31,2550,4,4,1,0,Sweden,42,2607,6,6,0,0
-2024-11-16,International Test Match,Netherlands,20,2597,2,2,2,0,Chile,17,2414,2,2,1,0
-2024-11-16,International Test Match,Japan,36,2582,3,3,5,0,Uruguay,20,2442,2,2,2,0
-2024-11-16,International Test Match,Spain,19,2502,1,1,4,0,Fiji,33,2637,3,3,4,0
+2024-11-15,International Test Match,Ireland,22,3020,1,1,5,0,Argentina,19,2766,1,1,4,0
+2024-11-16,International Test Match,Korea Republic,22,2479,1,1,5,0,Zimbabwe,27,2542,3,3,2,0
+2024-11-16,International Test Match,Hong Kong,38,2556,5,5,1,0,Brazil,17,2329,2,2,1,0
+2024-11-16,International Test Match,United Arab Emirates,20,2453,2,2,2,0,Germany,26,2603,2,2,4,0
+2024-11-16,International Test Match,Uganda,5,2462,1,0,0,0,Kenya,21,2498,3,3,0,0
+2024-11-16,International Test Match,Croatia,31,2561,4,4,1,0,Sweden,42,2608,6,6,0,0
+2024-11-16,International Test Match,Netherlands,20,2597,2,2,2,0,Chile,17,2401,2,2,1,0
+2024-11-16,International Test Match,Japan,36,2586,3,3,5,0,Uruguay,20,2450,2,2,2,0
+2024-11-16,International Test Match,Spain,19,2493,1,1,4,0,Fiji,33,2626,3,3,4,0
 2024-11-16,International Test Match,Poland,40,2591,4,4,4,0,Lithuania,13,2559,1,1,2,0
-2024-11-16,International Test Match,Scotland,59,2776,8,8,1,0,Portugal,21,2426,3,3,0,0
-2024-11-16,International Test Match,Romania,35,2460,5,5,0,0,Canada,27,2330,3,3,2,0
-2024-11-16,International Test Match,United States of America,36,2519,3,3,5,0,Tonga,17,2442,2,2,1,0
-2024-11-16,International Test Match,England,20,2832,2,2,2,0,South Africa,29,3054,2,2,5,0
-2024-11-16,International Test Match,France,30,2953,3,3,3,0,New Zealand,29,3025,2,2,5,0
-2024-11-17,International Test Match,Italy,20,2616,2,2,2,0,Georgia,17,2491,2,2,1,0
-2024-11-17,International Test Match,Wales,20,2620,2,2,2,0,Australia,52,2741,7,7,1,0
+2024-11-16,International Test Match,Scotland,59,2781,8,8,1,0,Portugal,21,2434,3,3,0,0
+2024-11-16,International Test Match,Romania,35,2450,5,5,0,0,Canada,27,2342,3,3,2,0
+2024-11-16,International Test Match,United States of America,36,2511,3,3,5,0,Tonga,17,2451,2,2,1,0
+2024-11-16,International Test Match,England,20,2845,2,2,2,0,South Africa,29,3049,2,2,5,0
+2024-11-16,International Test Match,France,30,2950,3,3,3,0,New Zealand,29,3015,2,2,5,0
+2024-11-17,International Test Match,Italy,20,2625,2,2,2,0,Georgia,17,2491,2,2,1,0
+2024-11-17,International Test Match,Wales,20,2630,2,2,2,0,Australia,52,2729,7,7,1,0
+2024-11-22,International Test Match,France,37,2966,4,4,3,0,Argentina,23,2758,2,2,3,0
+2024-11-23,Top 14,Toulon,39,2676,3,3,6,0,Bayonne,19,2556,1,1,4,0
+2024-11-23,Top 14,Castres Olympique,28,2650,4,4,0,0,La Rochelle,24,2704,3,3,1,0
+2024-11-23,Top 14,Lyon,22,2619,1,1,5,0,Clermont Auvergne,30,2682,3,3,3,0
+2024-11-23,Top 14,Montpellier Herault,30,2609,3,3,3,0,Pau,3,2518,0,0,1,0
+2024-11-23,Top 14,Stade Toulousain,41,2821,5,5,2,0,Perpignan,9,2533,0,0,3,0
+2024-11-23,Top 14,Vannes,29,2471,2,2,5,0,Bordeaux Begles,37,2724,4,4,3,0
+2024-11-23,International Test Match,Spain,23,2477,2,2,3,0,United States of America,26,2532,2,2,4,0
+2024-11-23,International Test Match,Croatia,32,2562,2,2,6,0,Lithuania,23,2536,2,2,3,0
+2024-11-23,International Test Match,Ireland,52,3026,7,7,1,0,Fiji,17,2630,2,2,1,0
+2024-11-23,International Test Match,Romania,21,2446,3,3,0,0,Uruguay,23,2452,2,2,3,0
+2024-11-23,International Test Match,Wales,12,2617,0,0,4,0,South Africa,45,3056,6,6,1,0
+2024-11-23,International Test Match,Czech Republic,15,2632,0,0,5,0,Poland,22,2616,1,1,5,0
+2024-11-23,International Test Match,Italy,11,2628,1,0,2,0,New Zealand,29,3007,2,2,5,0
+2024-11-24,Top 14,Stade Francais Paris,40,2599,4,4,4,0,Racing 92,24,2606,3,3,1,0
+2024-11-24,International Test Match,Scotland,27,2793,3,3,2,0,Australia,13,2731,1,1,2,0
+2024-11-24,International Test Match,Georgia,22,2494,1,1,5,0,Tonga,7,2431,1,1,0,0
+2024-11-24,International Test Match,England,59,2846,8,8,1,0,Japan,14,2589,2,2,0,0
