@@ -19490,21 +19490,44 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-11-16,International Test Match,France,30,2950,3,3,3,0,New Zealand,29,3015,2,2,5,0
 2024-11-17,International Test Match,Italy,20,2625,2,2,2,0,Georgia,17,2491,2,2,1,0
 2024-11-17,International Test Match,Wales,20,2630,2,2,2,0,Australia,52,2729,7,7,1,0
-2024-11-22,International Test Match,France,37,2966,4,4,3,0,Argentina,23,2758,2,2,3,0
+2024-11-22,International Test Match,France,37,2955,4,4,3,0,Argentina,23,2761,2,2,3,0
 2024-11-23,Top 14,Toulon,39,2676,3,3,6,0,Bayonne,19,2556,1,1,4,0
 2024-11-23,Top 14,Castres Olympique,28,2650,4,4,0,0,La Rochelle,24,2704,3,3,1,0
 2024-11-23,Top 14,Lyon,22,2619,1,1,5,0,Clermont Auvergne,30,2682,3,3,3,0
 2024-11-23,Top 14,Montpellier Herault,30,2609,3,3,3,0,Pau,3,2518,0,0,1,0
 2024-11-23,Top 14,Stade Toulousain,41,2821,5,5,2,0,Perpignan,9,2533,0,0,3,0
 2024-11-23,Top 14,Vannes,29,2471,2,2,5,0,Bordeaux Begles,37,2724,4,4,3,0
-2024-11-23,International Test Match,Spain,23,2477,2,2,3,0,United States of America,26,2532,2,2,4,0
-2024-11-23,International Test Match,Croatia,32,2562,2,2,6,0,Lithuania,23,2536,2,2,3,0
-2024-11-23,International Test Match,Ireland,52,3026,7,7,1,0,Fiji,17,2630,2,2,1,0
-2024-11-23,International Test Match,Romania,21,2446,3,3,0,0,Uruguay,23,2452,2,2,3,0
-2024-11-23,International Test Match,Wales,12,2617,0,0,4,0,South Africa,45,3056,6,6,1,0
-2024-11-23,International Test Match,Czech Republic,15,2632,0,0,5,0,Poland,22,2616,1,1,5,0
-2024-11-23,International Test Match,Italy,11,2628,1,0,2,0,New Zealand,29,3007,2,2,5,0
+2024-11-23,International Test Match,Spain,23,2483,2,2,3,0,United States of America,26,2521,2,2,4,0
+2024-11-23,International Test Match,Croatia,32,2571,2,2,6,0,Lithuania,23,2549,2,2,3,0
+2024-11-23,International Test Match,Ireland,52,3022,7,7,1,0,Fiji,17,2623,2,2,1,0
+2024-11-23,International Test Match,Romania,21,2440,3,3,0,0,Uruguay,23,2461,2,2,3,0
+2024-11-23,International Test Match,Wales,12,2628,0,0,4,0,South Africa,45,3051,6,6,1,0
+2024-11-23,International Test Match,Czech Republic,15,2631,0,0,5,0,Poland,22,2603,1,1,5,0
+2024-11-23,International Test Match,Italy,11,2622,1,0,2,0,New Zealand,29,3018,2,2,5,0
 2024-11-24,Top 14,Stade Francais Paris,40,2599,4,4,4,0,Racing 92,24,2606,3,3,1,0
-2024-11-24,International Test Match,Scotland,27,2793,3,3,2,0,Australia,13,2731,1,1,2,0
-2024-11-24,International Test Match,Georgia,22,2494,1,1,5,0,Tonga,7,2431,1,1,0,0
-2024-11-24,International Test Match,England,59,2846,8,8,1,0,Japan,14,2589,2,2,0,0
+2024-11-24,International Test Match,Scotland,27,2790,3,3,2,0,Australia,13,2720,1,1,2,0
+2024-11-24,International Test Match,Georgia,22,2500,1,1,5,0,Tonga,7,2443,1,1,0,0
+2024-11-24,International Test Match,England,59,2851,8,8,1,0,Japan,14,2580,2,2,0,0
+2024-11-29,Premiership Rugby,Harlequins,24,2654,3,3,1,0,Bristol Rugby,48,2699,6,6,2,0
+2024-11-29,Premiership Rugby,Newcastle Falcons,17,2415,2,2,1,0,Saracens,12,2764,0,0,4,0
+2024-11-29,United Rugby Championship,Glasgow Warriors,17,2690,2,2,1,0,Scarlets,15,2523,0,0,5,0
+2024-11-29,United Rugby Championship,Ulster,20,2697,2,2,2,0,Leinster,27,2896,3,3,2,0
+2024-11-30,Premiership Rugby,Northampton Saints,17,2706,2,2,1,0,Gloucester Rugby,25,2610,1,1,6,0
+2024-11-30,Premiership Rugby,Bath Rugby,19,2689,1,1,4,0,Exeter Chiefs,15,2596,0,0,5,0
+2024-11-30,Top 14,Racing 92,17,2587,2,2,1,0,Stade Toulousain,21,2830,3,3,0,0
+2024-11-30,Top 14,Clermont Auvergne,54,2704,6,6,4,0,Castres Olympique,10,2648,1,1,1,0
+2024-11-30,Top 14,Pau,29,2520,2,2,5,0,Lyon,15,2598,0,0,5,0
+2024-11-30,Top 14,La Rochelle,14,2677,2,2,0,0,Vannes,23,2483,2,2,3,0
+2024-11-30,Top 14,Bordeaux Begles,9,2735,0,0,3,0,Montpellier Herault,6,2613,0,0,2,0
+2024-11-30,Top 14,Perpignan,13,2523,1,1,2,0,Toulon,22,2692,1,1,5,0
+2024-11-30,United Rugby Championship,Sharks,21,2621,3,3,0,0,Stormers,15,2668,0,0,5,0
+2024-11-30,United Rugby Championship,Cardiff Blues,31,2477,4,4,1,0,Dragons,23,2309,2,2,3,0
+2024-11-30,United Rugby Championship,Connacht,14,2593,2,2,0,0,Bulls,28,2724,4,4,0,0
+2024-11-30,United Rugby Championship,Munster,17,2747,2,2,1,0,Lions,10,2599,1,1,1,0
+2024-11-30,United Rugby Championship,Zebre,22,2263,1,1,5,0,Ospreys,17,2563,2,2,1,0
+2024-11-30,United Rugby Championship,Edinburgh,50,2624,5,5,5,0,Benetton Treviso,33,2497,3,3,4,0
+2024-11-30,International Test Match,Ireland,22,3028,1,1,5,0,Australia,19,2710,1,1,4,0
+2024-11-30,International Test Match,Andorra,3,2362,0,0,1,0,Malta,10,2605,1,1,1,0
+2024-11-30,International Test Match,Luxembourg,31,2488,4,4,1,0,Croatia,31,2579,4,4,1,0
+2024-12-01,Premiership Rugby,Sale Sharks,39,2708,3,3,6,0,Leicester Tigers,25,2714,1,1,6,0
+2024-12-01,Top 14,Bayonne,21,2558,3,3,0,0,Stade Francais Paris,13,2603,1,1,2,0
