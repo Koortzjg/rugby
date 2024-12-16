@@ -19531,25 +19531,46 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-11-30,International Test Match,Luxembourg,31,2487,4,4,1,0,Croatia,31,2570,4,4,1,0
 2024-12-01,Premiership Rugby,Sale Sharks,39,2708,3,3,6,0,Leicester Tigers,25,2714,1,1,6,0
 2024-12-01,Top 14,Bayonne,21,2567,3,3,0,0,Stade Francais Paris,13,2588,1,1,2,0
-2024-12-06,European Rugby Champions Cup,Bath Rugby,20,2685,2,2,2,0,La Rochelle,24,2684,3,3,1,0
-2024-12-06,European Rugby Challenge Cup,Dragons,14,2300,2,2,0,0,Montpellier Herault,18,2599,0,0,6,0
-2024-12-06,European Rugby Challenge Cup,Gloucester Rugby,15,2633,0,0,5,0,Edinburgh,10,2623,1,1,1,0
-2024-12-07,European Rugby Champions Cup,Clermont Auvergne,28,2714,4,4,0,0,Benetton Treviso,0,2481,0,0,0,0
-2024-12-07,European Rugby Champions Cup,Sharks,39,2645,3,3,6,0,Exeter Chiefs,21,2577,3,3,0,0
-2024-12-07,European Rugby Champions Cup,Northampton Saints,38,2704,5,5,1,0,Castres Olympique,8,2613,1,0,1,0
-2024-12-07,European Rugby Champions Cup,Stormers,14,2647,2,2,0,0,Toulon,24,2698,3,3,1,0
-2024-12-07,European Rugby Champions Cup,Munster,33,2761,3,3,4,0,Stade Francais Paris,7,2570,1,1,0,0
-2024-12-07,European Rugby Champions Cup,Saracens,27,2761,3,3,2,0,Bulls,5,2716,1,0,0,0
-2024-12-07,European Rugby Champions Cup,Glasgow Warriors,38,2711,5,5,1,0,Sale Sharks,19,2702,1,1,4,0
-2024-12-07,European Rugby Champions Cup,Racing 92,23,2608,2,2,3,0,Harlequins,12,2629,0,0,4,0
-2024-12-07,European Rugby Challenge Cup,Bayonne,17,2585,2,2,1,0,Scarlets,16,2510,1,1,3,0
-2024-12-07,European Rugby Challenge Cup,Black Lion,22,2494,1,1,5,0,Vannes,19,2492,1,1,4,0
-2024-12-07,European Rugby Challenge Cup,Lyon,37,2601,4,4,3,0,Cardiff Blues,26,2476,2,2,4,0
-2024-12-07,European Rugby Challenge Cup,Connacht,43,2591,4,4,5,0,Zebre,12,2276,0,0,4,0
+2024-12-06,European Rugby Champions Cup,Bath Rugby,20,2678,2,2,2,0,La Rochelle,24,2699,3,3,1,0
+2024-12-06,European Rugby Challenge Cup,Dragons,14,2305,2,2,0,0,Montpellier Herault,18,2606,0,0,6,0
+2024-12-06,European Rugby Challenge Cup,Gloucester Rugby,15,2620,0,0,5,0,Edinburgh,10,2614,1,1,1,0
+2024-12-07,European Rugby Champions Cup,Clermont Auvergne,28,2702,4,4,0,0,Benetton Treviso,0,2490,0,0,0,0
+2024-12-07,European Rugby Champions Cup,Sharks,39,2634,3,3,6,0,Exeter Chiefs,21,2583,3,3,0,0
+2024-12-07,European Rugby Champions Cup,Northampton Saints,38,2717,5,5,1,0,Castres Olympique,8,2625,1,0,1,0
+2024-12-07,European Rugby Champions Cup,Stormers,14,2658,2,2,0,0,Toulon,24,2693,3,3,1,0
+2024-12-07,European Rugby Champions Cup,Munster,33,2755,3,3,4,0,Stade Francais Paris,7,2580,1,1,0,0
+2024-12-07,European Rugby Champions Cup,Saracens,27,2777,3,3,2,0,Bulls,5,2711,1,0,0,0
+2024-12-07,European Rugby Champions Cup,Glasgow Warriors,38,2705,5,5,1,0,Sale Sharks,19,2692,1,1,4,0
+2024-12-07,European Rugby Champions Cup,Racing 92,23,2613,2,2,3,0,Harlequins,12,2642,0,0,4,0
+2024-12-07,European Rugby Challenge Cup,Bayonne,17,2575,2,2,1,0,Scarlets,16,2515,1,1,3,0
+2024-12-07,European Rugby Challenge Cup,Black Lion,22,2494,1,1,5,0,Vannes,19,2477,1,1,4,0
+2024-12-07,European Rugby Challenge Cup,Lyon,37,2612,4,4,3,0,Cardiff Blues,26,2471,2,2,4,0
+2024-12-07,European Rugby Challenge Cup,Connacht,43,2597,4,4,5,0,Zebre,12,2260,0,0,4,0
 2024-12-07,International Test Match,Mexico,45,2560,6,6,1,0,Cayman Islands,14,2465,2,2,0,0
-2024-12-08,European Rugby Champions Cup,Bordeaux Begles,42,2746,6,6,0,0,Leicester Tigers,28,2695,4,4,0,0
-2024-12-08,European Rugby Champions Cup,Stade Toulousain,61,2839,7,7,4,0,Ulster,21,2683,3,3,0,0
-2024-12-08,European Rugby Champions Cup,Bristol Rugby,12,2704,0,0,4,0,Leinster,35,2909,5,5,0,0
-2024-12-08,European Rugby Challenge Cup,Pau,32,2549,2,2,6,0,Newcastle Falcons,19,2426,1,1,4,0
-2024-12-08,European Rugby Challenge Cup,Cheetahs,20,2466,2,2,2,0,Perpignan,20,2520,2,2,2,0
-2024-12-08,European Rugby Challenge Cup,Ospreys,30,2563,3,3,3,0,Lions,14,2577,2,2,0,0
+2024-12-08,European Rugby Champions Cup,Bordeaux Begles,42,2740,6,6,0,0,Leicester Tigers,28,2705,4,4,0,0
+2024-12-08,European Rugby Champions Cup,Stade Toulousain,61,2835,7,7,4,0,Ulster,21,2688,3,3,0,0
+2024-12-08,European Rugby Champions Cup,Bristol Rugby,12,2691,0,0,4,0,Leinster,35,2903,5,5,0,0
+2024-12-08,European Rugby Challenge Cup,Pau,32,2537,2,2,6,0,Newcastle Falcons,19,2409,1,1,4,0
+2024-12-08,European Rugby Challenge Cup,Cheetahs,20,2466,2,2,2,0,Perpignan,20,2526,2,2,2,0
+2024-12-08,European Rugby Challenge Cup,Ospreys,30,2580,3,3,3,0,Lions,14,2583,2,2,0,0
+2024-12-13,European Rugby Champions Cup,Sale Sharks,29,2691,2,2,5,0,Racing 92,7,2611,1,1,0,0
+2024-12-13,European Rugby Champions Cup,Castres Olympique,16,2628,1,1,3,0,Munster,14,2749,2,2,0,0
+2024-12-13,European Rugby Challenge Cup,Edinburgh,52,2618,7,7,1,0,Bayonne,12,2570,0,0,4,0
+2024-12-14,European Rugby Champions Cup,Bulls,21,2690,3,3,0,0,Northampton Saints,30,2738,3,3,3,0
+2024-12-14,European Rugby Champions Cup,Ulster,19,2667,1,1,4,0,Bordeaux Begles,40,2761,4,4,4,0
+2024-12-14,European Rugby Champions Cup,Leinster,15,2915,0,0,5,0,Clermont Auvergne,7,2704,1,1,0,0
+2024-12-14,European Rugby Champions Cup,Leicester Tigers,56,2708,8,8,0,0,Sharks,17,2634,2,2,1,0
+2024-12-14,European Rugby Champions Cup,La Rochelle,35,2722,5,5,0,0,Bristol Rugby,7,2670,1,1,0,0
+2024-12-14,European Rugby Champions Cup,Harlequins,53,2647,5,5,6,0,Stormers,16,2633,1,1,3,0
+2024-12-14,European Rugby Challenge Cup,Montpellier Herault,59,2623,8,8,1,0,Ospreys,15,2580,0,0,5,0
+2024-12-14,European Rugby Challenge Cup,Zebre,19,2254,1,1,4,0,Lyon,21,2620,3,3,0,0
+2024-12-14,European Rugby Challenge Cup,Lions,43,2577,4,4,5,0,Pau,35,2535,5,5,0,0
+2024-12-14,European Rugby Challenge Cup,Vannes,43,2489,4,4,5,0,Gloucester Rugby,19,2608,1,1,4,0
+2024-12-14,European Rugby Challenge Cup,Cardiff Blues,26,2480,2,2,4,0,Cheetahs,10,2452,1,1,1,0
+2024-12-15,European Rugby Champions Cup,Benetton Treviso,22,2498,1,1,5,0,Bath Rugby,21,2654,3,3,0,0
+2024-12-15,European Rugby Champions Cup,Stade Francais Paris,17,2568,2,2,1,0,Saracens,28,2794,4,4,0,0
+2024-12-15,European Rugby Champions Cup,Toulon,30,2712,3,3,3,0,Glasgow Warriors,29,2709,2,2,5,0
+2024-12-15,European Rugby Champions Cup,Exeter Chiefs,21,2565,3,3,0,0,Stade Toulousain,64,2849,7,7,5,0
+2024-12-15,European Rugby Challenge Cup,Scarlets,36,2521,3,3,5,0,Black Lion,18,2489,0,0,6,0
+2024-12-15,European Rugby Challenge Cup,Perpignan,18,2517,0,0,6,0,Connacht,31,2609,4,4,1,0
+2024-12-15,European Rugby Challenge Cup,Newcastle Falcons,14,2389,2,2,0,0,Dragons,22,2315,1,1,5,0
