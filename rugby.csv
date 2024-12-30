@@ -19574,22 +19574,40 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2024-12-15,European Rugby Challenge Cup,Scarlets,36,2529,3,3,5,0,Black Lion,18,2480,0,0,6,0
 2024-12-15,European Rugby Challenge Cup,Perpignan,18,2518,0,0,6,0,Connacht,31,2605,4,4,1,0
 2024-12-15,European Rugby Challenge Cup,Newcastle Falcons,14,2395,2,2,0,0,Dragons,22,2319,1,1,5,0
-2024-12-20,Premiership Rugby,Gloucester Rugby,14,2593,2,2,0,0,Harlequins,0,2659,0,0,0,0
-2024-12-20,United Rugby Championship,Ulster,19,2654,1,1,4,0,Munster,22,2738,1,1,5,0
-2024-12-21,Premiership Rugby,Leicester Tigers,24,2709,3,3,1,0,Bristol Rugby,54,2682,6,6,4,0
-2024-12-21,Premiership Rugby,Newcastle Falcons,15,2377,0,0,5,0,Bath Rugby,40,2655,4,4,4,0
-2024-12-21,Premiership Rugby,Sale Sharks,28,2723,4,4,0,0,Exeter Chiefs,10,2562,1,1,1,0
-2024-12-21,Top 14,La Rochelle,20,2735,2,2,2,0,Clermont Auvergne,15,2685,0,0,5,0
-2024-12-21,Top 14,Montpellier Herault,21,2640,3,3,0,0,Racing 92,17,2583,2,2,1,0
-2024-12-21,Top 14,Toulon,56,2719,8,8,0,0,Pau,25,2514,1,1,6,0
-2024-12-21,Top 14,Vannes,21,2507,3,3,0,0,Bayonne,27,2560,3,3,2,0
-2024-12-21,Top 14,Stade Francais Paris,24,2582,3,3,1,0,Perpignan,7,2498,1,1,0,0
-2024-12-21,Top 14,Castres Olympique,3,2644,0,0,1,0,Bordeaux Begles,13,2772,1,1,2,0
-2024-12-21,United Rugby Championship,Benetton Treviso,11,2522,1,0,2,0,Zebre,10,2251,1,1,1,0
-2024-12-21,United Rugby Championship,Stormers,29,2642,2,2,5,0,Lions,10,2586,1,1,1,0
-2024-12-21,United Rugby Championship,Sharks,20,2624,2,2,2,0,Bulls,17,2679,2,2,1,0
-2024-12-21,United Rugby Championship,Ospreys,23,2563,2,2,3,0,Scarlets,22,2532,1,1,5,0
-2024-12-21,United Rugby Championship,Leinster,20,2915,2,2,2,0,Connacht,12,2610,0,0,4,0
-2024-12-22,Premiership Rugby,Saracens,39,2795,3,3,6,0,Northampton Saints,24,2729,3,3,1,0
-2024-12-22,Top 14,Lyon,17,2620,2,2,1,0,Stade Toulousain,17,2844,2,2,1,0
-2024-12-22,United Rugby Championship,Glasgow Warriors,33,2698,3,3,4,0,Edinburgh,14,2626,2,2,0,0
+2024-12-20,Premiership Rugby,Gloucester Rugby,14,2611,2,2,0,0,Harlequins,0,2646,0,0,0,0
+2024-12-20,United Rugby Championship,Ulster,19,2666,1,1,4,0,Munster,22,2750,1,1,5,0
+2024-12-21,Premiership Rugby,Leicester Tigers,24,2699,3,3,1,0,Bristol Rugby,54,2694,6,6,4,0
+2024-12-21,Premiership Rugby,Newcastle Falcons,15,2390,0,0,5,0,Bath Rugby,40,2669,4,4,4,0
+2024-12-21,Premiership Rugby,Sale Sharks,28,2713,4,4,0,0,Exeter Chiefs,10,2568,1,1,1,0
+2024-12-21,Top 14,La Rochelle,20,2722,2,2,2,0,Clermont Auvergne,15,2689,0,0,5,0
+2024-12-21,Top 14,Montpellier Herault,21,2628,3,3,0,0,Racing 92,17,2593,2,2,1,0
+2024-12-21,Top 14,Toulon,56,2710,8,8,0,0,Pau,25,2521,1,1,6,0
+2024-12-21,Top 14,Vannes,21,2489,3,3,0,0,Bayonne,27,2571,3,3,2,0
+2024-12-21,Top 14,Stade Francais Paris,24,2587,3,3,1,0,Perpignan,7,2506,1,1,0,0
+2024-12-21,Top 14,Castres Olympique,3,2631,0,0,1,0,Bordeaux Begles,13,2760,1,1,2,0
+2024-12-21,United Rugby Championship,Benetton Treviso,11,2508,1,0,2,0,Zebre,10,2254,1,1,1,0
+2024-12-21,United Rugby Championship,Stormers,29,2655,2,2,5,0,Lions,10,2579,1,1,1,0
+2024-12-21,United Rugby Championship,Sharks,20,2635,2,2,2,0,Bulls,17,2689,2,2,1,0
+2024-12-21,United Rugby Championship,Ospreys,23,2575,2,2,3,0,Scarlets,22,2520,1,1,5,0
+2024-12-21,United Rugby Championship,Leinster,20,2911,2,2,2,0,Connacht,12,2603,0,0,4,0
+2024-12-22,Premiership Rugby,Saracens,39,2790,3,3,6,0,Northampton Saints,24,2719,3,3,1,0
+2024-12-22,Top 14,Lyon,17,2617,2,2,1,0,Stade Toulousain,17,2838,2,2,1,0
+2024-12-22,United Rugby Championship,Glasgow Warriors,33,2707,3,3,4,0,Edinburgh,14,2615,2,2,0,0
+2024-12-26,United Rugby Championship,Dragons,22,2313,1,1,5,0,Cardiff Blues,24,2491,3,3,1,0
+2024-12-27,Premiership Rugby,Bristol Rugby,0,2695,0,0,0,0,Sale Sharks,38,2737,5,5,1,0
+2024-12-27,United Rugby Championship,Munster,7,2749,1,1,0,0,Leinster,28,2923,4,4,0,0
+2024-12-28,Premiership Rugby,Bath Rugby,68,2694,8,8,4,0,Saracens,10,2778,1,1,1,0
+2024-12-28,Premiership Rugby,Northampton Saints,61,2715,7,7,4,0,Newcastle Falcons,0,2381,0,0,0,0
+2024-12-28,Premiership Rugby,Harlequins,34,2636,4,4,2,0,Leicester Tigers,34,2683,4,4,2,0
+2024-12-28,Top 14,Pau,48,2527,6,6,2,0,Vannes,24,2468,3,3,1,0
+2024-12-28,Top 14,Bayonne,33,2595,3,3,4,0,Castres Olympique,12,2608,0,0,4,0
+2024-12-28,Top 14,Clermont Auvergne,18,2668,0,0,6,0,Montpellier Herault,22,2649,1,1,5,0
+2024-12-28,Top 14,Bordeaux Begles,21,2775,3,3,0,0,Toulon,17,2709,2,2,1,0
+2024-12-28,United Rugby Championship,Stormers,24,2675,3,3,1,0,Sharks,20,2637,2,2,2,0
+2024-12-28,United Rugby Championship,Zebre,12,2246,0,0,4,0,Benetton Treviso,24,2516,3,3,1,0
+2024-12-28,United Rugby Championship,Edinburgh,10,2617,1,1,1,0,Glasgow Warriors,7,2705,1,1,0,0
+2024-12-28,United Rugby Championship,Connacht,7,2591,1,1,0,0,Ulster,17,2667,2,2,1,0
+2024-12-29,Premiership Rugby,Exeter Chiefs,22,2570,1,1,5,0,Gloucester Rugby,15,2610,0,0,5,0
+2024-12-29,Top 14,Racing 92,25,2584,1,1,6,0,Lyon,25,2620,1,1,6,0
+2024-12-29,Top 14,Perpignan,21,2511,3,3,0,0,La Rochelle,13,2715,1,1,2,0
+2024-12-29,Top 14,Stade Toulousain,38,2839,5,5,1,0,Stade Francais Paris,23,2594,2,2,3,0
