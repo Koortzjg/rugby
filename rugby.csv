@@ -19667,23 +19667,27 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-01-19,European Rugby Challenge Cup,Edinburgh,36,2642,3,3,5,0,Black Lion,15,2461,0,0,5,0
 2025-01-19,European Rugby Challenge Cup,Bayonne,55,2604,7,7,2,0,Gloucester Rugby,17,2614,2,2,1,0
 2025-01-19,European Rugby Challenge Cup,Zebre,21,2240,3,3,0,0,Perpignan,39,2529,3,3,6,0
-2025-01-24,Premiership Rugby,Harlequins,22,2689,1,1,5,0,Northampton Saints,19,2727,1,1,4,0
-2025-01-24,United Rugby Championship,Ospreys,43,2610,4,4,5,0,Benetton Treviso,0,2525,0,0,0,0
-2025-01-25,Premiership Rugby,Gloucester Rugby,38,2612,5,5,1,0,Leicester Tigers,31,2687,4,4,1,0
-2025-01-25,Premiership Rugby,Exeter Chiefs,31,2559,4,4,1,0,Saracens,22,2725,1,1,5,0
-2025-01-25,Top 14,Stade Toulousain,27,2857,3,3,2,0,Montpellier Herault,17,2669,2,2,1,0
-2025-01-25,Top 14,Racing 92,20,2595,2,2,2,0,Castres Olympique,27,2675,3,3,2,0
-2025-01-25,Top 14,Vannes,33,2462,3,3,4,0,Stade Francais Paris,28,2555,4,4,0,0
-2025-01-25,Top 14,Pau,20,2529,2,2,2,0,Clermont Auvergne,14,2672,2,2,0,0
-2025-01-25,Top 14,Perpignan,16,2546,1,1,3,0,Bayonne,11,2606,1,0,2,0
-2025-01-25,Top 14,Bordeaux Begles,20,2785,2,2,2,0,Lyon,22,2640,1,1,5,0
-2025-01-25,United Rugby Championship,Lions,22,2570,1,1,5,0,Bulls,35,2700,5,5,0,0
-2025-01-25,United Rugby Championship,Scarlets,30,2545,3,3,3,0,Edinburgh,24,2636,3,3,1,0
-2025-01-25,United Rugby Championship,Leinster,36,2941,3,3,5,0,Stormers,12,2651,0,0,4,0
-2025-01-25,United Rugby Championship,Cardiff Blues,22,2460,1,1,5,0,Sharks,42,2615,6,6,0,0
-2025-01-25,United Rugby Championship,Dragons,19,2289,1,1,4,0,Munster,38,2734,5,5,1,0
-2025-01-26,Premiership Rugby,Bristol Rugby,55,2663,7,7,2,0,Newcastle Falcons,35,2359,5,5,0,0
-2025-01-26,Premiership Rugby,Sale Sharks,23,2710,2,2,3,0,Bath Rugby,32,2694,2,2,6,0
-2025-01-26,Top 14,Toulon,45,2701,6,6,1,0,La Rochelle,26,2671,2,2,4,0
-2025-01-26,United Rugby Championship,Glasgow Warriors,22,2677,1,1,5,0,Connacht,19,2615,1,1,4,0
-2025-01-26,United Rugby Championship,Ulster,14,2663,2,2,0,0,Zebre,15,2253,0,0,5,0
+2025-01-24,Premiership Rugby,Harlequins,22,2673,1,1,5,0,Northampton Saints,19,2717,1,1,4,0
+2025-01-24,United Rugby Championship,Ospreys,43,2601,4,4,5,0,Benetton Treviso,0,2510,0,0,0,0
+2025-01-25,Premiership Rugby,Gloucester Rugby,38,2626,5,5,1,0,Leicester Tigers,31,2696,4,4,1,0
+2025-01-25,Premiership Rugby,Exeter Chiefs,31,2569,4,4,1,0,Saracens,22,2738,1,1,5,0
+2025-01-25,Top 14,Stade Toulousain,27,2848,3,3,2,0,Montpellier Herault,17,2664,2,2,1,0
+2025-01-25,Top 14,Racing 92,20,2583,2,2,2,0,Castres Olympique,27,2661,3,3,2,0
+2025-01-25,Top 14,Vannes,33,2470,3,3,4,0,Stade Francais Paris,28,2565,4,4,0,0
+2025-01-25,Top 14,Pau,20,2537,2,2,2,0,Clermont Auvergne,14,2663,2,2,0,0
+2025-01-25,Top 14,Perpignan,16,2540,1,1,3,0,Bayonne,11,2592,1,0,2,0
+2025-01-25,Top 14,Bordeaux Begles,20,2777,2,2,2,0,Lyon,22,2632,1,1,5,0
+2025-01-25,United Rugby Championship,Lions,22,2565,1,1,5,0,Bulls,35,2690,5,5,0,0
+2025-01-25,United Rugby Championship,Scarlets,30,2537,3,3,3,0,Edinburgh,24,2629,3,3,1,0
+2025-01-25,United Rugby Championship,Leinster,36,2936,3,3,5,0,Stormers,12,2663,0,0,4,0
+2025-01-25,United Rugby Championship,Cardiff Blues,22,2467,1,1,5,0,Sharks,42,2622,6,6,0,0
+2025-01-25,United Rugby Championship,Dragons,19,2294,1,1,4,0,Munster,38,2744,5,5,1,0
+2025-01-26,Premiership Rugby,Bristol Rugby,55,2672,7,7,2,0,Newcastle Falcons,35,2364,5,5,0,0
+2025-01-26,Premiership Rugby,Sale Sharks,23,2696,2,2,3,0,Bath Rugby,32,2699,2,2,6,0
+2025-01-26,Top 14,Toulon,45,2716,6,6,1,0,La Rochelle,26,2686,2,2,4,0
+2025-01-26,United Rugby Championship,Glasgow Warriors,22,2692,1,1,5,0,Connacht,19,2609,1,1,4,0
+2025-01-26,United Rugby Championship,Ulster,14,2654,2,2,0,0,Zebre,15,2258,0,0,5,0
+2025-01-31,Six Nations,France,43,2959,4,4,5,0,Wales,0,2624,0,0,0,0
+2025-02-01,Six Nations,Scotland,31,2795,4,4,1,0,Italy,19,2617,1,1,4,0
+2025-02-01,Six Nations,Ireland,27,3030,3,3,2,0,England,22,2846,1,1,5,0
+2025-02-01,International Test Match,Israel,28,2461,4,4,0,0,Andorra,31,2376,4,4,1,0
