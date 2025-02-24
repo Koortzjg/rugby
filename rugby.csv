@@ -19705,8 +19705,8 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-02-15,Top 14,Stade Francais Paris,39,2574,3,3,6,0,Pau,37,2528,4,4,3,0
 2025-02-15,Top 14,Perpignan,20,2542,2,2,2,0,Castres Olympique,20,2660,2,2,2,0
 2025-02-15,Top 14,Montpellier Herault,30,2655,3,3,3,0,Toulon,38,2725,5,5,1,0
-2025-02-15,United Rugby Championship,Lions,30,2577,3,3,3,0,Stormers,23,2632,2,2,3,0
-2025-02-15,United Rugby Championship,Bulls,19,2695,1,1,4,0,Sharks,29,2635,2,2,5,0
+2025-02-15,United Rugby Championship,Lions,30,2578,3,3,3,0,Stormers,23,2641,2,2,3,0
+2025-02-15,United Rugby Championship,Bulls,19,2687,1,1,4,0,Sharks,29,2635,2,2,5,0
 2025-02-15,United Rugby Championship,Benetton Treviso,34,2524,4,4,2,0,Ulster,19,2640,1,1,4,0
 2025-02-15,United Rugby Championship,Munster,29,2750,2,2,5,0,Scarlets,8,2531,1,0,1,0
 2025-02-15,United Rugby Championship,Connacht,24,2615,3,3,1,0,Cardiff Blues,19,2461,1,1,4,0
@@ -19715,3 +19715,20 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-02-15,Super Rugby Pacific,Western Force,45,2377,6,6,1,0,Moana Pasifika,44,2338,5,5,3,0
 2025-02-16,Top 14,Clermont Auvergne,18,2655,0,0,6,0,Stade Toulousain,35,2856,5,5,0,0
 2025-02-16,United Rugby Championship,Dragons,20,2291,2,2,2,0,Glasgow Warriors,45,2695,6,6,1,0
+2025-02-21,Super Rugby Pacific,Chiefs,49,2784,7,7,0,0,Crusaders,24,2730,3,3,1,0
+2025-02-21,Super Rugby Pacific,Queensland Reds,56,2514,8,8,0,0,Moana Pasifika,36,2322,3,3,5,0
+2025-02-22,Six Nations,Wales,18,2612,0,0,6,0,Ireland,27,3036,3,3,2,0
+2025-02-22,Six Nations,England,16,2866,1,1,3,0,Scotland,15,2783,0,0,5,0
+2025-02-22,Top 14,Castres Olympique,30,2668,3,3,3,0,Lyon,25,2654,1,1,6,0
+2025-02-22,Top 14,Toulon,24,2741,3,3,1,0,Stade Francais Paris,6,2574,0,0,2,0
+2025-02-22,Top 14,Vannes,37,2510,4,4,3,0,Montpellier Herault,24,2633,3,3,1,0
+2025-02-22,Top 14,Pau,23,2535,2,2,3,0,Perpignan,6,2528,0,0,2,0
+2025-02-22,Top 14,La Rochelle,21,2640,3,3,0,0,Racing 92,26,2570,2,2,4,0
+2025-02-22,Top 14,Stade Toulousain,41,2869,5,5,2,0,Bayonne,6,2615,0,0,2,0
+2025-02-22,United Rugby Championship,Bulls,31,2682,4,4,1,0,Lions,19,2582,1,1,4,0
+2025-02-22,International Test Match,Poland,58,2616,7,7,3,0,Croatia,27,2557,3,3,2,0
+2025-02-22,Super Rugby Pacific,Hurricanes,38,2704,5,5,1,0,Fijian Drua,34,2402,4,4,2,0
+2025-02-22,Super Rugby Pacific,Highlanders,29,2485,2,2,5,0,Blues,21,2777,3,3,0,0
+2025-02-22,Super Rugby Pacific,Brumbies,42,2680,6,6,0,0,Western Force,45,2403,6,6,1,0
+2025-02-23,Six Nations,Italy,24,2622,3,3,1,0,France,73,2950,10,10,1,0
+2025-02-23,Top 14,Bordeaux Begles,22,2755,1,1,5,0,Clermont Auvergne,18,2641,0,0,6,0
