@@ -19781,7 +19781,7 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-03-21,Premiership Rugby,Northampton Saints,0,2701,0,0,0,0,Leicester Tigers,33,2712,3,3,4,0
 2025-03-21,United Rugby Championship,Cardiff Blues,20,2472,2,2,2,0,Lions,17,2566,2,2,1,0
 2025-03-21,United Rugby Championship,Glasgow Warriors,28,2693,4,4,0,0,Munster,25,2725,1,1,6,0
-2025-03-21,Super Rugby Pacific,Moana Pasifika,35,2341,5,5,0,0,Chiefs,50,2784,5,5,5,0
+2025-03-21,Super Rugby Pacific,Moana Pasifika,35,2341,5,5,0,0,Chiefs,50,2774,5,5,5,0
 2025-03-22,Premiership Rugby,Saracens,12,2726,0,0,4,0,Harlequins,23,2685,2,2,3,0
 2025-03-22,Premiership Rugby,Bristol Rugby,52,2679,7,7,1,0,Exeter Chiefs,38,2562,5,5,1,0
 2025-03-22,French Top 14,La Rochelle,12,2632,0,0,4,0,Castres Olympique,12,2667,0,0,4,0
@@ -19796,9 +19796,35 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-03-22,United Rugby Championship,Scarlets,17,2517,2,2,1,0,Stormers,29,2660,2,2,5,0
 2025-03-22,United Rugby Championship,Dragons,30,2279,3,3,3,0,Ulster,34,2649,4,4,2,0
 2025-03-22,United Rugby Championship,Ospreys,43,2622,4,4,5,0,Connacht,40,2612,4,4,4,0
-2025-03-22,Super Rugby Pacific,Highlanders,23,2483,2,2,3,0,Queensland Reds,29,2544,2,2,5,0
-2025-03-22,Super Rugby Pacific,Blues,19,2746,1,1,4,0,Crusaders,42,2751,6,6,0,0
-2025-03-22,Super Rugby Pacific,New South Wales Waratahs,28,2410,4,4,0,0,Brumbies,23,2676,2,2,3,0
+2025-03-22,Super Rugby Pacific,Highlanders,23,2488,2,2,3,0,Queensland Reds,29,2535,2,2,5,0
+2025-03-22,Super Rugby Pacific,Blues,19,2755,1,1,4,0,Crusaders,42,2749,6,6,0,0
+2025-03-22,Super Rugby Pacific,New South Wales Waratahs,28,2420,4,4,0,0,Brumbies,23,2672,2,2,3,0
 2025-03-23,Premiership Rugby,Bath Rugby,42,2711,6,6,0,0,Gloucester Rugby,26,2615,2,2,4,0
 2025-03-23,French Top 14,Bordeaux Begles,32,2792,2,2,6,0,Stade Toulousain,24,2858,3,3,1,0
-2025-03-23,Super Rugby Pacific,Western Force,52,2383,7,7,1,0,Fijian Drua,15,2388,0,0,5,0
+2025-03-23,Super Rugby Pacific,Western Force,52,2386,7,7,1,0,Fijian Drua,15,2392,0,0,5,0
+2025-03-28,Premiership Rugby,Sale Sharks,27,2713,3,3,2,0,Northampton Saints,24,2676,3,3,1,0
+2025-03-28,United Rugby Championship,Ulster,38,2661,5,5,1,0,Stormers,34,2656,4,4,2,0
+2025-03-28,United Rugby Championship,Edinburgh,38,2604,5,5,1,0,Dragons,5,2273,1,0,0,0
+2025-03-28,Super Rugby Pacific,Hurricanes,57,2698,6,6,5,0,New South Wales Waratahs,12,2431,0,0,4,0
+2025-03-28,Super Rugby Pacific,Brumbies,34,2661,4,4,2,0,Highlanders,27,2474,3,3,2,0
+2025-03-29,Premiership Rugby,Exeter Chiefs,17,2560,2,2,1,0,Newcastle Falcons,15,2351,0,0,5,0
+2025-03-29,Premiership Rugby,Bath Rugby,47,2735,5,5,4,0,Harlequins,28,2683,4,4,0,0
+2025-03-29,Premiership Rugby,Gloucester Rugby,53,2622,5,5,6,0,Bristol Rugby,28,2667,4,4,0,0
+2025-03-29,French Top 14,Stade Toulousain,55,2852,7,7,2,0,Pau,10,2591,1,1,1,0
+2025-03-29,French Top 14,Clermont Auvergne,33,2618,3,3,4,0,La Rochelle,19,2622,1,1,4,0
+2025-03-29,French Top 14,Bayonne,28,2597,4,4,0,0,Lyon,14,2643,2,2,0,0
+2025-03-29,French Top 14,Montpellier Herault,38,2625,5,5,1,0,Stade Francais Paris,32,2582,2,2,6,0
+2025-03-29,French Top 14,Vannes,20,2496,2,2,2,0,Perpignan,20,2497,2,2,2,0
+2025-03-29,French Top 14,Castres Olympique,28,2678,4,4,0,0,Toulon,26,2729,2,2,4,0
+2025-03-29,International Test Match,Lithuania,3,2538,0,0,1,0,Czech Republic,44,2651,5,5,3,0
+2025-03-29,International Test Match,Luxembourg,18,2469,0,0,6,0,Sweden,57,2618,6,6,5,0
+2025-03-29,United Rugby Championship,Bulls,63,2716,9,9,0,0,Zebre,24,2280,3,3,1,0
+2025-03-29,United Rugby Championship,Connacht,24,2595,3,3,1,0,Munster,30,2722,3,3,3,0
+2025-03-29,United Rugby Championship,Scarlets,38,2530,5,5,1,0,Ospreys,22,2612,1,1,5,0
+2025-03-29,United Rugby Championship,Sharks,7,2627,1,1,0,0,Leinster,10,2912,1,1,1,0
+2025-03-29,United Rugby Championship,Benetton Treviso,20,2550,2,2,2,0,Cardiff Blues,19,2476,1,1,4,0
+2025-03-29,United Rugby Championship,Glasgow Warriors,42,2712,6,6,0,0,Lions,0,2545,0,0,0,0
+2025-03-29,Super Rugby Pacific,Crusaders,29,2737,2,2,5,0,Moana Pasifika,45,2367,6,6,1,0
+2025-03-29,Super Rugby Pacific,Queensland Reds,28,2549,4,4,0,0,Western Force,24,2395,3,3,1,0
+2025-03-30,Premiership Rugby,Leicester Tigers,22,2717,1,1,5,0,Saracens,29,2726,2,2,5,0
+2025-03-30,French Top 14,Racing 92,36,2616,3,3,5,0,Bordeaux Begles,31,2788,4,4,1,0
