@@ -19881,32 +19881,66 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-04-12,URBA Top 12,Regatas Bella Vista,31,2447,4,4,1,0,Hindú,21,2596,3,3,0,0
 2025-04-13,European Rugby Champions Cup,Toulon,18,2731,0,0,6,0,Stade Toulousain,21,2878,3,3,0,0
 2025-04-13,European Rugby Challenge Cup,Bath Rugby,61,2745,7,7,4,0,Gloucester Rugby,26,2632,2,2,4,0
-2025-04-18,Premiership Rugby,Newcastle Falcons,34,2353,4,4,2,0,Northampton Saints,35,2731,5,5,0,0
+2025-04-18,Premiership Rugby,Newcastle Falcons,34,2353,4,4,2,0,Northampton Saints,35,2719,5,5,0,0
 2025-04-18,International Test Match,Bulgaria,18,2467,0,0,6,0,Moldova,17,2514,2,2,1,0
-2025-04-18,United Rugby Championship,Edinburgh,17,2636,2,2,1,0,Sharks,18,2627,0,0,6,0
-2025-04-18,Super Rugby Pacific,Crusaders,25,2754,1,1,6,0,Blues,22,2759,1,1,5,0
-2025-04-19,Premiership Rugby,Exeter Chiefs,24,2562,3,3,1,0,Bath Rugby,26,2760,2,2,4,0
+2025-04-18,United Rugby Championship,Edinburgh,17,2625,2,2,1,0,Sharks,18,2627,0,0,6,0
+2025-04-18,Super Rugby Pacific,Crusaders,25,2745,1,1,6,0,Blues,22,2756,1,1,5,0
+2025-04-19,Premiership Rugby,Exeter Chiefs,24,2561,3,3,1,0,Bath Rugby,26,2750,2,2,4,0
 2025-04-19,Premiership Rugby,Harlequins,29,2657,2,2,5,0,Sale Sharks,43,2711,4,4,5,0
-2025-04-19,Premiership Rugby,Saracens,36,2732,3,3,5,0,Gloucester Rugby,14,2611,2,2,0,0
-2025-04-19,French Top 14,Pau,22,2567,1,1,5,0,Bordeaux Begles,26,2812,2,2,4,0
-2025-04-19,French Top 14,Castres Olympique,32,2666,2,2,6,0,Vannes,13,2494,1,1,2,0
-2025-04-19,French Top 14,Lyon,32,2674,2,2,6,0,Montpellier Herault,23,2616,2,2,3,0
+2025-04-19,Premiership Rugby,Saracens,36,2732,3,3,5,0,Gloucester Rugby,14,2621,2,2,0,0
+2025-04-19,French Top 14,Pau,22,2567,1,1,5,0,Bordeaux Begles,26,2800,2,2,4,0
+2025-04-19,French Top 14,Castres Olympique,32,2678,2,2,6,0,Vannes,13,2494,1,1,2,0
+2025-04-19,French Top 14,Lyon,32,2666,2,2,6,0,Montpellier Herault,23,2616,2,2,3,0
 2025-04-19,French Top 14,La Rochelle,29,2624,2,2,5,0,Bayonne,28,2590,4,4,0,0
-2025-04-19,French Top 14,Perpignan,28,2509,4,4,0,0,Racing 92,24,2619,3,3,1,0
-2025-04-19,French Top 14,Toulon,31,2732,4,4,1,0,Clermont Auvergne,24,2610,3,3,1,0
+2025-04-19,French Top 14,Perpignan,28,2509,4,4,0,0,Racing 92,24,2609,3,3,1,0
+2025-04-19,French Top 14,Toulon,31,2738,4,4,1,0,Clermont Auvergne,24,2611,3,3,1,0
 2025-04-19,International Test Match,Montenegro,22,2468,1,1,5,0,Slovenia,39,2376,3,3,6,0
 2025-04-19,International Test Match,Malaysia,19,2390,1,1,4,0,Sri Lanka,59,2519,8,8,1,0
 2025-04-19,International Test Match,Denmark,13,2485,1,1,2,0,Latvia,10,2483,1,1,1,0
 2025-04-19,United Rugby Championship,Lions,31,2538,4,4,1,0,Benetton Treviso,42,2542,6,6,0,0
-2025-04-19,United Rugby Championship,Ospreys,19,2575,1,1,4,0,Cardiff Blues,36,2479,3,3,5,0
-2025-04-19,United Rugby Championship,Stormers,34,2658,4,4,2,0,Connacht,29,2583,2,2,5,0
-2025-04-19,United Rugby Championship,Munster,13,2704,1,1,2,0,Bulls,16,2696,1,1,3,0
+2025-04-19,United Rugby Championship,Ospreys,19,2584,1,1,4,0,Cardiff Blues,36,2479,3,3,5,0
+2025-04-19,United Rugby Championship,Stormers,34,2658,4,4,2,0,Connacht,29,2592,2,2,5,0
+2025-04-19,United Rugby Championship,Munster,13,2716,1,1,2,0,Bulls,16,2707,1,1,3,0
 2025-04-19,United Rugby Championship,Dragons,23,2271,2,2,3,0,Scarlets,31,2528,4,4,1,0
-2025-04-19,United Rugby Championship,Leinster,41,2950,5,5,2,0,Ulster,17,2648,2,2,1,0
-2025-04-19,United Rugby Championship,Zebre,6,2280,0,0,2,0,Glasgow Warriors,14,2706,2,2,0,0
-2025-04-19,Super Rugby Pacific,Fijian Drua,28,2378,4,4,0,0,New South Wales Waratahs,14,2422,2,2,0,0
-2025-04-19,Super Rugby Pacific,Moana Pasifika,0,2375,0,0,0,0,Brumbies,24,2694,3,3,1,0
-2025-04-19,Super Rugby Pacific,Chiefs,46,2748,4,4,6,0,Highlanders,10,2486,1,1,1,0
-2025-04-19,Super Rugby Pacific,Western Force,17,2396,2,2,1,0,Hurricanes,17,2668,2,2,1,0
+2025-04-19,United Rugby Championship,Leinster,41,2944,5,5,2,0,Ulster,17,2648,2,2,1,0
+2025-04-19,United Rugby Championship,Zebre,6,2280,0,0,2,0,Glasgow Warriors,14,2712,2,2,0,0
+2025-04-19,Super Rugby Pacific,Fijian Drua,28,2388,4,4,0,0,New South Wales Waratahs,14,2405,2,2,0,0
+2025-04-19,Super Rugby Pacific,Moana Pasifika,0,2377,0,0,0,0,Brumbies,24,2688,3,3,1,0
+2025-04-19,Super Rugby Pacific,Chiefs,46,2765,4,4,6,0,Highlanders,10,2477,1,1,1,0
+2025-04-19,Super Rugby Pacific,Western Force,17,2397,2,2,1,0,Hurricanes,17,2677,2,2,1,0
 2025-04-20,Premiership Rugby,Bristol Rugby,19,2647,1,1,4,0,Leicester Tigers,36,2702,3,3,5,0
-2025-04-20,French Top 14,Stade Francais Paris,21,2569,3,3,0,0,Stade Toulousain,27,2887,3,3,2,0
+2025-04-20,French Top 14,Stade Francais Paris,21,2569,3,3,0,0,Stade Toulousain,27,2881,3,3,2,0
+2025-04-25,Premiership Rugby,Sale Sharks,25,2735,1,1,6,0,Saracens,7,2726,1,1,0,0
+2025-04-25,United Rugby Championship,Glasgow Warriors,19,2704,1,1,4,0,Bulls,26,2728,2,2,4,0
+2025-04-25,United Rugby Championship,Cardiff Blues,26,2514,2,2,4,0,Munster,21,2690,3,3,0,0
+2025-04-25,United Rugby Championship,Zebre,25,2282,1,1,6,0,Edinburgh,25,2611,1,1,6,0
+2025-04-25,Super Rugby Pacific,Chiefs,56,2772,8,8,0,0,Western Force,22,2397,1,1,5,0
+2025-04-25,Super Rugby Pacific,Queensland Reds,35,2545,5,5,0,0,Blues,21,2730,3,3,0,0
+2025-04-26,Premiership Rugby,Bath Rugby,55,2758,7,7,2,0,Newcastle Falcons,19,2348,1,1,4,0
+2025-04-26,Premiership Rugby,Leicester Tigers,40,2727,4,4,4,0,Harlequins,7,2637,1,1,0,0
+2025-04-26,Premiership Rugby,Northampton Saints,48,2732,6,6,2,0,Bristol Rugby,31,2623,4,4,1,0
+2025-04-26,French Top 14,Stade Toulousain,52,2891,7,7,1,0,Castres Olympique,6,2679,0,0,2,0
+2025-04-26,French Top 14,Clermont Auvergne,39,2616,3,3,6,0,Lyon,31,2662,4,4,1,0
+2025-04-26,French Top 14,Bayonne,27,2591,3,3,2,0,Pau,22,2553,1,1,5,0
+2025-04-26,French Top 14,Montpellier Herault,19,2615,1,1,4,0,Perpignan,13,2514,1,1,2,0
+2025-04-26,French Top 14,Vannes,29,2503,2,2,5,0,Toulon,19,2728,1,1,4,0
+2025-04-26,French Top 14,Bordeaux Begles,10,2790,1,1,1,0,La Rochelle,21,2647,3,3,0,0
+2025-04-26,International Test Match,Slovenia,34,2408,4,4,2,0,Bosnia-Herzegovina,21,2471,3,3,0,0
+2025-04-26,International Test Match,Latvia,19,2461,1,1,4,0,Finland,20,2406,2,2,2,0
+2025-04-26,International Test Match,Guyana,17,2510,2,2,1,0,Cayman Islands,48,2483,6,6,2,0
+2025-04-26,United Rugby Championship,Lions,26,2545,2,2,4,0,Connacht,7,2567,1,1,0,0
+2025-04-26,United Rugby Championship,Ospreys,57,2568,6,6,5,0,Dragons,24,2263,3,3,1,0
+2025-04-26,United Rugby Championship,Stormers,56,2676,8,8,0,0,Benetton Treviso,5,2543,1,0,0,0
+2025-04-26,United Rugby Championship,Scarlets,35,2551,5,5,0,0,Leinster,22,2930,1,1,5,0
+2025-04-26,United Rugby Championship,Ulster,19,2633,1,1,4,0,Sharks,22,2648,1,1,5,0
+2025-04-26,Super Rugby Pacific,Moana Pasifika,34,2389,4,4,2,0,Fijian Drua,15,2382,0,0,5,0
+2025-04-26,Super Rugby Pacific,Highlanders,10,2467,1,1,1,0,Crusaders,43,2760,4,4,5,0
+2025-04-26,Super Rugby Pacific,Brumbies,29,2681,2,2,5,0,Hurricanes,35,2684,5,5,0,0
+2025-04-26,URBA Top 12,Alumni,19,2625,1,1,4,0,Belgrano AC,35,2631,5,5,0,0
+2025-04-26,URBA Top 12,CUBA,9,2500,0,0,3,0,CASI,34,2550,4,4,2,0
+2025-04-26,URBA Top 12,La Plata Rugby Club,15,2484,0,0,5,0,San Luis,8,2424,1,0,1,0
+2025-04-26,URBA Top 12,B.A.C.R.C.,16,2412,1,1,3,0,Regatas Bella Vista,15,2436,0,0,5,0
+2025-04-26,URBA Top 12,Hindú,28,2588,4,4,0,0,SIC,32,2684,2,2,6,0
+2025-04-26,URBA Top 12,Newman,21,2652,3,3,0,0,Los Tilos,23,2348,2,2,3,0
+2025-04-27,Premiership Rugby,Gloucester Rugby,79,2623,10,10,3,0,Exeter Chiefs,17,2544,2,2,1,0
+2025-04-27,French Top 14,Racing 92,49,2610,7,7,0,0,Stade Francais Paris,24,2553,3,3,1,0
