@@ -20035,15 +20035,15 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-05-24,URBA Top 12,San Luis,17,2400,2,2,1,0,CASI,37,2583,4,4,3,0
 2025-05-24,URBA Top 12,SIC,38,2658,5,5,1,0,CUBA,31,2514,4,4,1,0
 2025-05-30,United Rugby Championship,Glasgow Warriors,36,2691,3,3,5,0,Stormers,18,2661,0,0,6,0
-2025-05-30,Super Rugby Pacific,Highlanders,24,2445,3,3,1,0,Chiefs,41,2776,5,5,2,0
-2025-05-30,Super Rugby Pacific,Brumbies,31,2684,4,4,1,0,Crusaders,33,2753,3,3,4,0
+2025-05-30,Super Rugby Pacific,Highlanders,24,2448,3,3,1,0,Chiefs,41,2773,5,5,2,0
+2025-05-30,Super Rugby Pacific,Brumbies,31,2684,4,4,1,0,Crusaders,33,2750,3,3,4,0
 2025-05-31,Premiership Rugby,Bristol Rugby,52,2663,7,7,1,0,Harlequins,26,2651,2,2,4,0
 2025-05-31,Premiership Rugby,Exeter Chiefs,26,2558,2,2,4,0,Sale Sharks,30,2730,3,3,3,0
-2025-05-31,Premiership Rugby,Gloucester Rugby,41,2635,5,5,2,0,Northampton Saints,26,2704,2,2,4,0
+2025-05-31,Premiership Rugby,Gloucester Rugby,41,2635,5,5,2,0,Northampton Saints,26,2712,2,2,4,0
 2025-05-31,Premiership Rugby,Leicester Tigers,42,2714,6,6,0,0,Newcastle Falcons,20,2341,2,2,2,0
-2025-05-31,Premiership Rugby,Saracens,36,2721,3,3,5,0,Bath Rugby,26,2761,2,2,4,0
-2025-05-31,French Top 14,Clermont Auvergne,55,2627,7,7,2,0,Stade Francais Paris,20,2546,2,2,2,0
-2025-05-31,French Top 14,Castres Olympique,33,2693,3,3,4,0,Bayonne,3,2595,0,0,1,0
+2025-05-31,Premiership Rugby,Saracens,36,2721,3,3,5,0,Bath Rugby,26,2752,2,2,4,0
+2025-05-31,French Top 14,Clermont Auvergne,55,2635,7,7,2,0,Stade Francais Paris,20,2546,2,2,2,0
+2025-05-31,French Top 14,Castres Olympique,33,2685,3,3,4,0,Bayonne,3,2595,0,0,1,0
 2025-05-31,French Top 14,Racing 92,25,2619,1,1,6,0,Montpellier Herault,27,2640,3,3,2,0
 2025-05-31,French Top 14,Vannes,26,2485,2,2,4,0,Pau,52,2596,7,7,1,0
 2025-05-31,French Top 14,La Rochelle,38,2668,5,5,1,0,Perpignan,15,2495,0,0,5,0
@@ -20051,14 +20051,34 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-05-31,United Rugby Championship,Leinster,33,2917,3,3,4,0,Scarlets,21,2548,3,3,0,0
 2025-05-31,United Rugby Championship,Sharks,24,2658,3,3,1,0,Munster,24,2717,3,3,1,0
 2025-05-31,International Test Match,Trinidad and Tobago,29,2547,2,2,5,0,Barbados,28,2497,4,4,0,0
-2025-05-31,Super Rugby Pacific,Blues,46,2734,4,4,6,0,New South Wales Waratahs,6,2406,0,0,2,0
-2025-05-31,Super Rugby Pacific,Hurricanes,64,2724,7,7,5,0,Moana Pasifika,12,2411,0,0,4,0
-2025-05-31,Super Rugby Pacific,Queensland Reds,52,2531,7,7,1,0,Fijian Drua,7,2389,1,1,0,0
-2025-05-31,URBA Top 12,Alumni,39,2627,3,3,6,0,San Luis,29,2388,2,2,5,0
-2025-05-31,URBA Top 12,CASI,47,2599,5,5,4,0,Regatas Bella Vista,23,2422,2,2,3,0
-2025-05-31,URBA Top 12,Belgrano AC,43,2647,4,4,5,0,SIC,31,2654,4,4,1,0
-2025-05-31,URBA Top 12,CUBA,25,2495,1,1,6,0,Los Tilos,26,2421,2,2,4,0
-2025-05-31,URBA Top 12,B.A.C.R.C.,17,2403,2,2,1,0,Hindú,25,2565,1,1,6,0
-2025-05-31,URBA Top 12,La Plata Rugby Club,17,2453,2,2,1,0,Newman,21,2662,3,3,0,0
-2025-06-01,French Top 14,Stade Toulousain,43,2867,4,4,5,0,Lyon,3,2613,0,0,1,0
-2025-06-01,French Top 14,Toulon,27,2718,3,3,2,0,Bordeaux Begles,10,2787,1,1,1,0
+2025-05-31,Super Rugby Pacific,Blues,46,2733,4,4,6,0,New South Wales Waratahs,6,2397,0,0,2,0
+2025-05-31,Super Rugby Pacific,Hurricanes,64,2719,7,7,5,0,Moana Pasifika,12,2415,0,0,4,0
+2025-05-31,Super Rugby Pacific,Queensland Reds,52,2536,7,7,1,0,Fijian Drua,7,2389,1,1,0,0
+2025-05-31,URBA Top 12,Alumni,39,2618,3,3,6,0,San Luis,29,2396,2,2,5,0
+2025-05-31,URBA Top 12,CASI,47,2591,5,5,4,0,Regatas Bella Vista,23,2427,2,2,3,0
+2025-05-31,URBA Top 12,Belgrano AC,43,2642,4,4,5,0,SIC,31,2648,4,4,1,0
+2025-05-31,URBA Top 12,CUBA,25,2500,1,1,6,0,Los Tilos,26,2410,2,2,4,0
+2025-05-31,URBA Top 12,B.A.C.R.C.,17,2407,2,2,1,0,Hindú,25,2573,1,1,6,0
+2025-05-31,URBA Top 12,La Plata Rugby Club,17,2464,2,2,1,0,Newman,21,2658,3,3,0,0
+2025-06-01,French Top 14,Stade Toulousain,43,2868,4,4,5,0,Lyon,3,2621,0,0,1,0
+2025-06-01,French Top 14,Toulon,27,2718,3,3,2,0,Bordeaux Begles,10,2779,1,1,1,0
+2025-06-06,Premiership Rugby,Bath Rugby,34,2749,4,4,2,0,Bristol Rugby,20,2669,2,2,2,0
+2025-06-06,Super Rugby Pacific,Crusaders,32,2765,2,2,6,0,Queensland Reds,12,2538,0,0,4,0
+2025-06-07,Premiership Rugby,Leicester Tigers,21,2727,3,3,0,0,Sale Sharks,16,2726,1,1,3,0
+2025-06-07,French Top 14,Bayonne,18,2598,0,0,6,0,Toulon,10,2721,1,1,1,0
+2025-06-07,French Top 14,Lyon,34,2605,4,4,2,0,Racing 92,47,2620,5,5,4,0
+2025-06-07,French Top 14,Montpellier Herault,10,2640,1,1,1,0,Clermont Auvergne,23,2656,2,2,3,0
+2025-06-07,French Top 14,Pau,32,2618,2,2,6,0,La Rochelle,18,2664,0,0,6,0
+2025-06-07,French Top 14,Stade Francais Paris,21,2549,3,3,0,0,Castres Olympique,10,2682,1,1,1,0
+2025-06-07,French Top 14,Bordeaux Begles,59,2766,8,8,1,0,Vannes,28,2469,4,4,0,0
+2025-06-07,French Top 14,Perpignan,42,2505,6,6,0,0,Stade Toulousain,35,2855,5,5,0,0
+2025-06-07,United Rugby Championship,Leinster,37,2926,4,4,3,0,Glasgow Warriors,19,2698,1,1,4,0
+2025-06-07,United Rugby Championship,Bulls,25,2747,1,1,6,0,Sharks,13,2651,1,1,2,0
+2025-06-07,Super Rugby Pacific,Chiefs,19,2766,1,1,4,0,Blues,20,2748,2,2,2,0
+2025-06-07,Super Rugby Pacific,Brumbies,35,2686,5,5,0,0,Hurricanes,28,2712,4,4,0,0
+2025-06-07,URBA Top 12,B.A.C.R.C.,13,2394,1,1,2,0,Alumni,33,2629,3,3,4,0
+2025-06-07,URBA Top 12,Hindú,24,2586,3,3,1,0,La Plata Rugby Club,20,2453,2,2,2,0
+2025-06-07,URBA Top 12,Newman,21,2668,3,3,0,0,CUBA,20,2483,2,2,2,0
+2025-06-07,URBA Top 12,SIC,16,2647,1,1,3,0,CASI,13,2591,1,1,2,0
+2025-06-07,URBA Top 12,Regatas Bella Vista,37,2432,4,4,3,0,San Luis,14,2378,2,2,0,0
+2025-06-07,URBA Top 12,Los Tilos,14,2416,2,2,0,0,Belgrano AC,42,2658,6,6,0,0
