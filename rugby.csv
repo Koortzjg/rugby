@@ -20062,23 +20062,36 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-05-31,URBA Top 12,La Plata Rugby Club,17,2464,2,2,1,0,Newman,21,2658,3,3,0,0
 2025-06-01,French Top 14,Stade Toulousain,43,2868,4,4,5,0,Lyon,3,2621,0,0,1,0
 2025-06-01,French Top 14,Toulon,27,2718,3,3,2,0,Bordeaux Begles,10,2779,1,1,1,0
-2025-06-06,Premiership Rugby,Bath Rugby,34,2749,4,4,2,0,Bristol Rugby,20,2669,2,2,2,0
-2025-06-06,Super Rugby Pacific,Crusaders,32,2765,2,2,6,0,Queensland Reds,12,2538,0,0,4,0
-2025-06-07,Premiership Rugby,Leicester Tigers,21,2727,3,3,0,0,Sale Sharks,16,2726,1,1,3,0
-2025-06-07,French Top 14,Bayonne,18,2598,0,0,6,0,Toulon,10,2721,1,1,1,0
-2025-06-07,French Top 14,Lyon,34,2605,4,4,2,0,Racing 92,47,2620,5,5,4,0
-2025-06-07,French Top 14,Montpellier Herault,10,2640,1,1,1,0,Clermont Auvergne,23,2656,2,2,3,0
-2025-06-07,French Top 14,Pau,32,2618,2,2,6,0,La Rochelle,18,2664,0,0,6,0
-2025-06-07,French Top 14,Stade Francais Paris,21,2549,3,3,0,0,Castres Olympique,10,2682,1,1,1,0
-2025-06-07,French Top 14,Bordeaux Begles,59,2766,8,8,1,0,Vannes,28,2469,4,4,0,0
-2025-06-07,French Top 14,Perpignan,42,2505,6,6,0,0,Stade Toulousain,35,2855,5,5,0,0
-2025-06-07,United Rugby Championship,Leinster,37,2926,4,4,3,0,Glasgow Warriors,19,2698,1,1,4,0
-2025-06-07,United Rugby Championship,Bulls,25,2747,1,1,6,0,Sharks,13,2651,1,1,2,0
-2025-06-07,Super Rugby Pacific,Chiefs,19,2766,1,1,4,0,Blues,20,2748,2,2,2,0
-2025-06-07,Super Rugby Pacific,Brumbies,35,2686,5,5,0,0,Hurricanes,28,2712,4,4,0,0
-2025-06-07,URBA Top 12,B.A.C.R.C.,13,2394,1,1,2,0,Alumni,33,2629,3,3,4,0
-2025-06-07,URBA Top 12,Hindú,24,2586,3,3,1,0,La Plata Rugby Club,20,2453,2,2,2,0
-2025-06-07,URBA Top 12,Newman,21,2668,3,3,0,0,CUBA,20,2483,2,2,2,0
-2025-06-07,URBA Top 12,SIC,16,2647,1,1,3,0,CASI,13,2591,1,1,2,0
-2025-06-07,URBA Top 12,Regatas Bella Vista,37,2432,4,4,3,0,San Luis,14,2378,2,2,0,0
-2025-06-07,URBA Top 12,Los Tilos,14,2416,2,2,0,0,Belgrano AC,42,2658,6,6,0,0
+2025-06-06,Premiership Rugby,Bath Rugby,34,2759,4,4,2,0,Bristol Rugby,20,2656,2,2,2,0
+2025-06-06,Super Rugby Pacific,Crusaders,32,2756,2,2,6,0,Queensland Reds,12,2529,0,0,4,0
+2025-06-07,Premiership Rugby,Leicester Tigers,21,2724,3,3,0,0,Sale Sharks,16,2720,1,1,3,0
+2025-06-07,French Top 14,Bayonne,18,2608,0,0,6,0,Toulon,10,2705,1,1,1,0
+2025-06-07,French Top 14,Lyon,34,2611,4,4,2,0,Racing 92,47,2630,5,5,4,0
+2025-06-07,French Top 14,Montpellier Herault,10,2630,1,1,1,0,Clermont Auvergne,23,2645,2,2,3,0
+2025-06-07,French Top 14,Pau,32,2608,2,2,6,0,La Rochelle,18,2656,0,0,6,0
+2025-06-07,French Top 14,Stade Francais Paris,21,2559,3,3,0,0,Castres Olympique,10,2672,1,1,1,0
+2025-06-07,French Top 14,Bordeaux Begles,59,2783,8,8,1,0,Vannes,28,2480,4,4,0,0
+2025-06-07,French Top 14,Perpignan,42,2513,6,6,0,0,Stade Toulousain,35,2850,5,5,0,0
+2025-06-07,United Rugby Championship,Leinster,37,2923,4,4,3,0,Glasgow Warriors,19,2685,1,1,4,0
+2025-06-07,United Rugby Championship,Bulls,25,2740,1,1,6,0,Sharks,13,2650,1,1,2,0
+2025-06-07,Super Rugby Pacific,Chiefs,19,2762,1,1,4,0,Blues,20,2745,2,2,2,0
+2025-06-07,Super Rugby Pacific,Brumbies,35,2695,5,5,0,0,Hurricanes,28,2708,4,4,0,0
+2025-06-07,URBA Top 12,B.A.C.R.C.,13,2399,1,1,2,0,Alumni,33,2625,3,3,4,0
+2025-06-07,URBA Top 12,Hindú,24,2580,3,3,1,0,La Plata Rugby Club,20,2457,2,2,2,0
+2025-06-07,URBA Top 12,Newman,21,2664,3,3,0,0,CUBA,20,2495,2,2,2,0
+2025-06-07,URBA Top 12,SIC,16,2656,1,1,3,0,CASI,13,2583,1,1,2,0
+2025-06-07,URBA Top 12,Regatas Bella Vista,37,2440,4,4,3,0,San Luis,14,2383,2,2,0,0
+2025-06-07,URBA Top 12,Los Tilos,14,2403,2,2,0,0,Belgrano AC,42,2648,6,6,0,0
+2025-06-13,French Top 14,Bayonne,20,2637,2,2,2,0,Clermont Auvergne,3,2639,0,0,1,0
+2025-06-13,Super Rugby Pacific,Crusaders,21,2772,3,3,0,0,Blues,14,2746,2,2,0,0
+2025-06-14,Premiership Rugby,Bath Rugby,23,2775,2,2,3,0,Leicester Tigers,21,2725,3,3,0,0
+2025-06-14,French Top 14,Toulon,52,2705,7,7,1,0,Castres Olympique,23,2646,2,2,3,0
+2025-06-14,International Test Match,Cayman Islands,18,2493,0,0,6,0,Bermuda,10,2456,1,1,1,0
+2025-06-14,United Rugby Championship,Leinster,32,2936,2,2,6,0,Bulls,7,2740,1,1,0,0
+2025-06-14,Super Rugby Pacific,Chiefs,37,2764,4,4,3,0,Brumbies,17,2692,2,2,1,0
+2025-06-14,URBA Top 12,San Luis,6,2367,0,0,2,0,SIC,19,2667,1,1,4,0
+2025-06-14,URBA Top 12,CASI,25,2581,1,1,6,0,Los Tilos,21,2392,3,3,0,0
+2025-06-14,URBA Top 12,Belgrano AC,41,2670,5,5,2,0,Newman,21,2654,3,3,0,0
+2025-06-14,URBA Top 12,CUBA,10,2502,1,1,1,0,Hindú,6,2574,0,0,2,0
+2025-06-14,URBA Top 12,La Plata Rugby Club,20,2459,2,2,2,0,B.A.C.R.C.,17,2385,2,2,1,0
+2025-06-14,URBA Top 12,Alumni,9,2617,0,0,3,0,Regatas Bella Vista,12,2467,0,0,4,0
