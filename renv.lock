@@ -91,7 +91,7 @@
     },
     "cli": {
       "Package": "cli",
-      "Version": "3.6.4",
+      "Version": "3.6.5",
       "Source": "Repository",
       "Title": "Helpers for Developing Command Line Interfaces",
       "Authors@R": "c( person(\"Gábor\", \"Csárdi\", , \"gabor@posit.co\", role = c(\"aut\", \"cre\")), person(\"Hadley\", \"Wickham\", role = \"ctb\"), person(\"Kirill\", \"Müller\", role = \"ctb\"), person(\"Salim\", \"Brüggemann\", , \"salim-b@pm.me\", role = \"ctb\", comment = c(ORCID = \"0000-0002-5329-5987\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
@@ -138,7 +138,7 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "6.2.2",
+      "Version": "6.3.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "A Modern and Flexible Web Client for R",
@@ -166,13 +166,13 @@
       "Encoding": "UTF-8",
       "Language": "en-US",
       "NeedsCompilation": "yes",
-      "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>), Hadley Wickham [ctb], Posit Software, PBC [cph]",
+      "Author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>), Hadley Wickham [ctb], Posit Software, PBC [cph]",
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
       "Repository": "CRAN"
     },
     "data.table": {
       "Package": "data.table",
-      "Version": "1.17.2",
+      "Version": "1.17.4",
       "Source": "Repository",
       "Title": "Extension of `data.frame`",
       "Depends": [
@@ -238,37 +238,6 @@
       "NeedsCompilation": "yes",
       "Author": "Ethan Heinzen [aut, cre]",
       "Maintainer": "Ethan Heinzen <heinzen.ethan@mayo.edu>",
-      "Repository": "CRAN"
-    },
-    "fansi": {
-      "Package": "fansi",
-      "Version": "1.0.6",
-      "Source": "Repository",
-      "Title": "ANSI Control Sequence Aware String Functions",
-      "Description": "Counterparts to R string manipulation functions that account for the effects of ANSI text formatting control sequences.",
-      "Authors@R": "c( person(\"Brodie\", \"Gaslam\", email=\"brodie.gaslam@yahoo.com\", role=c(\"aut\", \"cre\")), person(\"Elliott\", \"Sales De Andrade\", role=\"ctb\"), person(family=\"R Core Team\", email=\"R-core@r-project.org\", role=\"cph\", comment=\"UTF8 byte length calcs from src/util.c\" ))",
-      "Depends": [
-        "R (>= 3.1.0)"
-      ],
-      "License": "GPL-2 | GPL-3",
-      "URL": "https://github.com/brodieG/fansi",
-      "BugReports": "https://github.com/brodieG/fansi/issues",
-      "VignetteBuilder": "knitr",
-      "Suggests": [
-        "unitizer",
-        "knitr",
-        "rmarkdown"
-      ],
-      "Imports": [
-        "grDevices",
-        "utils"
-      ],
-      "RoxygenNote": "7.2.3",
-      "Encoding": "UTF-8",
-      "Collate": "'constants.R' 'fansi-package.R' 'internal.R' 'load.R' 'misc.R' 'nchar.R' 'strwrap.R' 'strtrim.R' 'strsplit.R' 'substr2.R' 'trimws.R' 'tohtml.R' 'unhandled.R' 'normalize.R' 'sgr.R'",
-      "NeedsCompilation": "yes",
-      "Author": "Brodie Gaslam [aut, cre], Elliott Sales De Andrade [ctb], R Core Team [cph] (UTF8 byte length calcs from src/util.c)",
-      "Maintainer": "Brodie Gaslam <brodie.gaslam@yahoo.com>",
       "Repository": "CRAN"
     },
     "glue": {
@@ -354,7 +323,7 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
-      "Version": "1.9.1",
+      "Version": "2.0.0",
       "Source": "Repository",
       "Title": "A Simple and Robust JSON Parser and Generator for R",
       "License": "MIT + file LICENSE",
@@ -376,7 +345,7 @@
         "R.rsp",
         "sf"
       ],
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "NeedsCompilation": "yes",
       "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>), Duncan Temple Lang [ctb], Lloyd Hilaiel [cph] (author of bundled libyajl)",
@@ -493,7 +462,7 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.3.2",
+      "Version": "2.3.3",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Toolkit for Encryption, Signatures and Certificates Based on OpenSSL",
@@ -520,7 +489,7 @@
       "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "NeedsCompilation": "yes",
-      "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>), Oliver Keyes [ctb]",
+      "Author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>), Oliver Keyes [ctb]",
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
       "Repository": "CRAN"
     },
@@ -738,11 +707,11 @@
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "1.1.5",
+      "Version": "1.1.6",
       "Source": "Repository",
       "Title": "Functions for Base Types and Core R and 'Tidyverse' Features",
       "Description": "A toolbox for working with base types, core R features like the condition system, and core 'Tidyverse' features like tidy evaluation.",
-      "Authors@R": "c( person(\"Lionel\", \"Henry\", ,\"lionel@posit.co\", c(\"aut\", \"cre\")), person(\"Hadley\", \"Wickham\", ,\"hadley@posit.co\", \"aut\"), person(given = \"mikefc\", email = \"mikefc@coolbutuseless.com\",  role = \"cph\",  comment = \"Hash implementation based on Mike's xxhashlite\"), person(given = \"Yann\", family = \"Collet\", role = \"cph\",  comment = \"Author of the embedded xxHash library\"), person(given = \"Posit, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Authors@R": "c( person(\"Lionel\", \"Henry\", ,\"lionel@posit.co\", c(\"aut\", \"cre\")), person(\"Hadley\", \"Wickham\", ,\"hadley@posit.co\", \"aut\"), person(given = \"mikefc\", email = \"mikefc@coolbutuseless.com\", role = \"cph\", comment = \"Hash implementation based on Mike's xxhashlite\"), person(given = \"Yann\", family = \"Collet\", role = \"cph\", comment = \"Author of the embedded xxHash library\"), person(given = \"Posit, PBC\", role = c(\"cph\", \"fnd\")) )",
       "License": "MIT + file LICENSE",
       "ByteCompile": "true",
       "Biarch": "true",
@@ -756,15 +725,17 @@
         "cli (>= 3.1.0)",
         "covr",
         "crayon",
+        "desc",
         "fs",
         "glue",
         "knitr",
         "magrittr",
         "methods",
         "pillar",
+        "pkgload",
         "rmarkdown",
         "stats",
-        "testthat (>= 3.0.0)",
+        "testthat (>= 3.2.0)",
         "tibble",
         "usethis",
         "vctrs (>= 0.2.3)",
@@ -777,6 +748,7 @@
       "RoxygenNote": "7.3.2",
       "URL": "https://rlang.r-lib.org, https://github.com/r-lib/rlang",
       "BugReports": "https://github.com/r-lib/rlang/issues",
+      "Config/build/compilation-database": "true",
       "Config/testthat/edition": "3",
       "Config/Needs/website": "dplyr, tidyverse/tidytemplate",
       "NeedsCompilation": "yes",
@@ -865,9 +837,9 @@
     },
     "stringi": {
       "Package": "stringi",
-      "Version": "1.8.4",
+      "Version": "1.8.7",
       "Source": "Repository",
-      "Date": "2024-05-06",
+      "Date": "2025-03-27",
       "Title": "Fast and Portable Character String Processing Facilities",
       "Description": "A collection of character string/text/natural language processing tools for pattern searching (e.g., with 'Java'-like regular expressions or the 'Unicode' collation algorithm), random string generation, case mapping, string transliteration, concatenation, sorting, padding, wrapping, Unicode normalisation, date-time formatting and parsing, and many more. They are fast, consistent, convenient, and - thanks to 'ICU' (International Components for Unicode) - portable across all locales and platforms. Documentation about 'stringi' is provided via its website at <https://stringi.gagolewski.com/> and the paper by Gagolewski (2022, <doi:10.18637/jss.v103.i02>).",
       "URL": "https://stringi.gagolewski.com/, https://github.com/gagolews/stringi, https://icu.unicode.org/",
@@ -884,11 +856,12 @@
       ],
       "Biarch": "TRUE",
       "License": "file LICENSE",
-      "Author": "Marek Gagolewski [aut, cre, cph] (<https://orcid.org/0000-0003-0637-6028>), Bartek Tartanus [ctb], and others (stringi source code); Unicode, Inc. and others (ICU4C source code, Unicode Character Database)",
-      "Maintainer": "Marek Gagolewski <marek@gagolewski.com>",
-      "RoxygenNote": "7.2.3",
+      "Authors@R": "c(person(given = \"Marek\", family = \"Gagolewski\", role = c(\"aut\", \"cre\", \"cph\"), email = \"marek@gagolewski.com\", comment = c(ORCID = \"0000-0003-0637-6028\")), person(given = \"Bartek\", family = \"Tartanus\", role = \"ctb\"), person(\"Unicode, Inc. and others\", role=\"ctb\", comment = \"ICU4C source code, Unicode Character Database\") )",
+      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "NeedsCompilation": "yes",
+      "Author": "Marek Gagolewski [aut, cre, cph] (<https://orcid.org/0000-0003-0637-6028>), Bartek Tartanus [ctb], Unicode, Inc. and others [ctb] (ICU4C source code, Unicode Character Database)",
+      "Maintainer": "Marek Gagolewski <marek@gagolewski.com>",
       "License_is_FOSS": "yes",
       "Repository": "CRAN"
     },
@@ -962,7 +935,7 @@
     },
     "tibble": {
       "Package": "tibble",
-      "Version": "3.2.1",
+      "Version": "3.3.0",
       "Source": "Repository",
       "Title": "Simple Data Frames",
       "Authors@R": "c(person(given = \"Kirill\", family = \"M\\u00fcller\", role = c(\"aut\", \"cre\"), email = \"kirill@cynkra.com\", comment = c(ORCID = \"0000-0002-1416-3412\")), person(given = \"Hadley\", family = \"Wickham\", role = \"aut\", email = \"hadley@rstudio.com\"), person(given = \"Romain\", family = \"Francois\", role = \"ctb\", email = \"romain@r-enthusiasts.com\"), person(given = \"Jennifer\", family = \"Bryan\", role = \"ctb\", email = \"jenny@rstudio.com\"), person(given = \"RStudio\", role = c(\"cph\", \"fnd\")))",
@@ -974,7 +947,7 @@
         "R (>= 3.4.0)"
       ],
       "Imports": [
-        "fansi (>= 0.4.0)",
+        "cli",
         "lifecycle (>= 1.0.0)",
         "magrittr",
         "methods",
@@ -982,7 +955,7 @@
         "pkgconfig",
         "rlang (>= 1.0.2)",
         "utils",
-        "vctrs (>= 0.4.2)"
+        "vctrs (>= 0.5.0)"
       ],
       "Suggests": [
         "bench",
@@ -990,9 +963,6 @@
         "blob",
         "brio",
         "callr",
-        "cli",
-        "covr",
-        "crayon (>= 1.3.4)",
         "DiagrammeR",
         "dplyr",
         "evaluate",
@@ -1003,9 +973,7 @@
         "htmltools",
         "knitr",
         "lubridate",
-        "mockr",
         "nycflights13",
-        "pkgbuild",
         "pkgload",
         "purrr",
         "rmarkdown",
@@ -1016,7 +984,7 @@
       ],
       "VignetteBuilder": "knitr",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.2.9000",
       "Config/testthat/edition": "3",
       "Config/testthat/parallel": "true",
       "Config/testthat/start-first": "vignette-formats, as_tibble, add, invariants",
@@ -1025,20 +993,20 @@
       "Config/autostyle/rmd": "false",
       "Config/Needs/website": "tidyverse/tidytemplate",
       "NeedsCompilation": "yes",
-      "Author": "Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>), Hadley Wickham [aut], Romain Francois [ctb], Jennifer Bryan [ctb], RStudio [cph, fnd]",
+      "Author": "Kirill Müller [aut, cre] (ORCID: <https://orcid.org/0000-0002-1416-3412>), Hadley Wickham [aut], Romain Francois [ctb], Jennifer Bryan [ctb], RStudio [cph, fnd]",
       "Maintainer": "Kirill Müller <kirill@cynkra.com>",
       "Repository": "CRAN"
     },
     "utf8": {
       "Package": "utf8",
-      "Version": "1.2.5",
+      "Version": "1.2.6",
       "Source": "Repository",
       "Title": "Unicode Text Processing",
-      "Authors@R": "c(person(given = c(\"Patrick\", \"O.\"), family = \"Perry\", role = c(\"aut\", \"cph\")), person(given = \"Kirill\", family = \"M\\u00fcller\", role = \"cre\", email = \"kirill@cynkra.com\"), person(given = \"Unicode, Inc.\", role = c(\"cph\", \"dtc\"), comment = \"Unicode Character Database\"))",
+      "Authors@R": "c(person(given = c(\"Patrick\", \"O.\"), family = \"Perry\", role = c(\"aut\", \"cph\")), person(given = \"Kirill\", family = \"M\\u00fcller\", role = \"cre\", email = \"kirill@cynkra.com\", comment = c(ORCID = \"0000-0002-1416-3412\")), person(given = \"Unicode, Inc.\", role = c(\"cph\", \"dtc\"), comment = \"Unicode Character Database\"))",
       "Description": "Process and print 'UTF-8' encoded international text (Unicode). Input, validate, normalize, encode, format, and display.",
       "License": "Apache License (== 2.0) | file LICENSE",
-      "URL": "https://ptrckprry.com/r-utf8/, https://github.com/patperry/r-utf8",
-      "BugReports": "https://github.com/patperry/r-utf8/issues",
+      "URL": "https://krlmlr.github.io/utf8/, https://github.com/krlmlr/utf8",
+      "BugReports": "https://github.com/krlmlr/utf8/issues",
       "Depends": [
         "R (>= 2.10)"
       ],
@@ -1056,7 +1024,7 @@
       "Encoding": "UTF-8",
       "RoxygenNote": "7.3.2.9000",
       "NeedsCompilation": "yes",
-      "Author": "Patrick O. Perry [aut, cph], Kirill Müller [cre], Unicode, Inc. [cph, dtc] (Unicode Character Database)",
+      "Author": "Patrick O. Perry [aut, cph], Kirill Müller [cre] (ORCID: <https://orcid.org/0000-0002-1416-3412>), Unicode, Inc. [cph, dtc] (Unicode Character Database)",
       "Maintainer": "Kirill Müller <kirill@cynkra.com>",
       "Repository": "CRAN"
     },
@@ -1109,7 +1077,7 @@
     },
     "xml2": {
       "Package": "xml2",
-      "Version": "1.3.7",
+      "Version": "1.3.8",
       "Source": "Repository",
       "Title": "Parse XML",
       "Authors@R": "c( person(\"Hadley\", \"Wickham\", role = \"aut\"), person(\"Jim\", \"Hester\", role = \"aut\"), person(\"Jeroen\", \"Ooms\", email = \"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")), person(\"R Foundation\", role = \"ctb\", comment = \"Copy of R-project homepage cached as example\") )",

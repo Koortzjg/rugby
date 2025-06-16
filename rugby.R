@@ -35,11 +35,11 @@ get_espn_rugby <- function(date) {
         html_element(page, xpath = _) |>
         html_text2()
 
-    home_team <- "/div/div/div/header/a/div[1]/div/div[1]/div[1]/div/span/span[1]" # nolint: line_length_linter.
+    home_team <- "/div/div/div/header/a/div[1]/div/div[1]/div[1]/div/span/span[1]"
 
     home_score <- "/div/div/div/header/a/div[1]/div/div[2]/div"
 
-    away_team <- "/div/div/div/header/a/div[3]/div/div[2]/div[2]/div/span/span[1]" # nolint: line_length_linter.
+    away_team <- "/div/div/div/header/a/div[3]/div/div[2]/div[2]/div/span/span[1]"
 
     away_score <- "/div/div/div/header/a/div[3]/div/div[1]/div"
 
@@ -53,7 +53,8 @@ get_espn_rugby <- function(date) {
         while (!is.na(match)) {
             tries <- sprintf(
                 "//*[@id='events']/div[%d]/article[%s]/div/div/div/header/a",
-                n_x, n_y
+                n_x,
+                n_y
             ) |>
                 html_element(page, xpath = _) |>
                 html_attr("href") |>
@@ -67,29 +68,39 @@ get_espn_rugby <- function(date) {
                 Sys.sleep(5L)
 
                 page2 <- sprintf(
-                    "https://www.espn.co.uk/rugby/matchstats?gameId=%s&league=%s", # nolint: line_length_linter.
-                    tries[1, ], tries[2, ]
+                    "https://www.espn.co.uk/rugby/matchstats?gameId=%s&league=%s",
+                    tries[1, ],
+                    tries[2, ]
                 ) |>
                     read_html()
 
-                match_stats <- "//*[@id='main-container']/div/div[2]/div[1]/div[2]/div[1]/article/div/table" |> # nolint: line_length_linter.
+                match_stats <- "//*[@id='main-container']/div/div[2]/div[1]/div[2]/div[1]/article/div/table" |>
                     html_element(page2, xpath = _) |>
                     html_table() |>
                     as.data.table() |>
                     DT(, .(X2, X3, X5)) |>
-                    DT(, X2 := fifelse(grepl("Kick", X3), sub("\\%", "", X2) |>
-                        as.integer() |>
-                        {
-                            \(x) x / 100
-                        }(), as.double(X2))) |>
-                    DT(, X5 := fifelse(
-                        grepl("Kick", X3), sub("\\%", "", X5) |>
-                            as.integer() |>
-                            {
-                                \(x) x / 100
-                            }(),
-                        as.double(X5)
-                    )) |>
+                    DT(,
+                        X2 := fifelse(
+                            grepl("Kick", X3),
+                            sub("\\%", "", X2) |>
+                                as.integer() |>
+                                {
+                                    \(x) x / 100
+                                }(),
+                            as.double(X2)
+                        )
+                    ) |>
+                    DT(,
+                        X5 := fifelse(
+                            grepl("Kick", X3),
+                            sub("\\%", "", X5) |>
+                                as.integer() |>
+                                {
+                                    \(x) x / 100
+                                }(),
+                            as.double(X5)
+                        )
+                    ) |>
                     DT()
             } else {
                 match_stats <- data.table(
@@ -105,14 +116,18 @@ get_espn_rugby <- function(date) {
                 competition_name = competition,
                 home_team = sprintf(
                     "//*[@id='events']/div[%d]/article[%d]%s",
-                    n_x, n_y, home_team
+                    n_x,
+                    n_y,
+                    home_team
                 ) |>
                     html_element(page, xpath = _) |>
                     html_text2() |>
                     trimws("both"),
                 home_score = sprintf(
                     "//*[@id='events']/div[%d]/article[%d]%s",
-                    n_x, n_y, home_score
+                    n_x,
+                    n_y,
+                    home_score
                 ) |>
                     html_element(page, xpath = _) |>
                     html_text2() |>
@@ -124,14 +139,18 @@ get_espn_rugby <- function(date) {
                 home_kick = match_stats[4, X2][[1]],
                 away_team = sprintf(
                     "//*[@id='events']/div[%d]/article[%d]%s",
-                    n_x, n_y, away_team
+                    n_x,
+                    n_y,
+                    away_team
                 ) |>
                     html_element(page, xpath = _) |>
                     html_text2() |>
                     trimws("both"),
                 away_score = sprintf(
                     "//*[@id='events']/div[%d]/article[%d]%s",
-                    n_x, n_y, away_score
+                    n_x,
+                    n_y,
+                    away_score
                 ) |>
                     html_element(page, xpath = _) |>
                     html_text2() |>
@@ -149,7 +168,8 @@ get_espn_rugby <- function(date) {
             n_y <- n_y + 1L
 
             match <- sprintf(
-                "//*[@id='events']/div[%d]/article[%s]", n_x,
+                "//*[@id='events']/div[%d]/article[%s]",
+                n_x,
                 n_y
             ) |>
                 html_element(page, xpath = _) |>
@@ -168,12 +188,17 @@ get_espn_rugby <- function(date) {
 ## This functions estimate the number of tries, conversions, and penalties from
 ## a rugby score.
 decompose_score <- function(score, what) {
-    result <- lpSolve::lp("max", c(3, 1, 1), matrix(c(7, 5, 3),
-        nrow = 1,
-        byrow = TRUE
-    ), c("="), c(score), all.int = TRUE)
+    result <- lpSolve::lp(
+        "max",
+        c(3, 1, 1),
+        matrix(c(7, 5, 3), nrow = 1, byrow = TRUE),
+        c("="),
+        c(score),
+        all.int = TRUE
+    )
 
-    result <- switch(what,
+    result <- switch(
+        what,
         penalty = result[["solution"]][3],
         tries = result[["solution"]][2] + result[["solution"]][1],
         conversions = result[["solution"]][1]
@@ -207,7 +232,9 @@ while (start_date < Sys.Date()) {
 
     get_espn_rugby(start_date)
 
-    paste(sprintf("%s", as.character(start_date)), timetaken(start_time2),
+    paste(
+        sprintf("%s", as.character(start_date)),
+        timetaken(start_time2),
         sprintf("%06.2f%%", (i / final_number) * 100),
         sep = " "
     ) |>
@@ -225,26 +252,39 @@ while (start_date < Sys.Date()) {
 fread("rugby.csv", colClasses = list(Date = "match_date")) |>
     DT(, venue := competition_name == "Rugby World Cup") |>
     DT(, venue := fifelse((venue), 0, 10)) |>
-    (\(x) elo.run(score(home_score, away_score) ~ adjust(home_team, venue) +
-        away_team + k(fcase(
-            venue == 0 &
-                abs(home_score - away_score) > 15,
-            60,
-            venue == 0 &
-                abs(home_score - away_score) == 0,
-            20,
-            venue == 0 &
-                abs(home_score - away_score) < 16,
-            40,
-            abs(home_score - away_score) > 15, 30,
-            abs(home_score - away_score) == 0, 10,
-            abs(home_score - away_score) < 16,
-            20
-        )), x, initial.elos = 2500) |>
-        as.data.table() |>
-        cbind(x))() |>
-    DT(, .(match_date, home_team,
-        home_elo = as.integer(elo.A), away_team,
+    (\(x) {
+        elo.run(
+            score(home_score, away_score) ~
+                adjust(home_team, venue) +
+                    away_team +
+                    k(fcase(
+                        venue == 0 &
+                            abs(home_score - away_score) > 15,
+                        60,
+                        venue == 0 &
+                            abs(home_score - away_score) == 0,
+                        20,
+                        venue == 0 &
+                            abs(home_score - away_score) < 16,
+                        40,
+                        abs(home_score - away_score) > 15,
+                        30,
+                        abs(home_score - away_score) == 0,
+                        10,
+                        abs(home_score - away_score) < 16,
+                        20
+                    )),
+            x,
+            initial.elos = 2500
+        ) |>
+            as.data.table() |>
+            cbind(x)
+    })() |>
+    DT(, .(
+        match_date,
+        home_team,
+        home_elo = as.integer(elo.A),
+        away_team,
         away_elo = as.integer(elo.B)
     )) |>
     DT(
@@ -253,32 +293,57 @@ fread("rugby.csv", colClasses = list(Date = "match_date")) |>
         on = .(match_date, home_team, away_team)
     ) |>
     DT(, .(
-        match_date, competition_name, home_team, home_score, home_elo,
-        home_tries, home_conversion, home_penalty, home_kick, away_team,
-        away_score, away_elo, away_tries, away_conversion, away_penalty,
+        match_date,
+        competition_name,
+        home_team,
+        home_score,
+        home_elo,
+        home_tries,
+        home_conversion,
+        home_penalty,
+        home_kick,
+        away_team,
+        away_score,
+        away_elo,
+        away_tries,
+        away_conversion,
+        away_penalty,
         away_kick
     )) |>
     DT(order(match_date)) |>
-    DT(, all_count := rowid(
-        match_date, competition_name, home_team,
-        away_team
-    )) |>
+    DT(,
+        all_count := rowid(
+            match_date,
+            competition_name,
+            home_team,
+            away_team
+        )
+    ) |>
     DT(all_count == 1, -"all_count") |>
     fwrite("rugby.csv")
 
-if (fread("rugby.csv", select = c(
-    "home_tries", "home_conversion",
-    "home_penalty", "away_tries",
-    "away_conversion", "away_penalty"
-)) |>
-    DT(, all_count := seq_len(.N)) |>
-    melt(id.vars = "all_count", variable.factor = FALSE) |>
-    DT(, value) |>
-    is.na() |>
-    sum() > 0) {
+if (
+    fread(
+        "rugby.csv",
+        select = c(
+            "home_tries",
+            "home_conversion",
+            "home_penalty",
+            "away_tries",
+            "away_conversion",
+            "away_penalty"
+        )
+    ) |>
+        DT(, all_count := seq_len(.N)) |>
+        melt(id.vars = "all_count", variable.factor = FALSE) |>
+        DT(, value) |>
+        is.na() |>
+        sum() >
+        0
+) {
     fread("rugby.csv") |>
-        DT(
-            , `:=`(
+        DT(,
+            `:=`(
                 home_tries = fifelse(
                     is.na(home_tries),
                     decompose_score(home_score, "tries"),
@@ -291,12 +356,16 @@ if (fread("rugby.csv", select = c(
                 )
             ),
             .(
-                match_date, competition_name, home_team, home_score, away_team,
+                match_date,
+                competition_name,
+                home_team,
+                home_score,
+                away_team,
                 away_score
             )
         ) |>
-        DT(
-            , `:=`(
+        DT(,
+            `:=`(
                 home_conversion = fifelse(
                     is.na(home_conversion),
                     decompose_score(
@@ -315,12 +384,16 @@ if (fread("rugby.csv", select = c(
                 )
             ),
             .(
-                match_date, competition_name, home_team, home_score, away_team,
+                match_date,
+                competition_name,
+                home_team,
+                home_score,
+                away_team,
                 away_score
             )
         ) |>
-        DT(
-            , `:=`(
+        DT(,
+            `:=`(
                 home_penalty = fifelse(
                     is.na(home_penalty),
                     decompose_score(home_score, "penalty"),
@@ -333,7 +406,11 @@ if (fread("rugby.csv", select = c(
                 )
             ),
             .(
-                match_date, competition_name, home_team, home_score, away_team,
+                match_date,
+                competition_name,
+                home_team,
+                home_score,
+                away_team,
                 away_score
             )
         ) |>
@@ -349,7 +426,9 @@ end_rows <- NROW(fread("rugby.csv"))
 
 sprintf(
     "The rugby data have updated for %s, adding %d rows, and %s",
-    Sys.Date() - 1, end_rows - start_rows, timetaken(start_time)
+    Sys.Date() - 1,
+    end_rows - start_rows,
+    timetaken(start_time)
 ) |>
     shQuote() |>
     httr::POST(url = paste0("https://ntfy.sh/", "rugby_koortzjg"), body = _) |>
