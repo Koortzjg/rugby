@@ -1,1 +1,1 @@
-renv::snapshot()
+renv::snapshot(prompt = FALSE)
