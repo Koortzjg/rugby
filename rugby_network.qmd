@@ -1,0 +1,2229 @@
+---
+title: Rugby Network
+format: html
+execute:
+    message: false
+    warning: false
+    echo: false
+---
+
+```{ojs}
+personal_colours = [
+    "#0080AB",
+    "#C9197D",
+    "#1E7B20",
+    "#914278",
+    "#28412C",
+    "#D11F0B",
+    "#4224BF",
+    "#88502E",
+    "#100739",
+    "#370E01",
+    "#2F65D0",
+    "#9F04FC",
+    "#3399BC",
+    "#D44797",
+    "#4B954D",
+    "#A76893",
+    "#536756",
+    "#DA4C3C",
+    "#6850CC",
+    "#A07358",
+    "#403961",
+    "#5F3E34",
+    "#5984D9",
+    "#B236FD",
+    "#66B3CD",
+    "#DF75B1",
+    "#78B079",
+    "#BD8EAE",
+    "#7E8D80",
+    "#E3796D",
+    "#8E7CD9",
+    "#B89682",
+    "#706A88",
+    "#876E67",
+    "#82A3E3",
+    "#C568FD",
+    "#99CCDD",
+    "#E9A3CB",
+    "#A5CAA6",
+    "#D3B3C9",
+    "#A9B3AB",
+    "#EDA59D",
+    "#B3A7E5",
+    "#CFB9AB",
+    "#9F9CB0",
+    "#AF9F99",
+    "#ACC1EC",
+    "#D99BFE",
+    "#CCE6EE",
+    "#F4D1E5",
+    "#D2E5D2",
+    "#E9D9E4",
+    "#D4D9D5",
+    "#F6D2CE",
+    "#D9D3F2",
+    "#E7DCD5",
+    "#CFCDD7",
+    "#D7CFCC",
+    "#D5E0F6",
+    "#ECCDFE",
+];
+
+function sparkbar(max) {
+    return (x) => htl.html`<div style="
+          background: #66B3CD;
+          width: ${(100 * x) / max}%;
+          float: right;
+          padding-right: 3px;
+          box-sizing: border-box;
+          overflow: visible;
+          display: flex;
+          justify-content: end;">${x.toLocaleString("en-GB")}`;
+}
+
+function sparkbarPercent(max) {
+    return (x) => htl.html`<div style="
+          background: #66B3CD;
+          width: ${(100 * Math.abs(x)) / max}%;
+          float: right;
+          padding-right: 3px;
+          box-sizing: border-box;
+          overflow: visible;
+          display: flex;
+          justify-content: end;">${x.toLocaleString("en-GB", {
+              style: "percent",
+              minimumFractionDigits: 1,
+              maximumFractionDigits: 1
+          })}`;
+}
+```
+
+```{ojs}
+matchDataSixNations = (await FileAttachment("rugby.csv").csv({ typed: true }))
+    .filter(d => d.competition_name.includes("Six Nations"))
+    .map(d => ({
+        ...d,
+        home_score: +d.home_score,
+        away_score: +d.away_score,
+        match_date: new Date(d.match_date),
+        winner: d.home_score > d.away_score ? d.home_team : d.away_team,
+        loser: d.home_score > d.away_score ? d.away_team : d.home_team
+    }));
+
+teamStatsSixNations = {
+    const stats = new Map();
+    for (const d of matchDataSixNations) {
+        for (const team of [d.home_team, d.away_team]) {
+            if (!stats.has(team)) stats.set(team, { team, games: 0, wins: 0 });
+            stats.get(team).games++;
+        }
+        stats.get(d.winner).wins++;
+    }
+    return Array.from(stats.values())
+        .map(d => ({
+            ...d,
+            win_rate: d.wins / d.games
+        }))
+        .sort((a, b) => b.wins - a.wins || b.games - a.games || b.win_rate - a.win_rate);
+};
+
+edgesSixNations = {
+    const edgeMap = new Map();
+    for (const d of matchDataSixNations) {
+        const [team1, team2] = [d.home_team, d.away_team].sort();
+        const key = `${team1}|${team2}`;
+        if (!edgeMap.has(key))
+            edgeMap.set(key, {
+                team1,
+                team2,
+                wins_team1: 0,
+                wins_team2: 0,
+                total: 0
+            });
+        const edge = edgeMap.get(key);
+        edge.total++;
+        if (d.winner === team1) edge.wins_team1++;
+        else edge.wins_team2++;
+    }
+    return Array.from(edgeMap.values()).map(
+        ({ team1, team2, wins_team1, wins_team2, total }) => {
+            const dominant = wins_team1 >= wins_team2 ? team1 : team2;
+            const weaker = wins_team1 < wins_team2 ? team1 : team2;
+            return {
+                source: dominant,
+                target: weaker,
+                weight: Math.max(wins_team1, wins_team2) / total
+            };
+        }
+    );
+};
+
+nodesSixNations = teamStatsSixNations
+    .map(d => ({
+        id: d.team,
+        group: d.wins,
+        wins: d.wins,
+        games: d.games,
+        win_rate: d.win_rate,
+        title: `${d.team}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(d.win_rate * 100).toFixed(1)}%`
+    }))
+    .sort((a, b) =>
+        b.wins - a.wins ||
+        b.games - a.games ||
+        b.win_rate - a.win_rate
+    );
+
+circularNodesSixNations = {
+    const radius = 250;
+    const centerX = width / 2;
+    const centerY = 300;
+    const angleStep = (2 * Math.PI) / nodesSixNations.length;
+
+    return nodesSixNations.map((node, i) => ({
+        ...node,
+        fx: centerX + radius * Math.cos(i * angleStep),
+        fy: centerY + radius * Math.sin(i * angleStep)
+    }));
+};
+```
+
+```{ojs}
+//| label: tbl-six-nations
+//| tbl-cap: Six Nations Matches
+Inputs.table(nodesSixNations, {
+    columns: [
+        "id",
+        "games",
+        "wins",
+        "win_rate"
+    ],
+    header: {
+        id: "Country",
+        games: "Number of Matches Played",
+        wins: "Number of Matches Won",
+        win_rate: "Win Rate"
+    },
+    format: {
+        games: sparkbar(d3.max(nodesRugbyChampionship, (d) => d["games"])),
+        wins: sparkbar(d3.max(nodesRugbyChampionship, (d) => d["wins"])),
+        win_rate: sparkbarPercent(
+            d3.max(nodesRugbyChampionship, (d) => d["win_rate"])
+        ),
+    },
+    rows: 100,
+});
+```
+
+```{ojs}
+//| label: fig-six-nations
+//| fig-cap: Six Nations.
+{
+    const width = 928;
+    const height = 600;
+
+    const color = d3.scaleOrdinal(personal_colours);
+
+    const links = edgesSixNations.map(d => ({ ...d }));
+    const nodes = circularNodesSixNations.map(d => ({ ...d }));
+
+    const radiusScale = d3.scaleSqrt()
+        .domain([0, d3.max(nodes, d => d.wins)])
+        .range([5, 100]);
+
+    const linkColor = d3.scaleLinear()
+        .domain([0, 0.5, 1])
+        .range(["#2ca02c", "#ff7f0e", "#d62728"]);
+
+    const svg = d3.create("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width, height + 50])
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("style", "width: 100%; height: auto;");
+
+    // Create a unique arrowhead marker for each link
+    const defs = svg.append("defs");
+
+    links.forEach((d, i) => {
+        defs.append("marker")
+            .attr("id", `arrowhead-${i}`)
+            .attr("viewBox", "0 -3 6 6")
+            .attr("refX", 6)
+            .attr("refY", 0)
+            .attr("markerWidth", 2)
+            .attr("markerHeight", 4)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-3L6,0L0,3")
+            .attr("fill", linkColor(d.weight));
+    });
+
+    const simulation = d3.forceSimulation(nodes)
+        .force("link", d3.forceLink(links).id(d => d.id))
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .on("tick", ticked);
+
+    const link = svg.append("g")
+        .attr("fill", "none")
+        .attr("stroke-opacity", 0.6)
+        .selectAll("path")
+        .data(links)
+        .join("path")
+        .attr("stroke", d => linkColor(d.weight))
+        .attr("stroke-width", d => 5 * d.weight)
+        .attr("marker-end", (d, i) => `url(#arrowhead-${i})`);
+
+    const node = svg.append("g")
+        .selectAll("circle")
+        .data(nodes)
+        .join("circle")
+        .attr("r", d => radiusScale(d.wins))
+        .attr("fill", d => color(d.group));
+
+    // Tooltip with full team stats
+    node.append("title")
+        .text(d => `${d.id}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(d.win_rate * 100).toFixed(1)}%`);
+
+    node.call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended));
+
+    const labels = svg.append("g")
+        .selectAll("text")
+        .data(nodes)
+        .join("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .attr("font-size", "10px")
+        .attr("fill", "#fff")
+        .text(d => d.id);
+
+    function ticked() {
+        link.attr("d", d => {
+            const dx = d.target.x - d.source.x;
+            const dy = d.target.y - d.source.y;
+            const dr = Math.sqrt(dx * dx + dy * dy);
+            const r = radiusScale(d.target.wins);
+            const ratio = (dr - r) / dr;
+            const tx = d.source.x + dx * ratio;
+            const ty = d.source.y + dy * ratio;
+            return `M${d.source.x},${d.source.y}L${tx},${ty}`;
+        });
+
+        node
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y);
+
+        labels
+            .attr("x", d => d.x)
+            .attr("y", d => d.y);
+    }
+
+    function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+    }
+
+    function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+    }
+
+    function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+    }
+
+    // When this cell is re-run, stop the previous simulation. (This doesn’t
+    // really matter since the target alpha is zero and the simulation will
+    // stop naturally, but it’s a good practice.)
+    invalidation.then(() => simulation.stop());
+
+    return svg.node();
+}
+```
+
+```{ojs}
+matchDataRugbyChampionship = (await FileAttachment("rugby.csv").csv({ typed: true }))
+    .filter(
+        d => (
+            d.competition_name === "Rugby Championship" ||
+            d.competition_name === "The Rugby Championship"
+        )
+    )
+    .map(
+        d => (
+            {
+                ...d,
+                home_score: +d.home_score,
+                away_score: +d.away_score,
+                match_date: new Date(d.match_date),
+                winner: d.home_score > d.away_score ? d.home_team : d.away_team,
+                loser: d.home_score > d.away_score ? d.away_team : d.home_team
+            }
+        )
+    )
+
+teamStatsRugbyChampionship = {
+    const stats = new Map()
+    for(const d of matchDataRugbyChampionship) {
+        for (const team of [d.home_team, d.away_team]) {
+            if (!stats.has(team)) stats.set(team, { team, games: 0, wins: 0 })
+            stats.get(team).games++
+        }
+        stats.get(d.winner).wins++
+    }
+    return Array.from(stats.values()).map(d => ({
+        ...d,
+        win_rate: d.wins / d.games
+    })).sort((a, b) => b.wins - a.wins || b.games - a.games || b.win_rate - a.win_rate)
+}
+
+edgesRugbyChampionship = {
+    const edgeMap = new Map()
+    for(const d of matchDataRugbyChampionship) {
+        const [team1, team2] = [d.home_team, d.away_team].sort()
+        const key = `${team1}|${team2}`
+        if (!edgeMap.has(key)) edgeMap.set(key, { team1, team2, wins_team1: 0, wins_team2: 0, total: 0 })
+        const edge = edgeMap.get(key)
+        edge.total++
+        if (d.winner === team1) edge.wins_team1++
+        else edge.wins_team2++
+    }
+    return Array.from(edgeMap.values()).map(({ team1, team2, wins_team1, wins_team2, total }) => {
+        const dominant = wins_team1 >= wins_team2 ? team1 : team2
+        const weaker = wins_team1 < wins_team2 ? team1 : team2
+        return {
+            source: dominant,
+            target: weaker,
+            weight: Math.max(wins_team1, wins_team2) / total
+        }
+    })
+}
+
+nodesRugbyChampionship = teamStatsRugbyChampionship
+    .map(d => ({
+        id: d.team,
+        group: d.wins,
+        wins: d.wins,
+        games: d.games,
+        win_rate: d.win_rate,
+        title: `${d.team}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(d.win_rate * 100).toFixed(1)}%`
+    }))
+    .sort((a, b) =>
+        b.wins - a.wins ||
+        b.games - a.games ||
+        b.win_rate - a.win_rate
+    );
+
+circularNodesRugbyChampionship = {
+    const radius = 250;
+    const centerX = width / 2;
+    const centerY = 300;
+    const angleStep = (2 * Math.PI) / nodesRugbyChampionship.length;
+
+    return nodesRugbyChampionship.map((node, i) => ({
+        ...node,
+        fx: centerX + radius * Math.cos(i * angleStep),
+        fy: centerY + radius * Math.sin(i * angleStep)
+    }));
+}
+```
+
+```{ojs}
+//| label: tbl-rugby-championship
+//| tbl-cap: Rugby Championship Matches
+Inputs.table(nodesRugbyChampionship, {
+    columns: [
+        "id",
+        "games",
+        "wins",
+        "win_rate"
+    ],
+    header: {
+        id: "Country",
+        games: "Number of Matches Played",
+        wins: "Number of Matches Won",
+        win_rate: "Win Rate"
+    },
+    format: {
+        games: sparkbar(d3.max(nodesRugbyChampionship, (d) => d["games"])),
+        wins: sparkbar(d3.max(nodesRugbyChampionship, (d) => d["wins"])),
+        win_rate: sparkbarPercent(
+            d3.max(nodesRugbyChampionship, (d) => d["win_rate"])
+        ),
+    },
+    rows: 100,
+});
+```
+
+```{ojs}
+//| label: fig-rugby-championship
+//| fig-cap: Rugby Championship.
+{
+    const width = 928;
+    const height = 600;
+
+    const color = d3.scaleOrdinal(personal_colours);
+
+    const links = edgesRugbyChampionship.map((d) => ({ ...d }));
+    const nodes = circularNodesRugbyChampionship.map((d) => ({ ...d }));
+
+    const radiusScale = d3
+        .scaleSqrt()
+        .domain([0, d3.max(nodes, (d) => d.wins)])
+        .range([5, 100]);
+
+    const linkColor = d3
+        .scaleLinear()
+        .domain([0, 0.5, 1])
+        .range(["#2ca02c", "#ff7f0e", "#d62728"]);
+
+    const svg = d3
+        .create("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width, height + 50])
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("style", "width: 100%; height: auto;");
+
+    // Create a unique arrowhead marker for each link
+    const defs = svg.append("defs");
+
+    links.forEach((d, i) => {
+        defs.append("marker")
+            .attr("id", `arrowhead-${i}`)
+            .attr("viewBox", "0 -3 6 6")
+            .attr("refX", 6)
+            .attr("refY", 0)
+            .attr("markerWidth", 2)
+            .attr("markerHeight", 4)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-3L6,0L0,3")
+            .attr("fill", linkColor(d.weight));
+    });
+
+    const simulation = d3
+        .forceSimulation(nodes)
+        .force(
+            "link",
+            d3.forceLink(links).id((d) => d.id)
+        )
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .on("tick", ticked);
+
+    const link = svg
+        .append("g")
+        .attr("fill", "none")
+        .attr("stroke-opacity", 0.6)
+        .selectAll("path")
+        .data(links)
+        .join("path")
+        .attr("stroke", (d) => linkColor(d.weight))
+        .attr("stroke-width", (d) => 5 * d.weight)
+        .attr("marker-end", (d, i) => `url(#arrowhead-${i})`);
+
+    const node = svg
+        .append("g")
+        .selectAll("circle")
+        .data(nodes)
+        .join("circle")
+        .attr("r", (d) => radiusScale(d.wins))
+        .attr("fill", (d) => color(d.group));
+
+    // Tooltip with full team stats
+    node.append("title").text(
+        (d) =>
+            `${d.id}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(
+                d.win_rate * 100
+            ).toFixed(1)}%`
+    );
+
+    node.call(
+        d3
+            .drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+    );
+
+    const labels = svg
+        .append("g")
+        .selectAll("text")
+        .data(nodes)
+        .join("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .attr("font-size", "10px")
+        .attr("fill", "#fff")
+        .text((d) => d.id);
+
+    function ticked() {
+        link.attr("d", (d) => {
+            const dx = d.target.x - d.source.x;
+            const dy = d.target.y - d.source.y;
+            const dr = Math.sqrt(dx * dx + dy * dy);
+            const r = radiusScale(d.target.wins);
+            const ratio = (dr - r) / dr;
+            const tx = d.source.x + dx * ratio;
+            const ty = d.source.y + dy * ratio;
+            return `M${d.source.x},${d.source.y}L${tx},${ty}`;
+        });
+
+        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+        labels.attr("x", (d) => d.x).attr("y", (d) => d.y);
+    }
+
+    function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+    }
+
+    function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+    }
+
+    function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+    }
+
+    // When this cell is re-run, stop the previous simulation. (This doesn’t
+    // really matter since the target alpha is zero and the simulation will
+    // stop naturally, but it’s a good practice.)
+    invalidation.then(() => simulation.stop());
+
+    return svg.node();
+}
+```
+
+```{ojs}
+matchDataRugbyWorldCup = (await FileAttachment("rugby.csv").csv({ typed: true }))
+    .filter(d => d.competition_name === "Rugby World Cup")
+    .map(
+        d => (
+            {
+                ...d,
+                home_score: +d.home_score,
+                away_score: +d.away_score,
+                match_date: new Date(d.match_date),
+                winner: d.home_score > d.away_score ? d.home_team : d.away_team,
+                loser: d.home_score > d.away_score ? d.away_team : d.home_team
+            }
+        )
+    )
+
+teamStatsRugbyWorldCup = {
+    const stats = new Map()
+    for(const d of matchDataRugbyWorldCup) {
+        for (const team of [d.home_team, d.away_team]) {
+            if (!stats.has(team)) stats.set(team, { team, games: 0, wins: 0 })
+            stats.get(team).games++
+        }
+        stats.get(d.winner).wins++
+    }
+    return Array.from(stats.values()).map(d => ({
+        ...d,
+        win_rate: d.wins / d.games
+    })).sort((a, b) => b.wins - a.wins || b.games - a.games || b.win_rate - a.win_rate)
+}
+
+edgesRugbyWorldCup = {
+    const edgeMap = new Map()
+    for(const d of matchDataRugbyWorldCup) {
+        const [team1, team2] = [d.home_team, d.away_team].sort()
+        const key = `${team1}|${team2}`
+        if (!edgeMap.has(key)) edgeMap.set(key, { team1, team2, wins_team1: 0, wins_team2: 0, total: 0 })
+        const edge = edgeMap.get(key)
+        edge.total++
+        if (d.winner === team1) edge.wins_team1++
+        else edge.wins_team2++
+    }
+    return Array.from(edgeMap.values()).map(({ team1, team2, wins_team1, wins_team2, total }) => {
+        const dominant = wins_team1 >= wins_team2 ? team1 : team2
+        const weaker = wins_team1 < wins_team2 ? team1 : team2
+        return {
+            source: dominant,
+            target: weaker,
+            weight: Math.max(wins_team1, wins_team2) / total
+        }
+    })
+}
+
+nodesRugbyWorldCup = teamStatsRugbyWorldCup
+    .map(d => ({
+        id: d.team,
+        group: d.wins,
+        wins: d.wins,
+        games: d.games,
+        win_rate: d.win_rate,
+        title: `${d.team}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(d.win_rate * 100).toFixed(1)}%`
+    }))
+    .sort((a, b) =>
+        b.wins - a.wins ||
+        b.games - a.games ||
+        b.win_rate - a.win_rate
+    );
+
+circularNodesRugbyWorldCup = {
+    const radius = 250;
+    const centerX = width / 2;
+    const centerY = 300;
+    const angleStep = (2 * Math.PI) / nodesRugbyWorldCup.length;
+
+    return nodesRugbyWorldCup.map((node, i) => ({
+        ...node,
+        fx: centerX + radius * Math.cos(i * angleStep),
+        fy: centerY + radius * Math.sin(i * angleStep)
+    }));
+}
+```
+
+```{ojs}
+//| label: tbl-rugby-world-cup
+//| tbl-cap: Rugby World Cup Matches
+Inputs.table(nodesRugbyWorldCup, {
+    columns: [
+        "id",
+        "games",
+        "wins",
+        "win_rate"
+    ],
+    header: {
+        id: "Country",
+        games: "Number of Matches Played",
+        wins: "Number of Matches Won",
+        win_rate: "Win Rate"
+    },
+    format: {
+        games: sparkbar(d3.max(nodesRugbyWorldCup, (d) => d["games"])),
+        wins: sparkbar(d3.max(nodesRugbyWorldCup, (d) => d["wins"])),
+        win_rate: sparkbarPercent(
+            d3.max(nodesRugbyWorldCup, (d) => d["win_rate"])
+        ),
+    },
+    rows: 100,
+});
+```
+
+```{ojs}
+//| label: fig-rugby-world-cup
+//| fig-cap: Rugby World Cup Matches.
+{
+    const width = 928;
+    const height = 600;
+
+    const color = d3.scaleOrdinal(personal_colours);
+
+    const links = edgesRugbyWorldCup.map((d) => ({ ...d }));
+    const nodes = circularNodesRugbyWorldCup.map((d) => ({ ...d }));
+
+    const radiusScale = d3
+        .scaleSqrt()
+        .domain([0, d3.max(nodes, (d) => d.wins)])
+        .range([5, 25]);
+
+    const linkColor = d3
+        .scaleLinear()
+        .domain([0, 0.5, 1])
+        .range(["#2ca02c", "#ff7f0e", "#d62728"]);
+
+    const svg = d3
+        .create("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width, height + 50])
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("style", "width: 100%; height: auto;");
+
+    // Create a unique arrowhead marker for each link
+    const defs = svg.append("defs");
+
+    links.forEach((d, i) => {
+        defs.append("marker")
+            .attr("id", `arrowhead-${i}`)
+            .attr("viewBox", "0 -3 6 6")
+            .attr("refX", 6)
+            .attr("refY", 0)
+            .attr("markerWidth", 2)
+            .attr("markerHeight", 4)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-3L6,0L0,3")
+            .attr("fill", linkColor(d.weight));
+    });
+
+    const simulation = d3
+        .forceSimulation(nodes)
+        .force(
+            "link",
+            d3.forceLink(links).id((d) => d.id)
+        )
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .on("tick", ticked);
+
+    const link = svg
+        .append("g")
+        .attr("fill", "none")
+        .attr("stroke-opacity", 0.6)
+        .selectAll("path")
+        .data(links)
+        .join("path")
+        .attr("stroke", (d) => linkColor(d.weight))
+        .attr("stroke-width", (d) => 2 * d.weight)
+        .attr("marker-end", (d, i) => `url(#arrowhead-${i})`);
+
+    const node = svg
+        .append("g")
+        .selectAll("circle")
+        .data(nodes)
+        .join("circle")
+        .attr("r", (d) => radiusScale(d.wins))
+        .attr("fill", (d) => color(d.group));
+
+    // Tooltip with full team stats
+    node.append("title").text(
+        (d) =>
+            `${d.id}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(
+                d.win_rate * 100
+            ).toFixed(1)}%`
+    );
+
+    node.call(
+        d3
+            .drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+    );
+
+    const labels = svg
+        .append("g")
+        .selectAll("text")
+        .data(nodes)
+        .join("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .attr("font-size", "10px")
+        .attr("fill", "#333")
+        .text((d) => d.id);
+
+    function ticked() {
+        link.attr("d", (d) => {
+            const dx = d.target.x - d.source.x;
+            const dy = d.target.y - d.source.y;
+            const dr = Math.sqrt(dx * dx + dy * dy);
+            const r = radiusScale(d.target.wins);
+            const ratio = (dr - r) / dr;
+            const tx = d.source.x + dx * ratio;
+            const ty = d.source.y + dy * ratio;
+            return `M${d.source.x},${d.source.y}L${tx},${ty}`;
+        });
+
+        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+        labels.attr("x", (d) => d.x).attr("y", (d) => d.y);
+    }
+
+    function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+    }
+
+    function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+    }
+
+    function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+    }
+
+    // When this cell is re-run, stop the previous simulation. (This doesn’t
+    // really matter since the target alpha is zero and the simulation will
+    // stop naturally, but it’s a good practice.)
+    invalidation.then(() => simulation.stop());
+
+    return svg.node();
+}
+```
+
+```{ojs}
+matchesByYearGroup = (await FileAttachment("rugby.csv").csv({ typed: true }))
+    .filter(d => d.competition_name === "Rugby World Cup")
+    .map(d => ({
+        ...d,
+        home_score: +d.home_score,
+        away_score: +d.away_score,
+        match_date: new Date(d.match_date),
+        year: new Date(d.match_date).getFullYear()
+    }))
+    .sort((a, b) => {
+        if (a.year !== b.year) return a.year - b.year;
+        return new Date(b.match_date) - new Date(a.match_date);
+    })
+    .reduce((acc, match) => {
+        const year = match.year;
+        if (!acc[year]) acc[year] = [];
+        acc[year].push(match);
+        return acc;
+    }, {});
+
+matchDataRugbyWorldCupGroup = Object.fromEntries(
+    Object.entries(matchesByYearGroup).map(([year, matches]) => [
+        year,
+        matches.slice(8, 200)
+    ])
+);
+
+groupMatches = Object.values(matchDataRugbyWorldCupGroup)
+    .flat()
+    .sort((a, b) => new Date(a.match_date) - new Date(b.match_date))
+    .map(d => ({
+        ...d,
+        winner: d.home_score > d.away_score ? d.home_team : d.away_team,
+        loser: d.home_score > d.away_score ? d.away_team : d.home_team
+    }));
+
+teamStatsRugbyWorldCupGroup = {
+    const stats = new Map();
+    for (const d of groupMatches) {
+        for (const team of [d.home_team, d.away_team]) {
+            if (!stats.has(team)) stats.set(team, { team, games: 0, wins: 0 });
+            stats.get(team).games++;
+        }
+        stats.get(d.winner).wins++;
+    }
+    return Array.from(stats.values()).map(d => ({
+        ...d,
+        win_rate: d.wins / d.games
+    })).sort((a, b) => b.wins - a.wins || b.games - a.games || b.win_rate - a.win_rate);
+};
+
+edgesRugbyWorldCupGroup = {
+    const edgeMap = new Map();
+    for (const d of groupMatches) {
+        const [team1, team2] = [d.home_team, d.away_team].sort();
+        const key = `${team1}|${team2}`;
+        if (!edgeMap.has(key)) edgeMap.set(key, { team1, team2, wins_team1: 0, wins_team2: 0, total: 0 });
+        const edge = edgeMap.get(key);
+        edge.total++;
+        if (d.winner === team1) edge.wins_team1++;
+        else edge.wins_team2++;
+    }
+    return Array.from(edgeMap.values()).map(({ team1, team2, wins_team1, wins_team2, total }) => {
+        const dominant = wins_team1 >= wins_team2 ? team1 : team2;
+        const weaker = wins_team1 < wins_team2 ? team1 : team2;
+        return {
+            source: dominant,
+            target: weaker,
+            weight: Math.max(wins_team1, wins_team2) / total
+        };
+    });
+};
+
+nodesRugbyWorldCupGroup = teamStatsRugbyWorldCupGroup
+    .map(d => ({
+        id: d.team,
+        group: d.wins,
+        wins: d.wins,
+        games: d.games,
+        win_rate: d.win_rate,
+        title: `${d.team}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(d.win_rate * 100).toFixed(1)}%`
+    }))
+    .sort((a, b) =>
+        b.wins - a.wins ||
+        b.games - a.games ||
+        b.win_rate - a.win_rate
+    );
+
+circularNodesRugbyWorldCupGroup = {
+    const radius = 250;
+    const centerX = width / 2;
+    const centerY = 300;
+    const angleStep = (2 * Math.PI) / nodesRugbyWorldCupGroup.length;
+
+    return nodesRugbyWorldCupGroup.map((node, i) => ({
+        ...node,
+        fx: centerX + radius * Math.cos(i * angleStep),
+        fy: centerY + radius * Math.sin(i * angleStep)
+    }));
+};
+```
+
+```{ojs}
+//| label: tbl-rugby-world-cup-group
+//| tbl-cap: Rugby World Cup Group Matches
+Inputs.table(nodesRugbyWorldCupGroup, {
+    columns: [
+        "id",
+        "games",
+        "wins",
+        "win_rate"
+    ],
+    header: {
+        id: "Country",
+        games: "Number of Matches Played",
+        wins: "Number of Matches Won",
+        win_rate: "Win Rate"
+    },
+    format: {
+        games: sparkbar(d3.max(nodesRugbyWorldCupGroup, (d) => d["games"])),
+        wins: sparkbar(d3.max(nodesRugbyWorldCupGroup, (d) => d["wins"])),
+        win_rate: sparkbarPercent(
+            d3.max(nodesRugbyWorldCupGroup, (d) => d["win_rate"])
+        ),
+    },
+    rows: 100,
+});
+```
+
+```{ojs}
+//| label: fig-rugby-world-cup-group
+//| fig-cap: Rugby World Cup Group Matches.
+{
+    const width = 928;
+    const height = 600;
+
+    const color = d3.scaleOrdinal(personal_colours);
+
+    const links = edgesRugbyWorldCupGroup.map((d) => ({ ...d }));
+    const nodes = circularNodesRugbyWorldCupGroup.map((d) => ({ ...d }));
+
+    const radiusScale = d3
+        .scaleSqrt()
+        .domain([0, d3.max(nodes, (d) => d.wins)])
+        .range([5, 25]);
+
+    const linkColor = d3
+        .scaleLinear()
+        .domain([0, 0.5, 1])
+        .range(["#2ca02c", "#ff7f0e", "#d62728"]);
+
+    const svg = d3
+        .create("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width, height + 50])
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("style", "width: 100%; height: auto;");
+
+    // Create a unique arrowhead marker for each link
+    const defs = svg.append("defs");
+
+    links.forEach((d, i) => {
+        defs.append("marker")
+            .attr("id", `arrowhead-${i}`)
+            .attr("viewBox", "0 -3 6 6")
+            .attr("refX", 6)
+            .attr("refY", 0)
+            .attr("markerWidth", 2)
+            .attr("markerHeight", 4)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-3L6,0L0,3")
+            .attr("fill", linkColor(d.weight));
+    });
+
+    const simulation = d3
+        .forceSimulation(nodes)
+        .force(
+            "link",
+            d3.forceLink(links).id((d) => d.id)
+        )
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .on("tick", ticked);
+
+    const link = svg
+        .append("g")
+        .attr("fill", "none")
+        .attr("stroke-opacity", 0.6)
+        .selectAll("path")
+        .data(links)
+        .join("path")
+        .attr("stroke", (d) => linkColor(d.weight))
+        .attr("stroke-width", (d) => 2 * d.weight)
+        .attr("marker-end", (d, i) => `url(#arrowhead-${i})`);
+
+    const node = svg
+        .append("g")
+        .selectAll("circle")
+        .data(nodes)
+        .join("circle")
+        .attr("r", (d) => radiusScale(d.wins))
+        .attr("fill", (d) => color(d.group));
+
+    // Tooltip with full team stats
+    node.append("title").text(
+        (d) =>
+            `${d.id}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(
+                d.win_rate * 100
+            ).toFixed(1)}%`
+    );
+
+    node.call(
+        d3
+            .drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+    );
+
+    const labels = svg
+        .append("g")
+        .selectAll("text")
+        .data(nodes)
+        .join("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .attr("font-size", "10px")
+        .attr("fill", "#333")
+        .text((d) => d.id);
+
+    function ticked() {
+        link.attr("d", (d) => {
+            const dx = d.target.x - d.source.x;
+            const dy = d.target.y - d.source.y;
+            const dr = Math.sqrt(dx * dx + dy * dy);
+            const r = radiusScale(d.target.wins);
+            const ratio = (dr - r) / dr;
+            const tx = d.source.x + dx * ratio;
+            const ty = d.source.y + dy * ratio;
+            return `M${d.source.x},${d.source.y}L${tx},${ty}`;
+        });
+
+        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+        labels.attr("x", (d) => d.x).attr("y", (d) => d.y);
+    }
+
+    function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+    }
+
+    function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+    }
+
+    function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+    }
+
+    // When this cell is re-run, stop the previous simulation. (This doesn’t
+    // really matter since the target alpha is zero and the simulation will
+    // stop naturally, but it’s a good practice.)
+    invalidation.then(() => simulation.stop());
+
+    return svg.node();
+}
+```
+
+```{ojs}
+matchesByYearQuarters = (await FileAttachment("rugby.csv").csv({ typed: true }))
+    .filter(d => d.competition_name === "Rugby World Cup")
+    .map(d => ({
+        ...d,
+        home_score: +d.home_score,
+        away_score: +d.away_score,
+        match_date: new Date(d.match_date),
+        year: new Date(d.match_date).getFullYear()
+    }))
+    .sort((a, b) => {
+        if (a.year !== b.year) return a.year - b.year;
+        return new Date(b.match_date) - new Date(a.match_date);
+    })
+    .reduce((acc, match) => {
+        const year = match.year;
+        if (!acc[year]) acc[year] = [];
+        acc[year].push(match);
+        return acc;
+    }, {});
+
+matchDataRugbyWorldCupQuarters = Object.fromEntries(
+    Object.entries(matchesByYearQuarters).map(([year, matches]) => [
+        year,
+        matches.slice(4, 8)
+    ])
+);
+
+top8Matches = Object.values(matchDataRugbyWorldCupQuarters)
+    .flat()
+    .sort((a, b) => new Date(a.match_date) - new Date(b.match_date))
+    .map(d => ({
+        ...d,
+        winner: d.home_score > d.away_score ? d.home_team : d.away_team,
+        loser: d.home_score > d.away_score ? d.away_team : d.home_team
+    }));
+
+teamStatsRugbyWorldCupQuarters = {
+    const stats = new Map();
+    for (const d of top8Matches) {
+        for (const team of [d.home_team, d.away_team]) {
+            if (!stats.has(team)) stats.set(team, { team, games: 0, wins: 0 });
+            stats.get(team).games++;
+        }
+        stats.get(d.winner).wins++;
+    }
+    return Array.from(stats.values()).map(d => ({
+        ...d,
+        win_rate: d.wins / d.games
+    })).sort((a, b) => b.wins - a.wins || b.games - a.games || b.win_rate - a.win_rate);
+};
+
+edgesRugbyWorldCupQuarters = {
+    const edgeMap = new Map();
+    for (const d of top8Matches) {
+        const [team1, team2] = [d.home_team, d.away_team].sort();
+        const key = `${team1}|${team2}`;
+        if (!edgeMap.has(key)) edgeMap.set(key, { team1, team2, wins_team1: 0, wins_team2: 0, total: 0 });
+        const edge = edgeMap.get(key);
+        edge.total++;
+        if (d.winner === team1) edge.wins_team1++;
+        else edge.wins_team2++;
+    }
+    return Array.from(edgeMap.values()).map(({ team1, team2, wins_team1, wins_team2, total }) => {
+        const dominant = wins_team1 >= wins_team2 ? team1 : team2;
+        const weaker = wins_team1 < wins_team2 ? team1 : team2;
+        return {
+            source: dominant,
+            target: weaker,
+            weight: Math.max(wins_team1, wins_team2) / total
+        };
+    });
+};
+
+nodesRugbyWorldCupQuarters = teamStatsRugbyWorldCupQuarters
+    .map(d => ({
+        id: d.team,
+        group: d.wins,
+        wins: d.wins,
+        games: d.games,
+        win_rate: d.win_rate,
+        title: `${d.team}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(d.win_rate * 100).toFixed(1)}%`
+    }))
+    .sort((a, b) =>
+        b.wins - a.wins ||
+        b.games - a.games ||
+        b.win_rate - a.win_rate
+    );
+
+circularNodesRugbyWorldCupQuarters = {
+    const radius = 250;
+    const centerX = width / 2;
+    const centerY = 300;
+    const angleStep = (2 * Math.PI) / nodesRugbyWorldCupQuarters.length;
+
+    return nodesRugbyWorldCupQuarters.map((node, i) => ({
+        ...node,
+        fx: centerX + radius * Math.cos(i * angleStep),
+        fy: centerY + radius * Math.sin(i * angleStep)
+    }));
+};
+```
+
+```{ojs}
+//| label: tbl-rugby-world-cup-quarter-finals
+//| tbl-cap: Rugby World Cup Quarter Final, Semi Final, and Final Matches
+Inputs.table(nodesRugbyWorldCupQuarters, {
+    columns: [
+        "id",
+        "games",
+        "wins",
+        "win_rate"
+    ],
+    header: {
+        id: "Country",
+        games: "Number of Matches Played",
+        wins: "Number of Matches Won",
+        win_rate: "Win Rate"
+    },
+    format: {
+        games: sparkbar(d3.max(nodesRugbyWorldCupQuarters, (d) => d["games"])),
+        wins: sparkbar(d3.max(nodesRugbyWorldCupQuarters, (d) => d["wins"])),
+        win_rate: sparkbarPercent(
+            d3.max(nodesRugbyWorldCupQuarters, (d) => d["win_rate"])
+        ),
+    },
+    rows: 100,
+});
+```
+
+```{ojs}
+//| label: fig-rugby-world-cup-quarter-finals
+//| fig-cap: Rugby World Cup Quarter Final, Semi Final, and Final Matches.
+{
+    const width = 928;
+    const height = 600;
+
+    const color = d3.scaleOrdinal(personal_colours);
+
+    const links = edgesRugbyWorldCupQuarters.map((d) => ({ ...d }));
+    const nodes = circularNodesRugbyWorldCupQuarters.map((d) => ({ ...d }));
+
+    const radiusScale = d3
+        .scaleSqrt()
+        .domain([0, d3.max(nodes, (d) => d.wins)])
+        .range([5, 50]);
+
+    const linkColor = d3
+        .scaleLinear()
+        .domain([0, 0.5, 1])
+        .range(["#2ca02c", "#ff7f0e", "#d62728"]);
+
+    const svg = d3
+        .create("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width, height + 50])
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("style", "width: 100%; height: auto;");
+
+    // Create a unique arrowhead marker for each link
+    const defs = svg.append("defs");
+
+    links.forEach((d, i) => {
+        defs.append("marker")
+            .attr("id", `arrowhead-${i}`)
+            .attr("viewBox", "0 -3 6 6")
+            .attr("refX", 6)
+            .attr("refY", 0)
+            .attr("markerWidth", 2)
+            .attr("markerHeight", 4)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-3L6,0L0,3")
+            .attr("fill", linkColor(d.weight));
+    });
+
+    const simulation = d3
+        .forceSimulation(nodes)
+        .force(
+            "link",
+            d3.forceLink(links).id((d) => d.id)
+        )
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .on("tick", ticked);
+
+    const link = svg
+        .append("g")
+        .attr("fill", "none")
+        .attr("stroke-opacity", 0.6)
+        .selectAll("path")
+        .data(links)
+        .join("path")
+        .attr("stroke", (d) => linkColor(d.weight))
+        .attr("stroke-width", (d) => 5 * d.weight)
+        .attr("marker-end", (d, i) => `url(#arrowhead-${i})`);
+
+    const node = svg
+        .append("g")
+        .selectAll("circle")
+        .data(nodes)
+        .join("circle")
+        .attr("r", (d) => radiusScale(d.wins))
+        .attr("fill", (d) => color(d.group));
+
+    // Tooltip with full team stats
+    node.append("title").text(
+        (d) =>
+            `${d.id}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(
+                d.win_rate * 100
+            ).toFixed(1)}%`
+    );
+
+    node.call(
+        d3
+            .drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+    );
+
+    const labels = svg
+        .append("g")
+        .selectAll("text")
+        .data(nodes)
+        .join("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .attr("font-size", "10px")
+        .attr("fill", "#333")
+        .text((d) => d.id);
+
+    function ticked() {
+        link.attr("d", (d) => {
+            const dx = d.target.x - d.source.x;
+            const dy = d.target.y - d.source.y;
+            const dr = Math.sqrt(dx * dx + dy * dy);
+            const r = radiusScale(d.target.wins);
+            const ratio = (dr - r) / dr;
+            const tx = d.source.x + dx * ratio;
+            const ty = d.source.y + dy * ratio;
+            return `M${d.source.x},${d.source.y}L${tx},${ty}`;
+        });
+
+        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+        labels.attr("x", (d) => d.x).attr("y", (d) => d.y);
+    }
+
+    function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+    }
+
+    function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+    }
+
+    function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+    }
+
+    // When this cell is re-run, stop the previous simulation. (This doesn’t
+    // really matter since the target alpha is zero and the simulation will
+    // stop naturally, but it’s a good practice.)
+    invalidation.then(() => simulation.stop());
+
+    return svg.node();
+}
+```
+
+```{ojs}
+matchesByYearSemis = (await FileAttachment("rugby.csv").csv({ typed: true }))
+    .filter(d => d.competition_name === "Rugby World Cup")
+    .map(d => ({
+        ...d,
+        home_score: +d.home_score,
+        away_score: +d.away_score,
+        match_date: new Date(d.match_date),
+        year: new Date(d.match_date).getFullYear()
+    }))
+    .sort((a, b) => {
+        if (a.year !== b.year) return a.year - b.year;
+        return new Date(b.match_date) - new Date(a.match_date);
+    })
+    .reduce((acc, match) => {
+        const year = match.year;
+        if (!acc[year]) acc[year] = [];
+        acc[year].push(match);
+        return acc;
+    }, {});
+
+matchDataRugbyWorldCupSemis = Object.fromEntries(
+    Object.entries(matchesByYearSemis).map(([year, matches]) => [
+        year,
+        matches.slice(2, 4) // assuming sorted from latest to earliest
+    ])
+);
+
+top4Matches = Object.values(matchDataRugbyWorldCupSemis)
+    .flat()
+    .sort((a, b) => new Date(a.match_date) - new Date(b.match_date))
+    .map(d => ({
+        ...d,
+        winner: d.home_score > d.away_score ? d.home_team : d.away_team,
+        loser: d.home_score > d.away_score ? d.away_team : d.home_team
+    }));
+
+teamStatsRugbyWorldCupSemis = {
+    const stats = new Map();
+    for (const d of top4Matches) {
+        for (const team of [d.home_team, d.away_team]) {
+            if (!stats.has(team)) stats.set(team, { team, games: 0, wins: 0 });
+            stats.get(team).games++;
+        }
+        stats.get(d.winner).wins++;
+    }
+    return Array.from(stats.values()).map(d => ({
+        ...d,
+        win_rate: d.wins / d.games
+    })).sort((a, b) => b.wins - a.wins || b.games - a.games || b.win_rate - a.win_rate);
+};
+
+edgesRugbyWorldCupSemis = {
+    const edgeMap = new Map();
+    for (const d of top4Matches) {
+        const [team1, team2] = [d.home_team, d.away_team].sort();
+        const key = `${team1}|${team2}`;
+        if (!edgeMap.has(key)) edgeMap.set(key, { team1, team2, wins_team1: 0, wins_team2: 0, total: 0 });
+        const edge = edgeMap.get(key);
+        edge.total++;
+        if (d.winner === team1) edge.wins_team1++;
+        else edge.wins_team2++;
+    }
+    return Array.from(edgeMap.values()).map(({ team1, team2, wins_team1, wins_team2, total }) => {
+        const dominant = wins_team1 >= wins_team2 ? team1 : team2;
+        const weaker = wins_team1 < wins_team2 ? team1 : team2;
+        return {
+            source: dominant,
+            target: weaker,
+            weight: Math.max(wins_team1, wins_team2) / total
+        };
+    });
+};
+
+nodesRugbyWorldCupSemis = teamStatsRugbyWorldCupSemis
+    .map(d => ({
+        id: d.team,
+        group: d.wins,
+        wins: d.wins,
+        games: d.games,
+        win_rate: d.win_rate,
+        title: `${d.team}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(d.win_rate * 100).toFixed(1)}%`
+    }))
+    .sort((a, b) =>
+        b.wins - a.wins ||
+        b.games - a.games ||
+        b.win_rate - a.win_rate
+    );
+
+circularNodesRugbyWorldCupSemis = {
+    const radius = 250;
+    const centerX = width / 2;
+    const centerY = 300;
+    const angleStep = (2 * Math.PI) / nodesRugbyWorldCupSemis.length;
+
+    return nodesRugbyWorldCupSemis.map((node, i) => ({
+        ...node,
+        fx: centerX + radius * Math.cos(i * angleStep),
+        fy: centerY + radius * Math.sin(i * angleStep)
+    }));
+};
+```
+
+```{ojs}
+//| label: tbl-rugby-world-cup-semis
+//| tbl-cap: Rugby World Cup Semi Final and Final Matches
+Inputs.table(nodesRugbyWorldCupSemis, {
+    columns: [
+        "id",
+        "games",
+        "wins",
+        "win_rate"
+    ],
+    header: {
+        id: "Country",
+        games: "Number of Matches Played",
+        wins: "Number of Matches Won",
+        win_rate: "Win Rate"
+    },
+    format: {
+        games: sparkbar(d3.max(nodesRugbyWorldCupSemis, (d) => d["games"])),
+        wins: sparkbar(d3.max(nodesRugbyWorldCupSemis, (d) => d["wins"])),
+        win_rate: sparkbarPercent(
+            d3.max(nodesRugbyWorldCupSemis, (d) => d["win_rate"])
+        ),
+    },
+    rows: 100,
+});
+```
+
+```{ojs}
+//| label: fig-rugby-world-cup-semis
+//| fig-cap: Rugby World Cup Semi Final and Final Matches.
+{
+    const width = 928;
+    const height = 600;
+
+    const color = d3.scaleOrdinal(personal_colours);
+
+    const links = edgesRugbyWorldCupSemis.map((d) => ({ ...d }));
+    const nodes = circularNodesRugbyWorldCupSemis.map((d) => ({ ...d }));
+
+    const radiusScale = d3
+        .scaleSqrt()
+        .domain([0, d3.max(nodes, (d) => d.wins)])
+        .range([5, 50]);
+
+    const linkColor = d3
+        .scaleLinear()
+        .domain([0, 0.5, 1])
+        .range(["#2ca02c", "#ff7f0e", "#d62728"]);
+
+    const svg = d3
+        .create("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width, height + 50])
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("style", "width: 100%; height: auto;");
+
+    // Create a unique arrowhead marker for each link
+    const defs = svg.append("defs");
+
+    links.forEach((d, i) => {
+        defs.append("marker")
+            .attr("id", `arrowhead-${i}`)
+            .attr("viewBox", "0 -3 6 6")
+            .attr("refX", 6)
+            .attr("refY", 0)
+            .attr("markerWidth", 2)
+            .attr("markerHeight", 4)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-3L6,0L0,3")
+            .attr("fill", linkColor(d.weight));
+    });
+
+    const simulation = d3
+        .forceSimulation(nodes)
+        .force(
+            "link",
+            d3.forceLink(links).id((d) => d.id)
+        )
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .on("tick", ticked);
+
+    const link = svg
+        .append("g")
+        .attr("fill", "none")
+        .attr("stroke-opacity", 0.6)
+        .selectAll("path")
+        .data(links)
+        .join("path")
+        .attr("stroke", (d) => linkColor(d.weight))
+        .attr("stroke-width", (d) => 5 * d.weight)
+        .attr("marker-end", (d, i) => `url(#arrowhead-${i})`);
+
+    const node = svg
+        .append("g")
+        .selectAll("circle")
+        .data(nodes)
+        .join("circle")
+        .attr("r", (d) => radiusScale(d.wins))
+        .attr("fill", (d) => color(d.group));
+
+    // Tooltip with full team stats
+    node.append("title").text(
+        (d) =>
+            `${d.id}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(
+                d.win_rate * 100
+            ).toFixed(1)}%`
+    );
+
+    node.call(
+        d3
+            .drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+    );
+
+    const labels = svg
+        .append("g")
+        .selectAll("text")
+        .data(nodes)
+        .join("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .attr("font-size", "10px")
+        .attr("fill", "#333")
+        .text((d) => d.id);
+
+    function ticked() {
+        link.attr("d", (d) => {
+            const dx = d.target.x - d.source.x;
+            const dy = d.target.y - d.source.y;
+            const dr = Math.sqrt(dx * dx + dy * dy);
+            const r = radiusScale(d.target.wins);
+            const ratio = (dr - r) / dr;
+            const tx = d.source.x + dx * ratio;
+            const ty = d.source.y + dy * ratio;
+            return `M${d.source.x},${d.source.y}L${tx},${ty}`;
+        });
+
+        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+        labels.attr("x", (d) => d.x).attr("y", (d) => d.y);
+    }
+
+    function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+    }
+
+    function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+    }
+
+    function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+    }
+
+    // When this cell is re-run, stop the previous simulation. (This doesn’t
+    // really matter since the target alpha is zero and the simulation will
+    // stop naturally, but it’s a good practice.)
+    invalidation.then(() => simulation.stop());
+
+    return svg.node();
+}
+```
+
+```{ojs}
+matchDataRugbyWorldCupFinals = (await FileAttachment("rugby.csv").csv({ typed: true }))
+    .filter(d => d.competition_name === "Rugby World Cup")
+    .map(d => ({
+        ...d,
+        home_score: +d.home_score,
+        away_score: +d.away_score,
+        match_date: new Date(d.match_date),
+        year: new Date(d.match_date).getFullYear()
+    }))
+    .sort((a, b) => {
+        if (a.year !== b.year) return a.year - b.year;
+        return new Date(b.match_date) - new Date(a.match_date);
+    }).reduce((acc, match) => {
+        const year = match.year;
+        if (!acc[year]) acc[year] = [];
+        if (acc[year].length < 2) acc[year].push(match);
+        return acc;
+    }, {});
+
+top2Matches = Object.values(matchDataRugbyWorldCupFinals)
+    .flat()
+    .sort((a, b) => new Date(a.match_date) - new Date(b.match_date))
+    .map(d => ({
+        ...d,
+        winner: d.home_score > d.away_score ? d.home_team : d.away_team,
+        loser: d.home_score > d.away_score ? d.away_team : d.home_team
+    }));
+
+teamStatsRugbyWorldCupFinals = {
+    const stats = new Map();
+    for (const d of top2Matches) {
+        for (const team of [d.home_team, d.away_team]) {
+            if (!stats.has(team)) stats.set(team, { team, games: 0, wins: 0 });
+            stats.get(team).games++;
+        }
+        stats.get(d.winner).wins++;
+    }
+    return Array.from(stats.values()).map(d => ({
+        ...d,
+        win_rate: d.wins / d.games
+    })).sort((a, b) => b.wins - a.wins || b.games - a.games || b.win_rate - a.win_rate);
+};
+
+edgesRugbyWorldCupFinals = {
+    const edgeMap = new Map();
+    for (const d of top2Matches) {
+        const [team1, team2] = [d.home_team, d.away_team].sort();
+        const key = `${team1}|${team2}`;
+        if (!edgeMap.has(key)) edgeMap.set(key, { team1, team2, wins_team1: 0, wins_team2: 0, total: 0 });
+        const edge = edgeMap.get(key);
+        edge.total++;
+        if (d.winner === team1) edge.wins_team1++;
+        else edge.wins_team2++;
+    }
+    return Array.from(edgeMap.values()).map(({ team1, team2, wins_team1, wins_team2, total }) => {
+        const dominant = wins_team1 >= wins_team2 ? team1 : team2;
+        const weaker = wins_team1 < wins_team2 ? team1 : team2;
+        return {
+            source: dominant,
+            target: weaker,
+            weight: Math.max(wins_team1, wins_team2) / total
+        };
+    });
+};
+
+nodesRugbyWorldCupFinals = teamStatsRugbyWorldCupFinals
+    .map(d => ({
+        id: d.team,
+        group: d.wins,
+        wins: d.wins,
+        games: d.games,
+        win_rate: d.win_rate,
+        title: `${d.team}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(d.win_rate * 100).toFixed(1)}%`
+    }))
+    .sort((a, b) =>
+        b.wins - a.wins ||
+        b.games - a.games ||
+        b.win_rate - a.win_rate
+    );
+
+circularNodesRugbyWorldCupFinals = {
+    const radius = 250;
+    const centerX = width / 2;
+    const centerY = 300;
+    const angleStep = (2 * Math.PI) / nodesRugbyWorldCupFinals.length;
+
+    return nodesRugbyWorldCupFinals.map((node, i) => ({
+        ...node,
+        fx: centerX + radius * Math.cos(i * angleStep),
+        fy: centerY + radius * Math.sin(i * angleStep)
+    }));
+};
+```
+
+```{ojs}
+//| label: tbl-rugby-world-cup-finals
+//| tbl-cap: Rugby World Cup Final Matches
+Inputs.table(nodesRugbyWorldCupFinals, {
+    columns: [
+        "id",
+        "games",
+        "wins",
+        "win_rate"
+    ],
+    header: {
+        id: "Country",
+        games: "Number of Matches Played",
+        wins: "Number of Matches Won",
+        win_rate: "Win Rate"
+    },
+    format: {
+        games: sparkbar(d3.max(nodesRugbyWorldCupFinals, (d) => d["games"])),
+        wins: sparkbar(d3.max(nodesRugbyWorldCupFinals, (d) => d["wins"])),
+        win_rate: sparkbarPercent(
+            d3.max(nodesRugbyWorldCupFinals, (d) => d["win_rate"])
+        ),
+    },
+    rows: 100,
+});
+```
+
+```{ojs}
+//| label: fig-rugby-world-cup-finals
+//| fig-cap: Rugby World Cup Final Matches.
+{
+    const width = 928;
+    const height = 600;
+
+    const color = d3.scaleOrdinal(personal_colours);
+
+    const links = edgesRugbyWorldCupFinals.map((d) => ({ ...d }));
+    const nodes = circularNodesRugbyWorldCupFinals.map((d) => ({ ...d }));
+
+    const radiusScale = d3
+        .scaleSqrt()
+        .domain([0, d3.max(nodes, (d) => d.wins)])
+        .range([5, 50]);
+
+    const linkColor = d3
+        .scaleLinear()
+        .domain([0, 0.5, 1])
+        .range(["#2ca02c", "#ff7f0e", "#d62728"]);
+
+    const svg = d3
+        .create("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width, height + 50])
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("style", "width: 100%; height: auto;");
+
+    // Create a unique arrowhead marker for each link
+    const defs = svg.append("defs");
+
+    links.forEach((d, i) => {
+        defs.append("marker")
+            .attr("id", `arrowhead-${i}`)
+            .attr("viewBox", "0 -3 6 6")
+            .attr("refX", 6)
+            .attr("refY", 0)
+            .attr("markerWidth", 2)
+            .attr("markerHeight", 4)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-3L6,0L0,3")
+            .attr("fill", linkColor(d.weight));
+    });
+
+    const simulation = d3
+        .forceSimulation(nodes)
+        .force(
+            "link",
+            d3.forceLink(links).id((d) => d.id)
+        )
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .on("tick", ticked);
+
+    const link = svg
+        .append("g")
+        .attr("fill", "none")
+        .attr("stroke-opacity", 0.6)
+        .selectAll("path")
+        .data(links)
+        .join("path")
+        .attr("stroke", (d) => linkColor(d.weight))
+        .attr("stroke-width", (d) => 5 * d.weight)
+        .attr("marker-end", (d, i) => `url(#arrowhead-${i})`);
+
+    const node = svg
+        .append("g")
+        .selectAll("circle")
+        .data(nodes)
+        .join("circle")
+        .attr("r", (d) => radiusScale(d.wins))
+        .attr("fill", (d) => color(d.group));
+
+    // Tooltip with full team stats
+    node.append("title").text(
+        (d) =>
+            `${d.id}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(
+                d.win_rate * 100
+            ).toFixed(1)}%`
+    );
+
+    node.call(
+        d3
+            .drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+    );
+
+    const labels = svg
+        .append("g")
+        .selectAll("text")
+        .data(nodes)
+        .join("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .attr("font-size", "10px")
+        .attr("fill", "#333")
+        .text((d) => d.id);
+
+    function ticked() {
+        link.attr("d", (d) => {
+            const dx = d.target.x - d.source.x;
+            const dy = d.target.y - d.source.y;
+            const dr = Math.sqrt(dx * dx + dy * dy);
+            const r = radiusScale(d.target.wins);
+            const ratio = (dr - r) / dr;
+            const tx = d.source.x + dx * ratio;
+            const ty = d.source.y + dy * ratio;
+            return `M${d.source.x},${d.source.y}L${tx},${ty}`;
+        });
+
+        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+        labels.attr("x", (d) => d.x).attr("y", (d) => d.y);
+    }
+
+    function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+    }
+
+    function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+    }
+
+    function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+    }
+
+    // When this cell is re-run, stop the previous simulation. (This doesn’t
+    // really matter since the target alpha is zero and the simulation will
+    // stop naturally, but it’s a good practice.)
+    invalidation.then(() => simulation.stop());
+
+    return svg.node();
+}
+```
+
+```{ojs}
+matchDataRugbyWorldCupTest = (await FileAttachment("rugby.csv").csv({ typed: true }))
+    .filter(d => d.competition_name === "Rugby World Cup")
+    .map(d => ({
+        ...d,
+        home_score: +d.home_score,
+        away_score: +d.away_score,
+        match_date: new Date(d.match_date),
+        year: new Date(d.match_date).getFullYear()
+    }))
+    .sort((a, b) => {
+        if (a.year !== b.year) return a.year - b.year;
+        return new Date(b.match_date) - new Date(a.match_date);
+    }).reduce((acc, match) => {
+        const year = match.year;
+        if (!acc[year]) acc[year] = [];
+        if (acc[year].length < 8) acc[year].push(match);
+        return acc;
+    }, {});
+
+testMatches = Object.values(matchDataRugbyWorldCupTest)
+    .flat()
+    .sort((a, b) => new Date(a.match_date) - new Date(b.match_date))
+    .map(d => ({
+        ...d,
+        winner: d.home_score > d.away_score ? d.home_team : d.away_team,
+        loser: d.home_score > d.away_score ? d.away_team : d.home_team
+    }));
+
+teamStatsRugbyWorldCupTest = {
+    const stats = new Map();
+    for (const d of testMatches) {
+        for (const team of [d.home_team, d.away_team]) {
+            if (!stats.has(team)) stats.set(team, { team, games: 0, wins: 0 });
+            stats.get(team).games++;
+        }
+        stats.get(d.winner).wins++;
+    }
+    return Array.from(stats.values()).map(d => ({
+        ...d,
+        win_rate: d.wins / d.games
+    })).sort((a, b) => b.wins - a.wins || b.games - a.games || b.win_rate - a.win_rate);
+};
+
+edgesRugbyWorldCupTest = {
+    const edgeMap = new Map();
+    for (const d of testMatches) {
+        const [team1, team2] = [d.home_team, d.away_team].sort();
+        const key = `${team1}|${team2}`;
+        if (!edgeMap.has(key)) edgeMap.set(key, { team1, team2, wins_team1: 0, wins_team2: 0, total: 0 });
+        const edge = edgeMap.get(key);
+        edge.total++;
+        if (d.winner === team1) edge.wins_team1++;
+        else edge.wins_team2++;
+    }
+    return Array.from(edgeMap.values()).map(({ team1, team2, wins_team1, wins_team2, total }) => {
+        const dominant = wins_team1 >= wins_team2 ? team1 : team2;
+        const weaker = wins_team1 < wins_team2 ? team1 : team2;
+        return {
+            source: dominant,
+            target: weaker,
+            weight: Math.max(wins_team1, wins_team2) / total
+        };
+    });
+};
+
+nodesRugbyWorldCupTest = teamStatsRugbyWorldCupTest
+    .map(d => ({
+        id: d.team,
+        group: d.wins,
+        wins: d.wins,
+        games: d.games,
+        win_rate: d.win_rate,
+        title: `${d.team}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(d.win_rate * 100).toFixed(1)}%`
+    }))
+    .sort((a, b) =>
+        b.wins - a.wins ||
+        b.games - a.games ||
+        b.win_rate - a.win_rate
+    );
+
+circularNodesRugbyWorldCupTest = {
+    const radius = 250;
+    const centerX = width / 2;
+    const centerY = 300;
+    const angleStep = (2 * Math.PI) / nodesRugbyWorldCupTest.length;
+
+    return nodesRugbyWorldCupTest.map((node, i) => ({
+        ...node,
+        fx: centerX + radius * Math.cos(i * angleStep),
+        fy: centerY + radius * Math.sin(i * angleStep)
+    }));
+};
+```
+
+```{ojs}
+//| label: tbl-rugby-world-cup-test
+//| tbl-cap: Rugby World Cup Test Matches
+Inputs.table(nodesRugbyWorldCupTest, {
+    columns: [
+        "id",
+        "games",
+        "wins",
+        "win_rate"
+    ],
+    header: {
+        id: "Country",
+        games: "Number of Matches Played",
+        wins: "Number of Matches Won",
+        win_rate: "Win Rate"
+    },
+    format: {
+        games: sparkbar(d3.max(nodesRugbyWorldCupTest, (d) => d["games"])),
+        wins: sparkbar(d3.max(nodesRugbyWorldCupTest, (d) => d["wins"])),
+        win_rate: sparkbarPercent(
+            d3.max(nodesRugbyWorldCupTest, (d) => d["win_rate"])
+        ),
+    },
+    rows: 100,
+});
+```
+
+```{ojs}
+//| label: fig-rugby-world-cup-test
+//| fig-cap: Rugby World Cup Test Matches.
+{
+    const width = 928;
+    const height = 600;
+
+    const color = d3.scaleOrdinal(personal_colours);
+
+    const links = edgesRugbyWorldCupTest.map((d) => ({ ...d }));
+    const nodes = circularNodesRugbyWorldCupTest.map((d) => ({ ...d }));
+
+    const radiusScale = d3
+        .scaleSqrt()
+        .domain([0, d3.max(nodes, (d) => d.wins)])
+        .range([5, 50]);
+
+    const linkColor = d3
+        .scaleLinear()
+        .domain([0, 0.5, 1])
+        .range(["#2ca02c", "#ff7f0e", "#d62728"]);
+
+    const svg = d3
+        .create("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", [0, 0, width, height + 50])
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("style", "width: 100%; height: auto;");
+
+    // Create a unique arrowhead marker for each link
+    const defs = svg.append("defs");
+
+    links.forEach((d, i) => {
+        defs.append("marker")
+            .attr("id", `arrowhead-${i}`)
+            .attr("viewBox", "0 -3 6 6")
+            .attr("refX", 6)
+            .attr("refY", 0)
+            .attr("markerWidth", 2)
+            .attr("markerHeight", 4)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-3L6,0L0,3")
+            .attr("fill", linkColor(d.weight));
+    });
+
+    const simulation = d3
+        .forceSimulation(nodes)
+        .force(
+            "link",
+            d3.forceLink(links).id((d) => d.id)
+        )
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .on("tick", ticked);
+
+    const link = svg
+        .append("g")
+        .attr("fill", "none")
+        .attr("stroke-opacity", 0.6)
+        .selectAll("path")
+        .data(links)
+        .join("path")
+        .attr("stroke", (d) => linkColor(d.weight))
+        .attr("stroke-width", (d) => 5 * d.weight)
+        .attr("marker-end", (d, i) => `url(#arrowhead-${i})`);
+
+    const node = svg
+        .append("g")
+        .selectAll("circle")
+        .data(nodes)
+        .join("circle")
+        .attr("r", (d) => radiusScale(d.wins))
+        .attr("fill", (d) => color(d.group));
+
+    // Tooltip with full team stats
+    node.append("title").text(
+        (d) =>
+            `${d.id}\nWins: ${d.wins}\nGames: ${d.games}\nWin Rate: ${(
+                d.win_rate * 100
+            ).toFixed(1)}%`
+    );
+
+    node.call(
+        d3
+            .drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+    );
+
+    const labels = svg
+        .append("g")
+        .selectAll("text")
+        .data(nodes)
+        .join("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", ".35em")
+        .attr("font-size", "10px")
+        .attr("fill", "#333")
+        .text((d) => d.id);
+
+    function ticked() {
+        link.attr("d", (d) => {
+            const dx = d.target.x - d.source.x;
+            const dy = d.target.y - d.source.y;
+            const dr = Math.sqrt(dx * dx + dy * dy);
+            const r = radiusScale(d.target.wins);
+            const ratio = (dr - r) / dr;
+            const tx = d.source.x + dx * ratio;
+            const ty = d.source.y + dy * ratio;
+            return `M${d.source.x},${d.source.y}L${tx},${ty}`;
+        });
+
+        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+        labels.attr("x", (d) => d.x).attr("y", (d) => d.y);
+    }
+
+    function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+    }
+
+    function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+    }
+
+    function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+    }
+
+    // When this cell is re-run, stop the previous simulation. (This doesn’t
+    // really matter since the target alpha is zero and the simulation will
+    // stop naturally, but it’s a good practice.)
+    invalidation.then(() => simulation.stop());
+
+    return svg.node();
+}
+```

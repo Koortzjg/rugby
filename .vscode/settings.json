@@ -4,6 +4,7 @@
         "CRAN",
         "fansi",
         "httr",
+        "igraph",
         "jsonlite",
         "koortzjg",
         "libcurl",
