@@ -20174,16 +20174,31 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-08-02,Mitre 10 Cup,Taranaki,23,2565,2,2,3,0,Northland,3,2324,0,0,1,0
 2025-08-03,Mitre 10 Cup,Bay of Plenty,37,2588,4,4,3,0,Tasman,7,2638,1,1,0,0
 2025-08-03,Mitre 10 Cup,Hawke's Bay,54,2545,6,6,4,0,Counties Manukau,14,2407,2,2,0,0
-2025-08-08,Mitre 10 Cup,Northland,22,2325,1,1,5,0,Southland,17,2198,2,2,1,0
-2025-08-09,URBA Top 12,Alumni,22,2550,1,1,5,0,Newman,30,2694,3,3,3,0
-2025-08-09,URBA Top 12,Hindú,10,2538,1,1,1,0,Los Tilos,24,2410,3,3,1,0
-2025-08-09,URBA Top 12,La Plata Rugby Club,16,2415,1,1,3,0,Regatas Bella Vista,13,2449,1,1,2,0
-2025-08-09,URBA Top 12,CUBA,50,2520,5,5,5,0,San Luis,40,2386,4,4,4,0
-2025-08-09,URBA Top 12,Belgrano AC,27,2711,3,3,2,0,CASI,18,2613,0,0,6,0
-2025-08-09,URBA Top 12,B.A.C.R.C.,23,2366,2,2,3,0,SIC,35,2684,5,5,0,0
-2025-08-09,Mitre 10 Cup,Waikato,24,2567,3,3,1,0,Wellington,35,2683,5,5,0,0
-2025-08-09,Mitre 10 Cup,North Harbour,24,2434,3,3,1,0,Taranaki,46,2581,4,4,6,0
-2025-08-09,Mitre 10 Cup,Tasman,49,2624,7,7,0,0,Manawatu,17,2283,2,2,1,0
-2025-08-09,Mitre 10 Cup,Canterbury,19,2725,1,1,4,0,Auckland,15,2532,0,0,5,0
-2025-08-10,Mitre 10 Cup,Counties Manukau,22,2390,1,1,5,0,Bay of Plenty,39,2612,3,3,6,0
-2025-08-10,Mitre 10 Cup,Otago,21,2475,3,3,0,0,Hawke's Bay,27,2562,3,3,2,0
+2025-08-08,Mitre 10 Cup,Northland,22,2330,1,1,5,0,Southland,17,2202,2,2,1,0
+2025-08-09,URBA Top 12,Alumni,22,2558,1,1,5,0,Newman,30,2691,3,3,3,0
+2025-08-09,URBA Top 12,Hindú,10,2545,1,1,1,0,Los Tilos,24,2413,3,3,1,0
+2025-08-09,URBA Top 12,La Plata Rugby Club,16,2430,1,1,3,0,Regatas Bella Vista,13,2442,1,1,2,0
+2025-08-09,URBA Top 12,CUBA,50,2526,5,5,5,0,San Luis,40,2370,4,4,4,0
+2025-08-09,URBA Top 12,Belgrano AC,27,2702,3,3,2,0,CASI,18,2606,0,0,6,0
+2025-08-09,URBA Top 12,B.A.C.R.C.,23,2373,2,2,3,0,SIC,35,2677,5,5,0,0
+2025-08-09,Mitre 10 Cup,Waikato,24,2558,3,3,1,0,Wellington,35,2698,5,5,0,0
+2025-08-09,Mitre 10 Cup,North Harbour,24,2448,3,3,1,0,Taranaki,46,2576,4,4,6,0
+2025-08-09,Mitre 10 Cup,Tasman,49,2641,7,7,0,0,Manawatu,17,2269,2,2,1,0
+2025-08-09,Mitre 10 Cup,Canterbury,19,2711,1,1,4,0,Auckland,15,2541,0,0,5,0
+2025-08-10,Mitre 10 Cup,Counties Manukau,22,2399,1,1,5,0,Bay of Plenty,39,2596,3,3,6,0
+2025-08-10,Mitre 10 Cup,Otago,21,2472,3,3,0,0,Hawke's Bay,27,2553,3,3,2,0
+2025-08-15,Mitre 10 Cup,Southland,29,2208,2,2,5,0,Manawatu,22,2255,1,1,5,0
+2025-08-16,The Rugby Championship,South Africa,22,3030,1,1,5,0,Australia,38,2740,5,5,1,0
+2025-08-16,The Rugby Championship,Argentina,24,2751,3,3,1,0,New Zealand,41,3051,5,5,2,0
+2025-08-16,URBA Top 12,Newman,34,2705,4,4,2,0,Hindú,17,2523,2,2,1,0
+2025-08-16,URBA Top 12,CASI,31,2607,4,4,1,0,Alumni,20,2543,2,2,2,0
+2025-08-16,URBA Top 12,San Luis,17,2362,2,2,1,0,Belgrano AC,22,2712,1,1,5,0
+2025-08-16,URBA Top 12,Regatas Bella Vista,25,2445,1,1,6,0,CUBA,22,2519,1,1,5,0
+2025-08-16,URBA Top 12,SIC,26,2686,2,2,4,0,La Plata Rugby Club,10,2435,1,1,1,0
+2025-08-16,URBA Top 12,Los Tilos,37,2435,4,4,3,0,B.A.C.R.C.,30,2362,3,3,3,0
+2025-08-16,Mitre 10 Cup,Northland,14,2334,2,2,0,0,Tasman,28,2647,4,4,0,0
+2025-08-16,Mitre 10 Cup,Bay of Plenty,7,2596,1,1,0,0,Canterbury,21,2723,3,3,0,0
+2025-08-16,Mitre 10 Cup,Auckland,8,2523,1,0,1,0,Taranaki,50,2599,5,5,5,0
+2025-08-16,Mitre 10 Cup,Hawke's Bay,36,2568,3,3,5,0,North Harbour,22,2431,1,1,5,0
+2025-08-17,Mitre 10 Cup,Wellington,41,2688,5,5,2,0,Otago,46,2480,4,4,6,0
+2025-08-17,Mitre 10 Cup,Waikato,27,2557,3,3,2,0,Counties Manukau,26,2385,2,2,4,0
