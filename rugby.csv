@@ -20202,21 +20202,43 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-08-16,Mitre 10 Cup,Hawke's Bay,36,2560,3,3,5,0,North Harbour,22,2441,1,1,5,0
 2025-08-17,Mitre 10 Cup,Wellington,41,2682,5,5,2,0,Otago,46,2488,4,4,6,0
 2025-08-17,Mitre 10 Cup,Waikato,27,2563,3,3,2,0,Counties Manukau,26,2393,2,2,4,0
-2025-08-21,Mitre 10 Cup,Bay of Plenty,25,2564,1,1,6,0,Southland,30,2242,3,3,3,0
-2025-08-22,Mitre 10 Cup,Hawke's Bay,7,2558,1,1,0,0,Canterbury,26,2734,2,2,4,0
+2025-08-21,Mitre 10 Cup,Bay of Plenty,25,2571,1,1,6,0,Southland,30,2232,3,3,3,0
+2025-08-22,Mitre 10 Cup,Hawke's Bay,7,2551,1,1,0,0,Canterbury,26,2727,2,2,4,0
 2025-08-22,Women's Rugby World Cup,England Women,69,2601,9,9,2,0,USA Women,7,2457,1,1,0,0
-2025-08-23,The Rugby Championship,South Africa,30,3009,3,3,3,0,Australia,22,2762,1,1,5,0
-2025-08-23,The Rugby Championship,Argentina,29,2763,2,2,5,0,New Zealand,23,3038,2,2,3,0
+2025-08-23,The Rugby Championship,South Africa,30,3033,3,3,3,0,Australia,22,2737,1,1,5,0
+2025-08-23,The Rugby Championship,Argentina,29,2768,2,2,5,0,New Zealand,23,3034,2,2,3,0
 2025-08-23,International Test Match,Uruguay,78,2490,9,9,5,0,Paraguay,10,2357,1,1,1,0
-2025-08-23,Mitre 10 Cup,Taranaki,22,2591,1,1,5,0,Waikato,23,2580,2,2,3,0
-2025-08-23,Mitre 10 Cup,North Harbour,19,2427,1,1,4,0,Tasman,43,2654,4,4,5,0
-2025-08-23,Mitre 10 Cup,Auckland,24,2492,3,3,1,0,Northland,43,2347,4,4,5,0
+2025-08-23,Mitre 10 Cup,Taranaki,22,2579,1,1,5,0,Waikato,23,2575,2,2,3,0
+2025-08-23,Mitre 10 Cup,North Harbour,19,2433,1,1,4,0,Tasman,43,2651,4,4,5,0
+2025-08-23,Mitre 10 Cup,Auckland,24,2504,3,3,1,0,Northland,43,2350,4,4,5,0
 2025-08-23,Women's Rugby World Cup,Australia Women,73,2496,10,10,1,0,Samoa Women,0,2484,0,0,0,0
 2025-08-23,Women's Rugby World Cup,Scotland Women,38,2483,5,5,1,0,Wales Women,8,2452,1,0,1,0
 2025-08-23,Women's Rugby World Cup,Canada Women,65,2562,8,8,3,0,Fiji Women,7,2471,1,1,0,0
 2025-08-23,Women's Rugby World Cup,France Women,24,2583,3,3,1,0,Italy Women,0,2477,0,0,0,0
-2025-08-24,Mitre 10 Cup,Otago,33,2509,3,3,4,0,Counties Manukau,19,2381,1,1,4,0
-2025-08-24,Mitre 10 Cup,Manawatu,38,2265,5,5,1,0,Wellington,28,2648,4,4,0,0
+2025-08-24,Mitre 10 Cup,Otago,33,2495,3,3,4,0,Counties Manukau,19,2386,1,1,4,0
+2025-08-24,Mitre 10 Cup,Manawatu,38,2276,5,5,1,0,Wellington,28,2663,4,4,0,0
 2025-08-24,Women's Rugby World Cup,Ireland Women,42,2495,6,6,0,0,Japan Women,14,2423,2,2,0,0
 2025-08-24,Women's Rugby World Cup,South Africa Women,66,2481,9,9,1,0,Brazil Women,6,2483,0,0,2,0
 2025-08-24,Women's Rugby World Cup,New Zealand Women,54,2636,6,6,4,0,Spain Women,8,2476,1,0,1,0
+2025-08-29,Mitre 10 Cup,North Harbour,7,2420,1,1,0,0,Bay of Plenty,19,2560,1,1,4,0
+2025-08-30,International Test Match,Chile,16,2423,1,1,3,0,Uruguay,28,2508,4,4,0,0
+2025-08-30,URBA Top 12,Alumni,24,2559,3,3,1,0,Hindú,23,2527,2,2,3,0
+2025-08-30,URBA Top 12,B.A.C.R.C.,10,2360,1,1,1,0,Newman,32,2703,2,2,6,0
+2025-08-30,URBA Top 12,CUBA,34,2508,4,4,2,0,SIC,38,2689,5,5,1,0
+2025-08-30,URBA Top 12,Belgrano AC,35,2709,5,5,0,0,Regatas Bella Vista,29,2451,2,2,5,0
+2025-08-30,URBA Top 12,CASI,25,2618,1,1,6,0,San Luis,24,2364,3,3,1,0
+2025-08-30,URBA Top 12,La Plata Rugby Club,22,2414,1,1,5,0,Los Tilos,30,2432,3,3,3,0
+2025-08-30,Mitre 10 Cup,Canterbury,53,2737,5,5,6,0,Manawatu,14,2292,2,2,0,0
+2025-08-30,Mitre 10 Cup,Counties Manukau,22,2371,1,1,5,0,Taranaki,43,2576,4,4,5,0
+2025-08-30,Mitre 10 Cup,Northland,27,2386,3,3,2,0,Hawke's Bay,22,2528,1,1,5,0
+2025-08-30,Mitre 10 Cup,Tasman,31,2664,4,4,1,0,Otago,27,2496,3,3,2,0
+2025-08-30,Women's Rugby World Cup,Canada Women,42,2582,6,6,0,0,Wales Women,0,2429,0,0,0,0
+2025-08-30,Women's Rugby World Cup,Scotland Women,29,2505,2,2,5,0,Fiji Women,15,2452,0,0,5,0
+2025-08-30,Women's Rugby World Cup,England Women,92,2618,11,11,5,0,Samoa Women,3,2461,0,0,1,0
+2025-08-30,Women's Rugby World Cup,USA Women,31,2449,4,4,1,0,Australia Women,31,2509,4,4,1,0
+2025-08-31,Mitre 10 Cup,Wellington,36,2654,3,3,5,0,Auckland,17,2475,2,2,1,0
+2025-08-31,Mitre 10 Cup,Waikato,10,2567,1,1,1,0,Southland,25,2267,1,1,6,0
+2025-08-31,Women's Rugby World Cup,Ireland Women,43,2519,4,4,5,0,Spain Women,27,2455,3,3,2,0
+2025-08-31,Women's Rugby World Cup,New Zealand Women,62,2651,8,8,2,0,Japan Women,19,2405,1,1,4,0
+2025-08-31,Women's Rugby World Cup,Italy Women,24,2458,3,3,1,0,South Africa Women,29,2505,2,2,5,0
+2025-08-31,Women's Rugby World Cup,France Women,84,2603,12,12,0,0,Brazil Women,5,2459,1,0,0,0
