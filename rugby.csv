@@ -20316,40 +20316,73 @@ match_date,competition_name,home_team,home_score,home_elo,home_tries,home_conver
 2025-09-21,Mitre 10 Cup,North Harbour,21,2398,3,3,0,0,Northland,22,2392,1,1,5,0
 2025-09-21,Mitre 10 Cup,Manawatu,19,2279,1,1,4,0,Bay of Plenty,55,2586,7,7,2,0
 2025-09-25,Gallagher Prem,Sale Sharks,27,2731,3,3,2,0,Gloucester Rugby,10,2624,1,1,1,0
-2025-09-25,Mitre 10 Cup,Hawke's Bay,45,2560,6,6,1,0,Auckland,28,2468,4,4,0,0
+2025-09-25,Mitre 10 Cup,Hawke's Bay,45,2570,6,6,1,0,Auckland,28,2485,4,4,0,0
 2025-09-26,Gallagher Prem,Harlequins,31,2640,4,4,1,0,Bath Rugby,47,2779,5,5,4,0
 2025-09-26,Gallagher Prem,Newcastle Falcons,17,2337,2,2,1,0,Saracens,39,2724,3,3,6,0
 2025-09-26,United Rugby Championship,Stormers,35,2685,5,5,0,0,Leinster,0,2906,0,0,0,0
 2025-09-26,United Rugby Championship,Ulster,42,2614,6,6,0,0,Dragons,21,2259,3,3,0,0
 2025-09-26,United Rugby Championship,Glasgow Warriors,35,2698,5,5,0,0,Sharks,19,2637,1,1,4,0
-2025-09-26,Mitre 10 Cup,Southland,38,2229,5,5,1,0,Tasman,55,2613,7,7,2,0
+2025-09-26,Mitre 10 Cup,Southland,38,2232,5,5,1,0,Tasman,55,2625,7,7,2,0
 2025-09-27,The Rugby Championship,New Zealand,33,3030,3,3,4,0,Australia,24,2735,3,3,1,0
 2025-09-27,The Rugby Championship,South Africa,67,3045,7,7,6,0,Argentina,30,2762,3,3,3,0
-2025-09-27,French Top 14,Stade Francais Paris,28,2568,4,4,0,0,Bordeaux Begles,7,2760,1,1,0,0
-2025-09-27,French Top 14,Racing 92,43,2652,4,4,5,0,Clermont Auvergne,31,2631,4,4,1,0
-2025-09-27,French Top 14,Pau,40,2619,4,4,4,0,Lyon,15,2631,0,0,5,0
-2025-09-27,French Top 14,La Rochelle,31,2671,4,4,1,0,Perpignan,8,2481,1,0,1,0
-2025-09-27,French Top 14,US Montauban,22,2475,1,1,5,0,Montpellier Herault,22,2657,1,1,5,0
-2025-09-27,French Top 14,Stade Toulousain,59,2831,8,8,1,0,Castres Olympique,12,2659,0,0,4,0
+2025-09-27,French Top 14,Stade Francais Paris,28,2575,4,4,0,0,Bordeaux Begles,7,2756,1,1,0,0
+2025-09-27,French Top 14,Racing 92,43,2645,4,4,5,0,Clermont Auvergne,31,2617,4,4,1,0
+2025-09-27,French Top 14,Pau,40,2632,4,4,4,0,Lyon,15,2625,0,0,5,0
+2025-09-27,French Top 14,La Rochelle,31,2672,4,4,1,0,Perpignan,8,2488,1,0,1,0
+2025-09-27,French Top 14,US Montauban,22,2479,1,1,5,0,Montpellier Herault,22,2634,1,1,5,0
+2025-09-27,French Top 14,Stade Toulousain,59,2852,8,8,1,0,Castres Olympique,12,2647,0,0,4,0
 2025-09-27,United Rugby Championship,Bulls,53,2738,5,5,6,0,Ospreys,40,2559,4,4,4,0
 2025-09-27,United Rugby Championship,Zebre,31,2297,4,4,1,0,Edinburgh,28,2613,4,4,0,0
 2025-09-27,United Rugby Championship,Scarlets,21,2542,3,3,0,0,Munster,34,2722,4,4,2,0
 2025-09-27,United Rugby Championship,Cardiff Blues,33,2496,3,3,4,0,Lions,20,2543,2,2,2,0
 2025-09-27,United Rugby Championship,Connacht,26,2579,2,2,4,0,Benetton Treviso,15,2539,0,0,5,0
-2025-09-27,International Test Match,Chile,31,2457,4,4,1,0,Samoa,12,2516,0,0,4,0
+2025-09-27,International Test Match,Chile,31,2456,4,4,1,0,Samoa,12,2518,0,0,4,0
 2025-09-27,URBA Top 12,Regatas Bella Vista,16,2446,1,1,3,0,Alumni,15,2536,0,0,5,0
 2025-09-27,URBA Top 12,SIC,20,2690,2,2,2,0,San Luis,11,2387,1,0,2,0
 2025-09-27,URBA Top 12,Newman,35,2722,5,5,0,0,Belgrano AC,25,2673,1,1,6,0
 2025-09-27,URBA Top 12,Hindú,27,2535,3,3,2,0,CUBA,3,2478,0,0,1,0
 2025-09-27,URBA Top 12,B.A.C.R.C.,13,2359,1,1,2,0,La Plata Rugby Club,12,2411,0,0,4,0
 2025-09-27,URBA Top 12,Los Tilos,18,2455,0,0,6,0,CASI,19,2641,1,1,4,0
-2025-09-27,Mitre 10 Cup,Otago,41,2547,5,5,2,0,North Harbour,26,2382,2,2,4,0
-2025-09-27,Mitre 10 Cup,Taranaki,39,2595,3,3,6,0,Wellington,20,2615,2,2,2,0
-2025-09-27,Women's Rugby World Cup,New Zealand Women,42,2648,6,6,0,0,France Women,26,2571,2,2,4,0
-2025-09-27,Women's Rugby World Cup,Canada Women,13,2604,1,1,2,0,England Women,33,2671,3,3,4,0
+2025-09-27,Mitre 10 Cup,Otago,41,2532,5,5,2,0,North Harbour,26,2392,2,2,4,0
+2025-09-27,Mitre 10 Cup,Taranaki,39,2586,3,3,6,0,Wellington,20,2612,2,2,2,0
+2025-09-27,Women's Rugby World Cup,New Zealand Women,42,2660,6,6,0,0,France Women,26,2584,2,2,4,0
+2025-09-27,Women's Rugby World Cup,Canada Women,13,2592,1,1,2,0,England Women,33,2658,3,3,4,0
 2025-09-28,Gallagher Prem,Northampton Saints,33,2710,3,3,4,0,Exeter Chiefs,33,2561,3,3,4,0
 2025-09-28,Gallagher Prem,Bristol Rugby,42,2673,6,6,0,0,Leicester Tigers,24,2698,3,3,1,0
-2025-09-28,French Top 14,Bayonne,35,2622,5,5,0,0,Toulon,32,2713,2,2,6,0
-2025-09-28,Mitre 10 Cup,Counties Manukau,48,2444,6,6,2,0,Manawatu,24,2267,3,3,1,0
-2025-09-28,Mitre 10 Cup,Bay of Plenty,41,2605,5,5,2,0,Waikato,5,2558,1,0,0,0
-2025-09-28,Mitre 10 Cup,Northland,19,2406,1,1,4,0,Canterbury,19,2703,1,1,4,0
+2025-09-28,French Top 14,Bayonne,35,2635,5,5,0,0,Toulon,32,2713,2,2,6,0
+2025-09-28,Mitre 10 Cup,Counties Manukau,48,2427,6,6,2,0,Manawatu,24,2271,3,3,1,0
+2025-09-28,Mitre 10 Cup,Bay of Plenty,41,2600,5,5,2,0,Waikato,5,2546,1,0,0,0
+2025-09-28,Mitre 10 Cup,Northland,19,2396,1,1,4,0,Canterbury,19,2719,1,1,4,0
+2025-10-03,Gallagher Prem,Bath Rugby,28,2797,4,4,0,0,Sale Sharks,16,2733,1,1,3,0
+2025-10-03,United Rugby Championship,Stormers,26,2717,2,2,4,0,Ospreys,10,2546,1,1,1,0
+2025-10-03,United Rugby Championship,Dragons,17,2260,2,2,1,0,Sharks,17,2622,2,2,1,0
+2025-10-03,Mitre 10 Cup,North Harbour,15,2392,0,0,5,0,Southland,14,2224,2,2,0,0
+2025-10-04,The Rugby Championship,Australia,14,2729,2,2,0,0,New Zealand,28,3036,4,4,0,0
+2025-10-04,The Rugby Championship,Argentina,27,2754,3,3,2,0,South Africa,29,3053,2,2,5,0
+2025-10-04,Gallagher Prem,Exeter Chiefs,38,2569,5,5,1,0,Newcastle Falcons,15,2328,0,0,5,0
+2025-10-04,Gallagher Prem,Leicester Tigers,29,2691,2,2,5,0,Harlequins,19,2622,1,1,4,0
+2025-10-04,Gallagher Prem,Saracens,50,2740,5,5,5,0,Bristol Rugby,17,2675,2,2,1,0
+2025-10-04,French Top 14,Montpellier Herault,37,2649,4,4,3,0,La Rochelle,13,2662,1,1,2,0
+2025-10-04,French Top 14,Clermont Auvergne,84,2618,12,12,0,0,US Montauban,31,2471,4,4,1,0
+2025-10-04,French Top 14,Castres Olympique,20,2650,2,2,2,0,Racing 92,16,2644,1,1,3,0
+2025-10-04,French Top 14,Toulon,33,2713,3,3,4,0,Pau,17,2634,2,2,1,0
+2025-10-04,French Top 14,Perpignan,11,2470,1,0,2,0,Stade Francais Paris,28,2607,4,4,0,0
+2025-10-04,French Top 14,Bordeaux Begles,32,2741,2,2,6,0,Lyon,20,2604,2,2,2,0
+2025-10-04,United Rugby Championship,Benetton Treviso,16,2545,1,1,3,0,Glasgow Warriors,14,2695,2,2,0,0
+2025-10-04,United Rugby Championship,Bulls,39,2757,3,3,6,0,Leinster,31,2869,4,4,1,0
+2025-10-04,United Rugby Championship,Munster,23,2732,2,2,3,0,Cardiff Blues,20,2503,2,2,2,0
+2025-10-04,URBA Top 12,Alumni,50,2534,5,5,5,0,La Plata Rugby Club,19,2390,1,1,4,0
+2025-10-04,URBA Top 12,CUBA,42,2477,6,6,0,0,B.A.C.R.C.,23,2360,2,2,3,0
+2025-10-04,URBA Top 12,Belgrano AC,43,2674,4,4,5,0,Hindú,27,2537,3,3,2,0
+2025-10-04,URBA Top 12,CASI,26,2658,2,2,4,0,Newman,16,2718,1,1,3,0
+2025-10-04,URBA Top 12,San Luis,9,2376,0,0,3,0,Los Tilos,13,2458,1,1,2,0
+2025-10-04,URBA Top 12,Regatas Bella Vista,15,2454,0,0,5,0,SIC,19,2697,1,1,4,0
+2025-10-04,Mitre 10 Cup,Wellington,26,2586,2,2,4,0,Bay of Plenty,33,2622,3,3,4,0
+2025-10-04,Mitre 10 Cup,Auckland,17,2462,2,2,1,0,Otago,51,2551,6,6,3,0
+2025-10-04,Mitre 10 Cup,Waikato,25,2540,1,1,6,0,Northland,19,2393,1,1,4,0
+2025-10-04,Mitre 10 Cup,Manawatu,10,2258,1,1,1,0,Hawke's Bay,38,2585,5,5,1,0
+2025-10-05,Gallagher Prem,Gloucester Rugby,35,2606,5,5,0,0,Northampton Saints,37,2715,4,4,3,0
+2025-10-05,French Top 14,Bayonne,40,2662,4,4,4,0,Stade Toulousain,26,2844,2,2,4,0
+2025-10-05,United Rugby Championship,Zebre,22,2330,1,1,5,0,Lions,20,2517,2,2,2,0
+2025-10-05,Mitre 10 Cup,Tasman,41,2613,5,5,2,0,Counties Manukau,49,2451,7,7,0,0
+2025-10-05,Mitre 10 Cup,Canterbury,34,2725,4,4,2,0,Taranaki,14,2592,2,2,0,0
