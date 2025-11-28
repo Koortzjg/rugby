@@ -213,7 +213,7 @@ decompose_score <- Vectorize(decompose_score)
 start_rows <- NROW(fread("rugby.csv"))
 
 ## need to find the last date this was updated
-start_date <- Sys.Date() - 14L
+start_date <- Sys.Date() - 28L
 
 ## getting the dates
 final_number <- seq(start_date, Sys.Date() - 1L, by = "day") |>
